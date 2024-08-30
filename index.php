@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/style.css"> 
 </head>
 <body>
-    <p>testing RAHHHHHHHHHHHHHH</p>
+    <h1>Toybox</h1>
+    <p>:o) Hello. I am a webpage</p>
 </body>
 </html>
