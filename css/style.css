@@ -12,7 +12,8 @@ body {
 
 .nav {
     display: inline-block;
-    padding: 1em;
     width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
     background-color: darkgrey;
 }
