@@ -15,14 +15,22 @@ body {
 .nav {
     display: inline-block;
     width: 100%;
-    padding: 1em;
+    padding: 1rem;
     background-color: darkgrey;
 }
+
+    .nav a {
+        display: inline-block;
+        width: fit-content;
+        padding: 1rem;
+        background-color: darkgrey;
+    }
 
 .wrapper {
     display: block;
     width: 80%;
     margin: auto;
-    padding: 1em;
+    margin-top: 1rem;
+    padding: 1rem;
     background-color: darkslategrey;
 }
