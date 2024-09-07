@@ -5,15 +5,16 @@ body {
 
 .header {
     display: block;
-    margin: auto;
+    box-sizing: border-box;
     width: 80%;
+    margin: auto;
     background-color: darkslategrey;
 }
 
 .nav {
     display: inline-block;
+    box-sizing: border-box;
     width: 100%;
     padding: 1em;
-    box-sizing: border-box;
     background-color: darkgrey;
 }
