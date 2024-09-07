@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.css"> 
 </head>
 <body>
-    <h1>Toybox</h1>
+    <?php include "header.php" ?>
     <p>:o) Hello. I am a webpage</p>
 </body>
 </html>
