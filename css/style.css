@@ -7,7 +7,6 @@ body {
 
 .header {
     display: block;
-    box-sizing: border-box;
     width: 80%;
     margin: auto;
     background-color: darkslategrey;
@@ -15,7 +14,6 @@ body {
 
 .nav {
     display: inline-block;
-    box-sizing: border-box;
     width: 100%;
     padding: 1em;
     background-color: darkgrey;
@@ -26,4 +24,5 @@ body {
     width: 80%;
     margin: auto;
     padding: 1em;
+    background-color: darkslategrey;
 }
