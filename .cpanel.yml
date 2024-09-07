@@ -2,7 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/lcaseydo/public_html/
-    - /bin/cp -R css $DEPLOYPATH
-    - /bin/cp -R images $DEPLOYPATH
-    - /bin/cp index.php $DEPLOYPATH
-    - /bin/cp header.php $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH
