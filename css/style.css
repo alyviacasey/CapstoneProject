@@ -4,9 +4,11 @@ body {
 }
 
 .header {
+    display: block;
     background-color: darkslategrey;
 }
 
 .nav {
+    display: block;
     background-color: darkgrey;
 }
