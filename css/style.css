@@ -21,8 +21,12 @@ body {
 
     .nav a {
         display: inline-block;
-        padding: 0.25rem;
+        padding: 0.25rem; padding-left: 1rem; padding-right: 1rem;
         background-color: grey;
+    }
+
+    .nav a :hover {
+        background-color: black;
     }
 
 .wrapper {
