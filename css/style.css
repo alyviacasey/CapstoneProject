@@ -22,7 +22,8 @@ body {
 }
 
     .banner h1 {
-        margin: auto;
+        text-align: center;
+        vertical-align: middle;
     }
 
 .nav {
