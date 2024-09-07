@@ -3,6 +3,8 @@ body {
     color: white;
 }
 
+/* HEADER & NAVIGATION */
+
 .header {
     display: block;
     box-sizing: border-box;
@@ -17,4 +19,11 @@ body {
     width: 100%;
     padding: 1em;
     background-color: darkgrey;
+}
+
+.wrapper {
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 1em;
 }

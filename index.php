@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toybox</title>
     <link rel="stylesheet" href="/css/style.css"> 
+    <link rel="stylesheet" href="/css/reset.css"> 
 </head>
 <body>
     <?php include "header.php" ?>
-    <p>:o) Hello. I am a webpage</p>
+    <div class = "wrapper">
+        <p>:o) Hello. I am a webpage</p>
+    </div>
 </body>
 </html>
