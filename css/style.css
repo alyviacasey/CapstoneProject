@@ -5,14 +5,14 @@ body {
 
 .header {
     display: block;
-    width: 80%;
     margin: auto;
+    width: 80%;
     background-color: darkslategrey;
 }
 
 .nav {
     display: inline-block;
-    width: 100%;
     padding: 1em;
+    width: 100%;
     background-color: darkgrey;
 }
