@@ -1,5 +1,7 @@
 <div class = "header">
-    <h1>Toybox</h1>
+    <div class = "banner">
+        <h1>Banner Image</h1>
+    </div>
     <div class = "nav">
         <a href = "index.php">Home</a>
     </div>
