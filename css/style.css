@@ -22,6 +22,7 @@ body {
         display: inline-block;
         padding: 0.5rem; padding-left: 1rem; padding-right: 1rem;
         background-color: grey;
+        font-size: 2rem;
     }
 
     .nav a:hover {
