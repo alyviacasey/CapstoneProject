@@ -3,13 +3,13 @@ body {
     color: white;
 }
 
-.header {
+#header {
     display: block;
     width: 80%;
     background-color: darkslategrey;
 }
 
-.nav {
+#nav {
     display: block;
     width: max-content;
     background-color: darkgrey;
