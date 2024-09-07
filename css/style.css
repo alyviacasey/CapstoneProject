@@ -8,7 +8,7 @@ body {
 .header {
     display: block;
     width: 60%;
-    margin: auto;
+    margin: auto; 
     background-color: darkslategrey;
 }
 
@@ -31,9 +31,8 @@ body {
 
 .wrapper {
     display: block;
-    width: 60%;
-    margin: auto;
-    margin-top: 1rem; 
+    width: 60%; height: 100%;
+    margin: auto; margin-top: 1rem; margin-bottom: 2rem;
     padding: 0.5rem; padding-top: 1rem; padding-bottom: 1rem;
     background-color: darkslategrey;
 }
