@@ -4,5 +4,7 @@
     </div>
     <div class = "nav">
         <a href = "index.php">Home</a>
+        <a href = "">Carnival</a>
+        <a href = "">Shop</a>
     </div>
 </div>

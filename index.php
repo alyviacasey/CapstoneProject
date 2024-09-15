@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/reset.css"> 
 </head>
 <body>
-    <?php include "header.php" ?>
+    <?php include_once "header.php" ?>
     <div class = "wrapper">
         <p>:o) Hello. I am a webpage</p>
     </div>
