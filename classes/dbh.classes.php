@@ -4,14 +4,16 @@ class Dbh {
     // Connect to database
     protected function connect(){
         try {
-            $username = "lcasey1";
-            $password = "%May1405";
+            $username = "root";
+            $password = "";
+            $hostname = "localhost";
+            $dbname = "CapstoneProject";
 
-            $dbh = new PDO('mysql:host=lcaseydo;dbname=CapstoneProject', $username, $password);
+            $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
             return $dbh;
         }
         catch (PDOException $e) {
-            print "Error!:" . $e->getMessage() . "<br/>";
+            print "Error!: " . $e->getMessage() . "<br/>";
             die();
         }
 
