@@ -5,7 +5,7 @@ class Dbh {
     protected function connect(){
         try {
             $username = "root";
-            $password = "";
+            $password = "root";
             $hostname = "localhost";
             $dbname = "CapstoneProject";
 
