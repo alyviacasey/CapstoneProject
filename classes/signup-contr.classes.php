@@ -10,7 +10,7 @@ class SignupContr extends Signup {
     private $email;
 
     // Constructor
-    public function __contruct($uid, $pwd, $pwdRepeat, $email) {
+    public function __construct($uid, $pwd, $pwdRepeat, $email) {
         $this->uid = $uid;
         $this->pwd = $pwd;
         $this->pwdRepeat = $pwdRepeat;
