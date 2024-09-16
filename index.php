@@ -12,6 +12,8 @@
     <?php include_once "header.php" ?>
     <div class = "wrapper">
         <p>:o) Hello. I am a webpage</p>
+
+        <?php include_once "signup.php" ?>
     </div>
 </body>
 </html>
