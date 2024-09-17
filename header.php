@@ -17,8 +17,8 @@
             else
             {
         ?>
-            <a href = "#">SIGN UP</a>
-            <a href = "#">LOGIN</a>
+            <a href = "signup.php">SIGN UP</a>
+            <a href = "signup.php">LOGIN</a>
         <?php
             }
         ?>
