@@ -26,7 +26,7 @@ public function loginUser() {
 
 // Check for empty / blank inputs
 private function emptyInput() {
-    $result;
+    $result = false;
     if(empty($this->uid) || empty($this->pwd)) {
         $result = false;
     }

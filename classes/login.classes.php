@@ -7,7 +7,7 @@ class Login extends Dbh {
         $stmt = $this->connect()->prepare('SELECT password FROM Users WHERE username = ? OR email = ?;');
 
         // Check if statement failed, returns as false
-        if(!$stmt->execute(array($uid, $pwd))) {
+        if(!$stmt->execute(array($uid, $uid))) {
             $stmt = null;
             header("location: ../index.php?error=stmtfailed");
             exit();
@@ -31,7 +31,7 @@ class Login extends Dbh {
         else if ($checkPwd == true) {
             $stmt = $this->connect()->prepare('SELECT * FROM Users WHERE username = ? OR email = ? AND password = ?;');
 
-            if(!$stmt->execute(array($uid, $uid, $pwd))) {
+            if(!$stmt->execute(array($uid, $uid, $pwdHashed[0]['password']))) {
                 $stmt = null;
                 header("location: ../index.php?error=stmtfailed");
                 exit();

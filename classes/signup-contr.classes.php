@@ -51,7 +51,7 @@ class SignupContr extends Signup {
 
     // Check for empty / blank inputs
     private function emptyInput() {
-        $result;
+        $result = false;
         if(empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)) {
             $result = false;
         }
@@ -63,7 +63,7 @@ class SignupContr extends Signup {
 
     // Checks username using regex
     private function invalidUid() {
-        $result;
+        $result = false;
         if (!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)){
             $result = false;
         }
@@ -75,7 +75,7 @@ class SignupContr extends Signup {
 
     // Check if email is valid
     private function invalidEmail() {
-        $result;
+        $result = false;
         if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)){
             $result = false;
         }
@@ -87,7 +87,7 @@ class SignupContr extends Signup {
 
     // Check that passwords match
     private function pwdMatch() {
-        $result;
+        $result = false;
         if($this->pwd !== $this->pwdRepeat)
         {
             $result = false;
@@ -100,7 +100,7 @@ class SignupContr extends Signup {
 
     // Check if username / email exists already
     private function uidTakenCheck() {
-        $result;
+        $result = false;
         if (!$this->checkUser($this->uid, $this->email)) {
             $result = false;
         }
