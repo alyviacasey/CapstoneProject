@@ -6,5 +6,22 @@
         <a href = "index.php">Home</a>
         <a href = "">Carnival</a>
         <a href = "">Shop</a>
+        <?php
+            if(isset($_SESSION["userid"]))
+            {
+        ?>
+            <a href = "#"><?php echo $_SESSION["username"]; ?></a>
+            <a href = "includes/login.inc.php">LOGOUT</a>
+        <?php
+            }
+            else
+            {
+        ?>
+            <a href = "#">SIGN UP</a>
+            <a href = "#">LOGIN</a>
+        <?php
+            }
+        ?>
+        </ul>
     </div>
 </div>
