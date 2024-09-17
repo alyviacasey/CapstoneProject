@@ -20,6 +20,8 @@ class Login extends Dbh {
             exit();
         }
 
+        print($stmt);
+
         $pwdHashed = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $checkPwd = password_verify($pwd, $pwdHashed[0]["password"]);
 
@@ -31,7 +33,7 @@ class Login extends Dbh {
         else if ($checkPwd == true) {
             $stmt = $this->connect()->prepare('SELECT * FROM Users WHERE username = ? OR email = ? AND password = ?;');
 
-            if(!$stmt->execute(array($uid, $uid, $pwdHashed[0]['password']))) {
+            if(!$stmt->execute(array($uid, $uid, $pwdHashed[0]["password"]))) {
                 $stmt = null;
                 header("location: ../index.php?error=stmtfailed");
                 exit();
