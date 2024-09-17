@@ -5,7 +5,7 @@ class Signup extends Dbh {
 
     // Sign up user
     protected function setUser($uid, $pwd, $email) {
-        $stmt = $this->connect()->prepare('INSERT INTO users (username, password, email) VALUES (?, ?, ?);');
+        $stmt = $this->connect()->prepare('INSERT INTO Users (username, password, email) VALUES (?, ?, ?);');
 
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
@@ -21,7 +21,7 @@ class Signup extends Dbh {
 
     // Check if username or email already exists in database
     protected function checkUser($uid, $email) {
-        $stmt = $this->connect()->prepare('SELECT user_id FROM users WHERE username = ? OR email = ?;');
+        $stmt = $this->connect()->prepare('SELECT user_id FROM Users WHERE username = ? OR email = ?;');
 
         // Check if statement failed, returns as false
         if(!$stmt->execute(array($uid, $email))) {
