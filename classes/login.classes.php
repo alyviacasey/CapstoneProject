@@ -46,15 +46,11 @@ class Login extends Dbh {
             $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             session_start();
+            
             $_SESSION["userid"] = $user[0]["user_id"];
             $_SESSION["username"] = $user[0]["username"];
 
             $stmt = null;
-        }
-        else{
-            $stmt = null;
-            header("location: ../index.php?error");
-            exit();
         }
     }
 }
