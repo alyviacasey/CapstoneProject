@@ -51,6 +51,11 @@ class Login extends Dbh {
 
             $stmt = null;
         }
+        else{
+            $stmt = null;
+            header("location: ../index.php?error");
+            exit();
+        }
     }
 }
 

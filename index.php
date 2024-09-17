@@ -11,9 +11,9 @@
 <body>
     <?php include_once "header.php" ?>
     <div class = "wrapper">
-        <p>:o) Hello. I am a webpage</p>
+        <p>:o) Hello. I am a webpage</p><br><br>
 
-        <h4>IS A SESSION SET?</h4>
+        <h4>IS A SESSION SET? (DISABLED = 0 NONE = 1 ACTIVE = 2)</h4>
         <?php
             print(session_status());
         ?>
