@@ -12,6 +12,10 @@
     <?php include_once "header.php" ?>
     <div class = "wrapper">
         <p>:o) Hello. I am a webpage</p>
+
+        <?php
+            print_r($_SESSION);
+        ?>
     </div>
 </body>
 </html>
