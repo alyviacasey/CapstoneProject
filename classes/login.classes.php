@@ -6,8 +6,6 @@ class Login extends Dbh {
     protected function getUser($uid, $pwd) {
         $stmt = $this->connect()->prepare('SELECT password FROM Users WHERE username = ? OR email = ?;');
 
-        $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
-
         // Check if statement failed, returns as false
         if(!$stmt->execute(array($uid, $pwd))) {
             $stmt = null;
@@ -49,7 +47,7 @@ class Login extends Dbh {
 
             session_start();
             $_SESSION["userid"] = $user[0]["user_id"];
-            $_SESSION["username"] = $user[1]["username"];
+            $_SESSION["username"] = $user[0]["username"];
         }
 
         $stmt = null;

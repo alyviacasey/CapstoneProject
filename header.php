@@ -11,7 +11,7 @@
             {
         ?>
             <a href = "#"><?php echo $_SESSION["username"]; ?></a>
-            <a href = "includes/login.inc.php">LOGOUT</a>
+            <a href = "includes/logout.inc.php">LOGOUT</a>
         <?php
             }
             else
