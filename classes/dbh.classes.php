@@ -4,10 +4,10 @@ class Dbh {
     // Connect to database
     protected function connect(){
         try {
-            $username = "lcasey1";
+            $username = "lcaseydo_lcasey1";
             $password = "%May1405";
             $hostname = "localhost";
-            $dbname = "CapstoneProject";
+            $dbname = "lcaseydo_CapstoneProject";
 
             $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
             return $dbh;
