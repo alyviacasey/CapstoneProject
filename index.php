@@ -13,6 +13,12 @@
     <div class = "wrapper">
         <p>:o) Hello. I am a webpage</p>
 
+        <h4>IS A SESSION SET?</h4>
+        <?php
+            print(session_status());
+        ?>
+
+        <h4>SESSION VARIABLES</h4>
         <?php
             print_r($_SESSION);
         ?>
