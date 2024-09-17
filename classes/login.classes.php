@@ -49,7 +49,7 @@ class Login extends Dbh {
 
             session_start();
             $_SESSION["userid"] = $user[0]["user_id"];
-            $_SESSION["username"] = $user[0]["username"];
+            $_SESSION["username"] = $user[1]["username"];
         }
 
         $stmt = null;
