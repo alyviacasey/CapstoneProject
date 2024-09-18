@@ -5,7 +5,7 @@ class Signup extends Dbh {
 
     // Sign up user
     protected function setUser($uid, $pwd, $email) {
-        $stmt = $this->connect()->prepare('INSERT INTO Users (username, password, email) VALUES (?, ?, ?);');
+        $stmt = $this->connect()->prepare('INSERT INTO Users (username, password, email, registration) VALUES (?, ?, ?, NOW());');
 
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
