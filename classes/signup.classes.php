@@ -8,10 +8,12 @@ class Signup extends Dbh {
         $stmt = $this->connect()->prepare('INSERT INTO Users (username, password, email, registration) VALUES (?, ?, ?, ?);');
 
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
-        $currDate = date('Y-m-d');
+
+        date_default_timezone_set('UTC');
+        $today = date('Y-m-d');
 
         // Check if statement failed, returns as false
-        if(!$stmt->execute(array($uid, $hashedPwd, $email, $currDate))) {
+        if(!$stmt->execute(array($uid, $hashedPwd, $email, $today))) {
             $stmt = null;
             header("location: ../index.php?error=stmtfailed");
             exit();
