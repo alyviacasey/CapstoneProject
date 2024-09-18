@@ -1,4 +1,4 @@
-<div class = "header">
+<header>
     <div class = "banner">
         <h1>Banner Image</h1>
     </div>
@@ -24,4 +24,4 @@
         ?>
         </ul>
     </div>
-</div>
+</header>

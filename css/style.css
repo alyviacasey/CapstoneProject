@@ -5,7 +5,7 @@ body {
 
 /* HEADER & NAVIGATION */
 
-.header {
+header {
     display: block;
     width: 60%;
     margin: auto; margin-top: 2em;

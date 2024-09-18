@@ -20,8 +20,6 @@ public function loginUser() {
     }
 
     $this->getUser($this->uid, $this->pwd);
-
-    
 }
 
 // Error handlers
