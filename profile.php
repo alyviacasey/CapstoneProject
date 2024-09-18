@@ -33,7 +33,7 @@
                     </p>
                     <br>
                     <a href = "profilesettings.php">PROFILE SETTINGS</a>
-                    <br>
+                    <br><br>
                 </div>
                 <div class = "profile-about">
                     <h3>ABOUT</h3>
