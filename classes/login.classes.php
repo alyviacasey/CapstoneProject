@@ -46,7 +46,7 @@ class Login extends Dbh {
             $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             // Update last login date
-            $currDate = date('YYYY-MM-DD');
+            $currDate = date('Y-m-d');
             $sql = 'UPDATE Users SET last_login = ? WHERE username = ? OR email = ?;';
             $update = $this->connect()->prepare($sql); 
             $update->execute(array($currDate, $uid, $uid)); 

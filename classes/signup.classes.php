@@ -8,7 +8,7 @@ class Signup extends Dbh {
         $stmt = $this->connect()->prepare('INSERT INTO Users (username, password, email, registration) VALUES (?, ?, ?, ?);');
 
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
-        $currDate = date('YYYY-MM-DD');
+        $currDate = date('Y-m-d');
 
         // Check if statement failed, returns as false
         if(!$stmt->execute(array($uid, $hashedPwd, $email, $currDate))) {
