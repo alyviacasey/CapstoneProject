@@ -32,13 +32,15 @@
                         <?php echo $_SESSION["username"]; ?>
                     </p>
                     <br>
-                    <a href = "profilesettings.php">PROFILE SETTINGS</a><br>
+                    <a href = "profilesettings.php">PROFILE SETTINGS</a>
+                    <br>
                 </div>
                 <div class = "profile-about">
                     <h3>ABOUT</h3>
                     <p>
                     <?php $profileInfo->fetchAbout($_SESSION["userid"]); ?>
-                    </p><br><br>
+                    </p>
+                    <br><br>
                 </div>
             </div>
             <div class = "profile-content">
