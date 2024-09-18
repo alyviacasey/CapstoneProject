@@ -45,15 +45,19 @@ class Login extends Dbh {
 
             $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+            // Update last login date
+            $currDate = date('YYYY-MM-DD');
+            $sql = 'UPDATE Users SET last_login = ? WHERE username = ? OR email = ?;';
+            $update = $this->connect()->prepare($sql); 
+            $update->execute(array($currDate)); 
+
             // Set session variables
             session_start();
             
             $_SESSION["userid"] = $user[0]["user_id"];
             $_SESSION["username"] = $user[0]["username"];
 
-            // Update last login date
-            $sql = 'UPDATE last_login SET last_login = NOW() WHERE username = ? OR email = ?;';
-            $stmt = $this->connect()->query($sql); 
+            $stmt = null;
         }
     }
 }
