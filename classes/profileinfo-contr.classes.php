@@ -17,7 +17,7 @@ class ProfileContr extends ProfileInfo {
     }
 
 
-    
+
     // METHODS
 
     // DEFAULT PROFILE INFO
@@ -28,7 +28,7 @@ class ProfileContr extends ProfileInfo {
         $introTitle = "Hello! I am " . $this->usn;
         $introText = "Welcome to my profile page!";
 
-        $this->setProfileInfo($about, $introTitle, $introText, $this->uid);
+        $this->setProfileInfo($about, $introTitle, $introText, $this->usn);
     }
 
 

@@ -35,7 +35,7 @@ class Signup extends Dbh {
     }
 
 
-    
+
     // CHECK USER
     // If username or email already exists in database... return false
 
@@ -69,5 +69,39 @@ class Signup extends Dbh {
 
         return $resultCheck;
     }
+
+
+
+    // GET USER ID
+
+    protected function getUserId($usn) {
+        // PREPARE SQL STATEMENT
+        $sql = 'SELECT user_id FROM Users WHERE username = ?';
+        $stmt = $this->connect()->prepare($sql);
+
+        // ERROR HANDLING
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($usn))) {
+                $stmt = null;
+                header("location: profile.php?error=stmtfailed");
+                exit();
+            }
+
+            // If statement returns no data... ERROR
+            if($stmt->rowCount() == 0) {
+                $stmt = null;
+                header("location: profile.php?error=profilenotfound");
+                exit();
+            }
+
+            // NO ERRORS
+
+            // Fetch all the data from the query as an associative array
+            $uid = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $uid;
+        }
+
 
 }

@@ -9,7 +9,7 @@ class Login extends Dbh {
     // GET USER
     // Sets session variables for user
 
-    protected function getUser($uid, $pwd) {
+    protected function getUser($usn, $pwd) {
         // PREPARE SQL STATEMENT
         // Get password from user
         $sql = 'SELECT password FROM Users WHERE username = ? OR email = ?;';
@@ -18,7 +18,7 @@ class Login extends Dbh {
         // ERROR HANDLING
 
         // If statement fails... ERROR
-        if(!$stmt->execute(array($uid, $uid))) {
+        if(!$stmt->execute(array($usn, $usn))) {
             $stmt = null;
             header("location: ../index.php?error=stmtfailed");
             exit();
@@ -52,7 +52,7 @@ class Login extends Dbh {
             // ERROR HANDLING
 
             // If statement fails... ERROR
-            if(!$stmt->execute(array($uid, $uid, $pwdHashed[0]["password"]))) {
+            if(!$stmt->execute(array($usn, $usn, $pwdHashed[0]["password"]))) {
                 $stmt = null;
                 header("location: ../index.php?error=stmtfailed");
                 exit();
@@ -75,7 +75,7 @@ class Login extends Dbh {
             $today = date('Y-m-d');
             $sql = 'UPDATE Users SET last_login = ? WHERE username = ? OR email = ?;';
             $lastLogin = $this->connect()->prepare($sql); 
-            $lastLogin->execute(array($today, $uid, $uid)); 
+            $lastLogin->execute(array($today, $usn, $usn)); 
             $lastLogin = null;
 
             // Set session variables

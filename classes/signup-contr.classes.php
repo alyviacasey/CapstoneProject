@@ -6,22 +6,22 @@ class SignupContr extends Signup {
 
     // PROPERTIES
 
-    private $uid;
+    private $usn;
     private $pwd;
     private $pwdRepeat;
     private $email;
 
     // DEFINE CONSTRUCTOR
 
-    public function __construct($uid, $pwd, $pwdRepeat, $email) {
-        $this->uid = $uid;
+    public function __construct($usn, $pwd, $pwdRepeat, $email) {
+        $this->usn = $usn;
         $this->pwd = $pwd;
         $this->pwdRepeat = $pwdRepeat;
         $this->email = $email;
     }
 
 
-    
+
     // METHODS
 
     // SIGN UP USER
@@ -34,7 +34,7 @@ class SignupContr extends Signup {
             exit();
         }
 
-        if($this->invalidUid() == false) {
+        if($this->invalidUsn() == false) {
             header("location: ../index.php?error=username");
             exit();
         }
@@ -56,7 +56,17 @@ class SignupContr extends Signup {
 
         // NO ERRORS
         // Create new user
-        $this->setUser($this->uid, $this->pwd, $this->email);
+        $this->setUser($this->usn, $this->pwd, $this->email);
+    }
+
+
+
+    // FETCH USER ID
+    // Get user id #
+
+    public function fetchUserID($usn){
+        $uid= $this->getUserId($usn);
+        return $uid[0]["user_id"];
     }
 
 
@@ -68,7 +78,7 @@ class SignupContr extends Signup {
 
     private function emptyInput() {
         $result = false;
-        if(empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)) {
+        if(empty($this->usn) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)) {
             $result = false;
         }
         else { 
@@ -82,9 +92,9 @@ class SignupContr extends Signup {
     // INVALID ID
     // Checks username using regex
 
-    private function invalidUid() {
+    private function invalidUsn() {
         $result = false;
-        if (!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)){
+        if (!preg_match("/^[a-zA-Z0-9]*$/", $this->usn)){
             $result = false;
         }
         else {
@@ -133,7 +143,7 @@ class SignupContr extends Signup {
 
     private function uidTakenCheck() {
         $result = false;
-        if (!$this->checkUser($this->uid, $this->email)) {
+        if (!$this->checkUser($this->usn, $this->email)) {
             $result = false;
         }
         else {
