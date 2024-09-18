@@ -49,7 +49,8 @@ class Login extends Dbh {
             $currDate = date('YYYY-MM-DD');
             $sql = 'UPDATE Users SET last_login = ? WHERE username = ? OR email = ?;';
             $update = $this->connect()->prepare($sql); 
-            $update->execute(array($currDate)); 
+            $update->execute(array($currDate, $uid, $uid)); 
+            $update = null;
 
             // Set session variables
             session_start();
