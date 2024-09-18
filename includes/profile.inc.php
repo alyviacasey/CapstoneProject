@@ -6,7 +6,7 @@ session_start();
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // VARIABLES
-    $uid = $_SESSION["user_id"];
+    $uid = $_SESSION["userid"];
     $usn = $_SESSION["username"];
     $about = htmlspecialchars($_POST["about"], ENT_QUOTES, "UTF-8");
     $introTitle = htmlspecialchars($_POST["introtitle"], ENT_QUOTES, "UTF-8");
