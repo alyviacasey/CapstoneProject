@@ -1,15 +1,18 @@
 <?php
-// Change database
+// SIGNUP CONTROLLER
+// INPUT - Handles interaction from the user and interacts with model objects
 
 class SignupContr extends Signup {
 
-    // Define properties inside class
+    // PROPERTIES
+
     private $uid;
     private $pwd;
     private $pwdRepeat;
     private $email;
 
-    // Constructor
+    // DEFINE CONSTRUCTOR
+
     public function __construct($uid, $pwd, $pwdRepeat, $email) {
         $this->uid = $uid;
         $this->pwd = $pwd;
@@ -17,8 +20,15 @@ class SignupContr extends Signup {
         $this->email = $email;
     }
 
+
+    
+    // METHODS
+
+    // SIGN UP USER
+    // Create new user 
+
     public function signupUser() {
-        // Run error handlers
+        // ERROR HANDLING
         if($this->emptyInput() == false) {
             header("location: ../index.php?error=emptyInput");
             exit();
@@ -44,12 +54,18 @@ class SignupContr extends Signup {
             exit();
         }
 
+        // NO ERRORS
+        // Create new user
         $this->setUser($this->uid, $this->pwd, $this->email);
     }
 
-    // Error handlers
 
-    // Check for empty / blank inputs
+
+    // ERROR HANDLING METHODS
+
+    // EMPTY INPUT
+    // Check for empty / blank inputs in form
+
     private function emptyInput() {
         $result = false;
         if(empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)) {
@@ -61,7 +77,11 @@ class SignupContr extends Signup {
         return $result;
     }
 
+
+
+    // INVALID ID
     // Checks username using regex
+
     private function invalidUid() {
         $result = false;
         if (!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)){
@@ -73,7 +93,11 @@ class SignupContr extends Signup {
         return $result;
     }
 
+
+
+    // INVALID EMAIL
     // Check if email is valid
+
     private function invalidEmail() {
         $result = false;
         if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)){
@@ -85,7 +109,11 @@ class SignupContr extends Signup {
         return $result;
     }
 
+
+
+    // PASSWORD MATCH
     // Check that passwords match
+
     private function pwdMatch() {
         $result = false;
         if($this->pwd !== $this->pwdRepeat)
@@ -98,7 +126,11 @@ class SignupContr extends Signup {
         return $result;
     }
 
+
+
+    // USER TAKEN
     // Check if username / email exists already
+
     private function uidTakenCheck() {
         $result = false;
         if (!$this->checkUser($this->uid, $this->email)) {
@@ -110,4 +142,3 @@ class SignupContr extends Signup {
         return $result;
     }
 }
-?>

@@ -1,30 +1,50 @@
 <?php
+// LOGIN CONTROLLER
+// INPUT - Handles interaction from the user and interacts with model objects
 
 class LoginContr extends Login {
 
-// Define properties inside class
+// PROPERTIES 
+
 private $uid;
 private $pwd;
 
-// Constructor
+// DEFINE CONSTRUCTOR
+
 public function __construct($uid, $pwd) {
     $this->uid = $uid;
     $this->pwd = $pwd;
 }
 
+
+
+// METHODS
+
+// LOGIN USER
+// Set session variables for user
+
 public function loginUser() {
-    // Run error handlers
+    // ERROR HANDLING
+
+    // If form input is empty... ERROR
     if($this->emptyInput() == false) {
         header("location: ../index.php?error=emptyInput");
         exit();
     }
 
+    // NO ERRORS
+
+    // Sets session variables for user
     $this->getUser($this->uid, $this->pwd);
 }
 
-// Error handlers
 
+
+// ERROR HANDLING METHODS
+
+// EMPTY INPUT
 // Check for empty / blank inputs
+
 private function emptyInput() {
     $result = false;
     if(empty($this->uid) || empty($this->pwd)) {
@@ -37,4 +57,3 @@ private function emptyInput() {
 }
 
 }
-?>

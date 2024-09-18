@@ -10,7 +10,7 @@
             if(isset($_SESSION["userid"]))
             {
         ?>
-            <a href = "#"><?php echo $_SESSION["username"]; ?></a>
+            <a href = "profile.php"><?php echo $_SESSION["username"]; ?></a>
             <a href = "includes/logout.inc.php">LOGOUT</a>
         <?php
             }

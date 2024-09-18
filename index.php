@@ -12,20 +12,12 @@
     <link rel="stylesheet" href="/css/style.css"> 
     <link rel="stylesheet" href="/css/reset.css"> 
 </head>
+
 <body>
     <?php include_once "header.php" ?>
+
     <div class = "wrapper">
-        <p>:o) Hello. I am a webpage</p><br><br>
-
-        <h4>IS A SESSION SET? (DISABLED = 0 NONE = 1 ACTIVE = 2)</h4>
-        <?php
-            print(session_status());
-        ?>
-
-        <h4>SESSION VARIABLES</h4>
-        <?php
-            print_r($_SESSION);
-        ?>
+        <b>Hello. I am a webpage :-)</b>
     </div>
 </body>
 </html>
