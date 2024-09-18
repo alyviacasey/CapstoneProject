@@ -18,7 +18,6 @@
     
     include "classes/dbh.classes.php";
     include "classes/profileinfo.classes.php";
-    include "classes/profileinfo-contr.classes.php";
     include "classes/profileinfo-view.classes.php";
 
     $profileInfo = new ProfileView();
