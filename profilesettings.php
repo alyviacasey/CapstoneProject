@@ -32,7 +32,7 @@
                 <textarea name = "about" rows="10" cols="30" placeholder = "Tell us about yourself!"> <?php $profileInfo->fetchAbout($_SESSION["userid"]);?> </textarea>
                 <br><br>
                 <h3>Introduction</h3>
-                <input type = "text" name = "introtitle" placeholder = "Hello, my name is..." value = "<?php $profileInfo->fetchIntroTitle($_SESSION["userid"]); ?>">
+                <input type = "text" name = "introtitle" placeholder = "Hello, my name is..." value = "<?php $profileInfo->fetchIntroTitle($_SESSION["userid"]); ?>"> <br>
                 <textarea name="introtext" rows="10" cols="30" placeholder="Type an introduction!"> <?php $profileInfo->fetchIntroText($_SESSION["userid"]); ?></textarea>
                 <br>
                 <button type = "submit" name = "submit">SAVE</button>
