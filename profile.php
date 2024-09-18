@@ -29,7 +29,7 @@
             <div class = "profile-info">
                 <div class = "profile-info-img">
                     <p>
-                        <?php $_SESSION["username"]; ?>
+                        <?php echo $_SESSION["username"]; ?>
                     </p>
                     <br>
                     <a href = "profilesettings.php">PROFILE SETTINGS</a>
