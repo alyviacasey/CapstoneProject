@@ -27,15 +27,9 @@
         <section class = "profile">
             <div class = "profile-info">
                 <div class = "profile-info-img">
-                    <p>
-                        <?php echo $_SESSION["username"]; ?>
-                    </p>
-                    <br>
-                    <a href = "profilesettings.php">PROFILE SETTINGS</a>
-                    <br><br>
                 </div>
                 <div class = "profile-about">
-                    <h3>ABOUT</h3>
+                    <h3><?php echo $_SESSION["username"]; ?></h3>
                     <p>
                     <?php $profileInfo->fetchAbout($_SESSION["userid"]); ?>
                     </p>
@@ -50,6 +44,9 @@
                     <p>
                         <?php $profileInfo->fetchIntroText($_SESSION["userid"]); ?>
                     </p>
+                    <br><br>
+                    <a href = "profilesettings.php">PROFILE SETTINGS</a>
+                    <br><br>
                 </div>
             </div>
         </section>
