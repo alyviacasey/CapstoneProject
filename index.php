@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <?php include_once "header.php" ?>
+    <?php include_once "header.php"; ?>
 
     <div class = "wrapper">
         <b>Hello. I am a webpage :-)</b>

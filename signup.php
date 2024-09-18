@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/reset.css"> 
 </head>
 <body>
-    <?php include_once "header.php" ?>
+    <?php include_once "header.php"; ?>
     <div class = "wrapper"> 
         <div>
             <h4>SIGN UP</h4>

@@ -14,25 +14,41 @@
 </head>
 
 <body>
-    <?php include_once "header.php" ?>
+    <?php include_once "header.php"; 
+    
+    include "../classes/dbh.classes.php";
+    include "../classes/profileinfo.classes.php";
+    include "../classes/profileinfo-contr.classes.php";
+    include "../classes/profileinfo-view.classes.php";
+
+    $profileInfo = new ProfileView();
+    ?>
 
     <div class = "wrapper">
         <section class = "profile">
             <div class = "profile-info">
                 <div class = "profile-info-img">
-                    <p>USERNAME</p>
+                    <p>
+                        <?php $_SESSION["username"]; ?>
+                    </p>
                     <br>
                     <a href = "profilesettings.php">PROFILE SETTINGS</a>
                 </div>
                 <div class = "profile-about">
                     <h3>ABOUT</h3>
-                    <p>Hello (:</p>
+                    <p>
+                    <?php $profileInfo->fetchAbout($_SESSION["userid"]); ?>
+                    </p>
                 </div>
             </div>
             <div class = "profile-content">
-                <div class = "profile-content">
-                    <h3>HI! MY NAME IS...</h3>
-                    <p>Tell us about yourself!</p>
+                <div class = "profile-intro">
+                    <h3>
+                        <?php $profileInfo->fetchIntroTitle($_SESSION["userid"]); ?>
+                    </h3>
+                    <p>
+                        <?php $profileInfo->fetchIntroText($_SESSION["userid"]); ?>
+                    </p>
                 </div>
             </div>
         </section>
