@@ -7,20 +7,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $pwdRepeat = htmlspecialchars($_POST["pwdrepeat"], ENT_QUOTES, 'UTF-8');
     $email = htmlspecialchars($_POST["email"], ENT_QUOTES, 'UTF-8');
 
+    // INSTANTIATE ( create new user )
+
     include "../classes/dbh.classes.php";
     include "../classes/signup.classes.php";
     include "../classes/signup-contr.classes.php";
 
-    // INSTANTIATE ( create new user )
     $signup = new SignupContr($usn, $pwd, $pwdRepeat, $email);
 
     // Running error handlers and user signup
 
     $signup->signupUser();
 
-    $signup->fetchUserID(($usn));
+    $uid = $signup->fetchUserID(($usn));
 
-    // Create profile for user
+    // INSTANTIATE ( create new profile )
+
+    include "../classes/profileinfo.classes.php";
+    include "../classes/profileinfo-contr.classes.php";
+
+    $profileInfo = new ProfileContr($uid, $usn);
+    $profileInfo->defaultProfileInfo();
 
     // Going back to front page
     header("location: ../index.php?error=none");

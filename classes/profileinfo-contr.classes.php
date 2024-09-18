@@ -40,7 +40,7 @@ class ProfileContr extends ProfileInfo {
 
         // ERROR HANDLING
 
-        if(emptyInput($about, $introTitle, $introText) == true) {
+        if($this->emptyInput($about, $introTitle, $introText) == true) {
             header("location: ../profilesettings.php?error=emptyinput");
             exit();
         }

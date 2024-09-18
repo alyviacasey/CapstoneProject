@@ -20,14 +20,14 @@
             // If statement fails to execute... ERROR
             if(!$stmt->execute(array($uid))) {
                 $stmt = null;
-                header("location: profile.php?error=stmtfailed");
+                header("location: ../profile.php?error=stmtfailed");
                 exit();
             }
 
             // If statement returns no data... ERROR
             if($stmt->rowCount() == 0) {
                 $stmt = null;
-                header("location: profile.php?error=profilenotfound");
+                header("location: ../profile.php?error=profilenotfound");
                 exit();
             }
 
@@ -55,7 +55,7 @@
             // If statement fails to execute... ERROR
             if(!$stmt->execute(array($about, $introTitle, $introText, $uid))) {
                 $stmt = null;
-                header("location: profile.php?error=stmtfailed");
+                header("location: ../profile.php?error=stmtfailed");
                 exit();
             }
 
@@ -78,7 +78,7 @@
             // If statement fails to execute... ERROR
             if(!$stmt->execute(array($about, $introTitle, $introText, $uid))) {
                 $stmt = null;
-                header("location: profile.php?error=stmtfailed");
+                header("location: ../profile.php?error=stmtfailed");
                 exit();
             }
 
