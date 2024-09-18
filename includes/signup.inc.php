@@ -24,11 +24,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // INSTANTIATE ( create new profile )
 
-    include "../classes/profileinfo.classes.php";
-    include "../classes/profileinfo-contr.classes.php";
+    include "../classes/profile.classes.php";
+    include "../classes/profile-contr.classes.php";
 
-    $profileInfo = new ProfileContr($uid, $usn);
-    $profileInfo->defaultProfileInfo();
+    $profile = new ProfileContr($uid, $usn);
+    $profile->defaultProfile();
 
     // Going back to front page
     header("location: ../index.php?error=none");
