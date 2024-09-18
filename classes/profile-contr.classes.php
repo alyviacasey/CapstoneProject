@@ -2,7 +2,7 @@
 // PROFILE CONTROLLER
 // INPUT - Handles interaction from the user and interacts with model objects
 
-class ProfileContr extends ProfileInfo {
+class ProfileContr extends Profile {
 
     // FIELDS / PROPERTIES
 
@@ -20,23 +20,23 @@ class ProfileContr extends ProfileInfo {
 
     // METHODS
 
-    // DEFAULT PROFILE INFO
+    // DEFAULT PROFILE 
     // Set profile text to default messages
 
-    public function defaultProfileInfo() {
+    public function defaultProfile() {
         $about = "Tell people about yourself!";
         $introTitle = "Hello! I am " . $this->usn;
         $introText = "Welcome to my profile page!";
 
-        $this->setProfileInfo($about, $introTitle, $introText, $this->uid);
+        $this->setProfile($about, $introTitle, $introText, $this->uid);
     }
 
 
 
-    // EDIT PROFILE INFO
+    // EDIT PROFILE 
     // User inputs new profile info
 
-    public function editProfileInfo($about, $introTitle, $introText) {
+    public function editProfile($about, $introTitle, $introText) {
 
         // ERROR HANDLING
 
@@ -47,7 +47,7 @@ class ProfileContr extends ProfileInfo {
 
         // NO ERRORS
         // Update profile inmfo
-        $this->updateProfileInfo($about, $introTitle, $introText, $this->uid);
+        $this->updateProfile($about, $introTitle, $introText, $this->uid);
 
     }
 

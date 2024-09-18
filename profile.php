@@ -17,10 +17,10 @@
     <?php include_once "header.php"; 
     
     include "classes/dbh.classes.php";
-    include "classes/profileinfo.classes.php";
-    include "classes/profileinfo-view.classes.php";
+    include "classes/profile.classes.php";
+    include "classes/profile-view.classes.php";
 
-    $profileInfo = new ProfileView();
+    $profile = new ProfileView();
     ?>
 
     <div class = "wrapper">
@@ -31,7 +31,7 @@
                 <div class = "profile-about">
                     <h3><?php echo $_SESSION["username"]; ?></h3>
                     <p>
-                    <?php $profileInfo->fetchAbout($_SESSION["userid"]); ?>
+                    <?php $profile->fetchAbout($_SESSION["userid"]); ?>
                     </p>
                     <br><br>
                 </div>
@@ -39,10 +39,10 @@
             <div class = "profile-content">
                 <div class = "profile-intro">
                     <h3>
-                        <?php $profileInfo->fetchIntroTitle($_SESSION["userid"]); ?>
+                        <?php $profile->fetchIntroTitle($_SESSION["userid"]); ?>
                     </h3>
                     <p>
-                        <?php $profileInfo->fetchIntroText($_SESSION["userid"]); ?>
+                        <?php $profile->fetchIntroText($_SESSION["userid"]); ?>
                     </p>
                     <br><br>
                     <a href = "profilesettings.php">PROFILE SETTINGS</a>

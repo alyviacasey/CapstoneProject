@@ -1,4 +1,5 @@
 <?php
+
 // If the file was accessed with the submit button...
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // SET VARIABLES from form input
@@ -7,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $pwdRepeat = htmlspecialchars($_POST["pwdrepeat"], ENT_QUOTES, 'UTF-8');
     $email = htmlspecialchars($_POST["email"], ENT_QUOTES, 'UTF-8');
 
-    // INSTANTIATE ( create new user )
+    // INSTANTIATE SIGNUP CONTROLLER ( create new user )
 
     include "../classes/dbh.classes.php";
     include "../classes/signup.classes.php";

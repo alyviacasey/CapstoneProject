@@ -2,14 +2,14 @@
     // PROFILE MODEL
     // BRAIN - makes database changes, queries database. Defines data logic and stores and retrieves data from database
 
-    class ProfileInfo extends Dbh {
+    class Profile extends Dbh {
 
         // METHODS
 
         // GET PROFILE INFO
         // Returns associative array of all profile data for user
 
-        protected function getProfileInfo($uid) {
+        protected function getProfile($uid) {
             // PREPARE SQL STATEMENT
             // Select all user profile data
             $sql = 'SELECT * FROM Profiles WHERE user_id = ?;';
@@ -41,10 +41,10 @@
 
 
 
-        // UPDATE PROFILE INFO
+        // UPDATE PROFILE
         // Update profile data 
 
-        protected function updateProfileInfo($about, $introTitle, $introText, $uid) {
+        protected function updateProfile($about, $introTitle, $introText, $uid) {
             // PREPARE SQL STATEMENT
             // Update 
             $sql = 'UPDATE Profiles SET about = ?, intro_title = ?, intro_text = ? WHERE user_id = ?';
@@ -64,10 +64,10 @@
 
 
 
-        // SET PROFILE INFO
+        // SET PROFILE
         // Update profile data 
 
-        protected function setProfileInfo($about, $introTitle, $introText, $uid) {
+        protected function setProfile($about, $introTitle, $introText, $uid) {
             // PREPARE SQL STATEMENT
             // Update 
             $sql = 'INSERT INTO Profiles (about, intro_title, intro_text, user_id) VALUES (?, ?, ?, ?);';

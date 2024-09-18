@@ -1,0 +1,30 @@
+<?php
+
+session_start();
+
+// If the file was accessed with the submit button...
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    // VARIABLES
+    $uid = $_SESSION["user_id"];
+    $usn = $_SESSION["username"];
+    $about = htmlspecialchars($_POST["about"], ENT_QUOTES, "UTF-8");
+    $introTitle = htmlspecialchars($_POST["introtitle"], ENT_QUOTES, "UTF-8");
+    $introText = htmlspecialchars($_POST["introtext"], ENT_QUOTES, "UTF-8");
+
+    // GRAB DATABASE CONNECTION
+
+    include "../classes/dbh.classes.php";
+    include "../classes/profile.classes.php";
+    include "../classes/profile-contr.classes.php";
+
+    $profile = new ProfileContr($uid, $usn);
+
+    // UPDATE INFO
+
+    $profile->editProfile($about, $introTitle, $introText);
+
+    // SEND BACK TO PROFILE
+
+    header("location: ../profile.php?error=none");
+}

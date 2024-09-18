@@ -1,4 +1,5 @@
 <?php
+
 // Check if the file was accessed with the submit button, security measure
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Set parameter variables
