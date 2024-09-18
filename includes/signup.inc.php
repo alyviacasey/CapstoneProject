@@ -2,7 +2,7 @@
 // If the file was accessed with the submit button...
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // SET VARIABLES from form input
-    $uid = htmlspecialchars($_POST["usn"], ENT_QUOTES, 'UTF-8');
+    $usn = htmlspecialchars($_POST["usn"], ENT_QUOTES, 'UTF-8');
     $pwd = htmlspecialchars($_POST["pwd"], ENT_QUOTES, 'UTF-8');
     $pwdRepeat = htmlspecialchars($_POST["pwdrepeat"], ENT_QUOTES, 'UTF-8');
     $email = htmlspecialchars($_POST["email"], ENT_QUOTES, 'UTF-8');
