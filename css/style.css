@@ -45,6 +45,7 @@ header {
         text-decoration: none !important;
         text-transform: uppercase;
         transition: all 1s;
+        position: relative;
         z-index: 1;
     }
 
