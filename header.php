@@ -3,7 +3,6 @@
         <h1>Banner Image</h1>
     </div>
     <div class = "nav">
-        <ul>
             <a href = "index.php">Home</a>
             <a href = "">Carnival</a>
             <a href = "">Shop</a>
@@ -23,6 +22,5 @@
             <?php
                 }
             ?>
-        </ul>
     </div>
 </header>
