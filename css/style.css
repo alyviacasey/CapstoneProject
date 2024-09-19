@@ -39,6 +39,7 @@ header {
     display: inline-block;
     width: 100%;
     background-color: #45364b;
+    outline: solid #06a2d5;
 }
 
     .nav a {
