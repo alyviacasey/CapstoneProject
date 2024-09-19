@@ -63,6 +63,7 @@ header {
     display: block;
     width: 60%; height: 60rem;
     margin: auto; margin-top: 1rem; margin-bottom: 4rem;
-    padding: 0.5rem; padding-top: 1rem; padding-bottom: 1rem;
+    padding-top: 3.5rem; padding-bottom: 3.5rem;
+    padding-left: 2.5rem; padding-right: 2.5rem;
     background-color: #45364b;
 }
