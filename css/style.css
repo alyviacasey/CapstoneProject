@@ -40,7 +40,9 @@ header {
     width: 100%;
     background-color: #162638;
     outline: solid #06a2d5;
-    z-index: 1;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
 }
 
     .nav a {
@@ -53,7 +55,6 @@ header {
         text-decoration: none !important;
         text-transform: uppercase;
         transition: all 1s;
-        z-index: 10;
     }
 
     .nav a:hover {
