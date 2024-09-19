@@ -3,6 +3,15 @@ body {
     color: white;
 }
 
+a {
+    color: #06a2d5;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #f34deb;
+}
+
 /* HEADER & NAVIGATION */
 
 header {
