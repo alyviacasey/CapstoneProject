@@ -1,5 +1,5 @@
 body {
-    background-color: #220f16;
+    background-color: #180f22;
     color: white;
 }
 
@@ -38,7 +38,7 @@ header {
         font-size: 1.5rem;
         color: white;
         text-decoration: none !important;
-        text-transform: capitalize;
+        text-transform: capitalize !important;
         transition: all 1s;
     }
 
