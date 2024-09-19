@@ -1,11 +1,12 @@
 body {
-    background-color: #180f22;
+    background-color: #0c0622;
     color: white;
 }
 
 a {
     color: #06a2d5;
     text-decoration: none !important;
+    transition: all 1s;
 }
 
 a:hover {
