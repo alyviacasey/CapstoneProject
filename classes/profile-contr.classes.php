@@ -46,7 +46,7 @@ class ProfileContr extends Profile {
         }
 
         // NO ERRORS
-        // Update profile inmfo
+        // Update profile info
         $this->updateProfile($about, $introTitle, $introText, $this->uid);
 
     }

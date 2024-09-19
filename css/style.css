@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: #2d2327;
     color: white;
 }
 
@@ -9,14 +9,15 @@ header {
     display: block;
     width: 60%;
     margin: auto; margin-top: 2em;
-    background-color: darkslategrey;
+    background-color: #45364b;
 }
 
 .banner {
     display: flex;
     align-items: center; justify-content: center;
     width: 100%; height: 15rem;
-    background-color: red;
+    background-color: #2d2327;
+    outline: solid #45364b;
 }
 
     .banner h1 {
@@ -27,19 +28,20 @@ header {
 .nav {
     display: inline-block;
     width: 100%;
-    background-color: darkgrey;
+    background-color: #45364b;
 }
 
     .nav a {
         display: inline-block;
         padding: 0.5rem; padding-left: 2.5rem; padding-right: 2.5rem;
-        background-color: grey;
+        background-color: #524058;
         font-size: 1.5rem;
         text-decoration: none !important;
+        transition: all 1s;
     }
 
     .nav a:hover {
-        background-color: black;
+        background-color: #2d2327;
     }
 
 /* MAIN PAGE ELEMENTS */
@@ -49,5 +51,5 @@ header {
     width: 60%; height: 60rem;
     margin: auto; margin-top: 1rem; margin-bottom: 4rem;
     padding: 0.5rem; padding-top: 1rem; padding-bottom: 1rem;
-    background-color: darkslategrey;
+    background-color: #45364b;
 }
