@@ -1,5 +1,5 @@
 body {
-    background-color: #2d2327;
+    background-color: #220f16;
     color: white;
 }
 
@@ -36,12 +36,15 @@ header {
         padding: 0.5rem; padding-left: 2.5rem; padding-right: 2.5rem;
         background-color: #524058;
         font-size: 1.5rem;
+        color: white;
         text-decoration: none !important;
+        text-transform: capitalize;
         transition: all 1s;
     }
 
     .nav a:hover {
         background-color: #2d2327;
+        color: #06a2d5;
     }
 
 /* MAIN PAGE ELEMENTS */
