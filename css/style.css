@@ -27,7 +27,7 @@ header {
     align-items: center; justify-content: center;
     width: 100%; height: 15rem;
     background-color: #2d2327;
-    background-image: "./images/banner.png";
+    background-image: url("./images/banner.png");
 }
 
     .banner h1 {
