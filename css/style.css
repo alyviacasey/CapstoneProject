@@ -45,6 +45,7 @@ header {
         text-decoration: none !important;
         text-transform: uppercase;
         transition: all 1s;
+        z-index: 1;
     }
 
     .nav a:hover {
