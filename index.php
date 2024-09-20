@@ -17,7 +17,8 @@
     <?php include_once "header.php"; ?>
 
     <div class = "wrapper">
-        <b>Hello. I am a webpage :-)</b>
+        <h3>Hello, welcome to Toybox!</h3>
+        <p>This is a pet collection webgame.</p>
     </div>
 </body>
 </html>
