@@ -29,17 +29,17 @@
                 <h3>Theme</h3>
                 <p>Choose an adjective to describe the toy model</p>
                 <input type = "text" name = "theme" rows="10" cols="30" placeholder = "Birthday"> <br>
-                <br><br>
+                <br>
                 <h3>Model Name</h3>
                 <p>Choose an noun to describe the toy model</p>
                 <input type = "text" name = "model" placeholder = "Teddy Bear"> <br>
-                <br><br>
+                <br>
                 <h3>Model Material</h3>
                 <input type="radio" id="plush" name="material" value="Plush">
-                <label for="plush">Plush</label> <br>
+                <label for="plush">Plush</label> &nbsp; &nbsp;
                 <input type="radio" id="plastic" name="material" value="Plastic">
                 <label for="plastic">Plastic</label> <br>
-                <br><br>
+                <br>
                 <h3>Probability</h3>
                 <p>Choose an noun to describe the toy model</p>
                 <br><br>
