@@ -10,8 +10,8 @@ class Dbh {
     protected function connect(){
         try {
             // Set database variables
-            $username = "lcaseydo_lcasey1";
-            $password = "%May1405";
+            $username = "lcaseydo_admin";
+            $password = "Wi8TsU2)zTaH";
             $hostname = "localhost";
             $dbname = "lcaseydo_CapstoneProject";
 
