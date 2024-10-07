@@ -17,7 +17,7 @@
     <?php include_once "header.php"; 
     
     include "classes/dbh.classes.php";
-    include "classes/admin.classes.php";
+    include "classes/model.classes.php";
 
     ?>
 
