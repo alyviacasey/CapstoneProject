@@ -17,14 +17,14 @@
     <?php include_once "header.php"; 
     
     include "classes/dbh.classes.php";
-    include "classes/profile.classes.php";
-    include "classes/profile-view.classes.php";
+    include "classes/admin.classes.php";
+    include "classes/admin-view.classes.php";
 
-    $profile = new ProfileView();
+    //$profile = new ProfileView();
     ?>
 
     <div class = "wrapper">
-        <section class = "profilesettings">
+        <section class = "profile-settings">
             <h2>PROFILE SETTINGS</h2>
             <br><br>
             <form action = "includes/profile.inc.php" method = "post">

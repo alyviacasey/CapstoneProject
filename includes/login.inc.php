@@ -10,11 +10,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include "../classes/login.classes.php";
     include "../classes/login-contr.classes.php";
 
-    // INSTANTIATE ( set session variables )
+    // INSTANTIATE CONTROLLER
     $login = new LoginContr($usn, $pwd);
 
-    // Running error handlers and user signup
-
+    //  Login user ( create session variables )
     $login->loginUser();
 
     // Going back to front page
