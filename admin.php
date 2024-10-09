@@ -29,7 +29,7 @@
 
         <section class = "admin">
             <h2>ADMIN PANEL</h2>
-            <br><br>
+            <br>
             <form action = "includes/admin.inc.php" method = "post">
                 <h3>Theme</h3>
                 <p>Choose an adjective to describe the toy model</p>
@@ -46,8 +46,8 @@
                 <label for="plastic">Plastic</label> <br>
                 <br>
                 <h3>Probability</h3>
-                <p>Choose an noun to describe the toy model</p>
-                <br><br>
+                <p>Choose the probability that this pet will be picked</p>
+                <br>
                 <button type = "submit" name = "submit">SAVE</button>
             </form>
         </section>
