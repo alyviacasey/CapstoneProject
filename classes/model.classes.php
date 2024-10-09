@@ -67,10 +67,10 @@
         // SET MODEL
         // Update model data 
 
-        protected function setModel($theme, $name, $material) {
+        protected function setModel($theme, $name, $material, $rarity) {
             // PREPARE SQL STATEMENT
             // Update 
-            $sql = 'INSERT INTO Models (theme, name, material, release_date) VALUES (?, ?, ?, ?);';
+            $sql = 'INSERT INTO Models (theme, name, material, rarity, release_date) VALUES (?, ?, ?, ?, ?);';
             $stmt = $this->connect()->prepare($sql);
 
             // Set date to update registration date
@@ -80,7 +80,7 @@
             // ERROR HANDLING
 
             // If statement fails to execute... ERROR
-            if(!$stmt->execute(array($theme, $name, $material, $today))) {
+            if(!$stmt->execute(array($theme, $name, $material, $rarity, $today))) {
                 $stmt = null;
                 header("location: ../admin.php?error=stmtfailed");
                 exit();

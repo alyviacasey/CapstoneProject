@@ -6,6 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $theme = htmlspecialchars($_POST["theme"], ENT_QUOTES, 'UTF-8');
     $name = htmlspecialchars($_POST["model"], ENT_QUOTES, 'UTF-8');
     $material = htmlspecialchars($_POST["material"], ENT_QUOTES, 'UTF-8');
+    $rarity = htmlspecialchars($_POST["rarity"], ENT_QUOTES, 'UTF-8');
     
 
     // INSTANTIATE MODEL CONTROLLER ( create new model )
@@ -14,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include "../classes/model.classes.php";
     include "../classes/model-contr.classes.php";
 
-    $create = new ModelContr($theme, $name, $material);
+    $create = new ModelContr($theme, $name, $material, $rarity);
 
     // Running error handlers and user signup
 

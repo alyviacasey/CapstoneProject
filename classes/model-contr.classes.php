@@ -9,13 +9,15 @@ class ModelContr extends Model {
     private $theme;
     private $name;
     private $material;
+    private $rarity;
 
     // DEFINE CONSTRUCTOR
 
-    public function __construct($theme, $name, $material){
+    public function __construct($theme, $name, $material, $rarity){
         $this->theme = $theme;
         $this->name = $name;
         $this->material = $material;
+        $this->rarity = $rarity;
     }
 
     // SIGN UP USER
@@ -30,7 +32,7 @@ class ModelContr extends Model {
 
         // NO ERRORS
         // Create new user
-        $this->setModel($this->theme, $this->name, $this->material);
+        $this->setModel($this->theme, $this->name, $this->material, $this->rarity);
     }
 
 
@@ -61,7 +63,7 @@ class ModelContr extends Model {
 
     private function emptyInput() {
         $result = false;
-        if(empty($this->theme) || empty($this->name) || empty($this->material)) {
+        if(empty($this->theme) || empty($this->name) || empty($this->material) || empty($this->rarity)) {
             $result = false;
         }
         else { 
