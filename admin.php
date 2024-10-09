@@ -22,6 +22,11 @@
     ?>
 
     <div class = "wrapper">
+        <?php
+            if($_SESSION["admin"] = 1)
+            {
+        ?>
+
         <section class = "admin">
             <h2>ADMIN PANEL</h2>
             <br><br>
@@ -46,6 +51,16 @@
                 <button type = "submit" name = "submit">SAVE</button>
             </form>
         </section>
+
+        <?php
+                }
+                else
+                {
+        ?>
+
+        <p>You do not have permission to view this page!</p>
+
+        <?php } ?>
     </div>
 </body>
 </html>
