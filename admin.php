@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/style.css"> 
     <link rel="stylesheet" href="/css/reset.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="stars.js" defer></script>
 </head>
 
 <body>
@@ -49,12 +50,13 @@
                 <h3>Rarity</h3>
                 <p>Select a rarity for this pet</p>
                 <div class = "stars">
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
                 </div>
+                <br>
                 <button type = "submit" name = "submit">SAVE</button>
             </form>
         </section>
