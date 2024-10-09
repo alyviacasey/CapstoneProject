@@ -11,6 +11,7 @@
     <title>Toybox</title>
     <link rel="stylesheet" href="/css/style.css"> 
     <link rel="stylesheet" href="/css/reset.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -45,9 +46,15 @@
                 <input type="radio" id="plastic" name="material" value="Plastic">
                 <label for="plastic">Plastic</label> <br>
                 <br>
-                <h3>Probability</h3>
-                <p>Choose the probability that this pet will be picked</p>
-                <br>
+                <h3>Rarity</h3>
+                <p>Select a rarity for this pet</p>
+                <div class = "stars">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
                 <button type = "submit" name = "submit">SAVE</button>
             </form>
         </section>
