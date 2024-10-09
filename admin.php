@@ -23,7 +23,7 @@
 
     <div class = "wrapper">
         <?php
-            if($_SESSION["admin"] = 1)
+            if($_SESSION["admin"] = "1")
             {
         ?>
 
