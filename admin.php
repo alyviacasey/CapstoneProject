@@ -24,6 +24,7 @@
     <div class = "wrapper">
         <?php
             echo $_SESSION["userid"];
+            echo $_SESSION["username"];
             echo $_SESSION["admin"];
 
             if($_SESSION["admin"] = 1)
