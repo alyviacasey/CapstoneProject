@@ -49,6 +49,7 @@
                 <br>
                 <h3>Rarity</h3>
                 <p>Select a rarity for this pet</p>
+                <input type="hidden" id="rarity" name="rarity" value="0">
                 <div class = "stars">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>

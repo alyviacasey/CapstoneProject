@@ -6,6 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $theme = htmlspecialchars($_POST["theme"], ENT_QUOTES, 'UTF-8');
     $name = htmlspecialchars($_POST["model"], ENT_QUOTES, 'UTF-8');
     $material = htmlspecialchars($_POST["material"], ENT_QUOTES, 'UTF-8');
+    
 
     // INSTANTIATE MODEL CONTROLLER ( create new model )
 
