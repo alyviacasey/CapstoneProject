@@ -70,7 +70,7 @@ header {
 /* STAR RATING SYSTEM */
 
 .stars i {
-    font-size: 20px;
+    font-size: 30px;
     transition: all 0.2s ease;
 }
 
