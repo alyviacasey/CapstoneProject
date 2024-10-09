@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/style.css"> 
     <link rel="stylesheet" href="/css/reset.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="stars.js" defer></script>
+    <script src="scripts/stars.js" defer></script>
 </head>
 
 <body>
