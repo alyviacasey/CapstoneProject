@@ -23,10 +23,6 @@
 
     <div class = "wrapper">
         <?php
-            echo $_SESSION["userid"];
-            echo $_SESSION["username"];
-            echo $_SESSION["admin"];
-
             if($_SESSION["admin"] == 1)
             {
         ?>
@@ -62,7 +58,7 @@
                 {
         ?>
 
-        <p>You do not have permission to view this page!</p>
+        <h2>You do not have permission to view this page!</h2>
 
         <?php } ?>
     </div>
