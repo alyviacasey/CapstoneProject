@@ -27,7 +27,7 @@
             echo $_SESSION["username"];
             echo $_SESSION["admin"];
 
-            if($_SESSION["admin"] = 1)
+            if($_SESSION["admin"] == 1)
             {
         ?>
 
