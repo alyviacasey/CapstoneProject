@@ -87,21 +87,21 @@ header {
 @media (max-width: 971px) {
 
     .wrapper {
-        max-width: 100%;
+        min-width: 100%;
     }
     
     header {
-        max-width: 100%; 
+        min-width: 100%; 
     }
 }
 
-@media (max-width: 1500px) {
+@media screen (max-width: 1500px) {
 
     .wrapper {
-        max-width: 70%;
+        min-width: 70%;
     }
 
     header {
-        max-width: 70%; 
+        min-width: 70%; 
     }
 }
