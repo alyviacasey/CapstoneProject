@@ -17,8 +17,8 @@ a:hover {
 
 header {
     display: block;
-    max-width: 60%; 
-    min-width: 45%;
+    max-width: 100%; 
+    width: 900px;
     margin: 0 auto; margin-top: 2em;
 }
 
@@ -61,8 +61,8 @@ header {
 
 .wrapper {
     display: block;
-    max-width: 60%; 
-    min-width: 45%;
+    max-width: 100%; 
+    width: 900px;
     height: 60rem;
     margin: 0 auto; margin-top: 1rem; margin-bottom: 4rem;
     padding-top: 3.5rem; padding-bottom: 3.5rem;
@@ -79,29 +79,4 @@ header {
 
 .stars i.checked {
     color: #f34deb;
-}
-
-
-/* SCALE BASED ON WINDOW SIZE */
-
-@media (max-width: 971px) {
-
-    .wrapper {
-        min-width: 100%;
-    }
-    
-    header {
-        min-width: 100%; 
-    }
-}
-
-@media (max-width: 1500px) {
-
-    .wrapper {
-        min-width: 70%;
-    }
-
-    header {
-        min-width: 70%; 
-    }
 }
