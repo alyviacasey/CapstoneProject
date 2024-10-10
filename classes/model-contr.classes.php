@@ -20,8 +20,8 @@ class ModelContr extends Model {
         $this->rarity = $rarity;
     }
 
-    // SIGN UP USER
-    // Create new user 
+    // CREATE MODEL
+    // Create new toy model
 
     public function createModel() {
         // ERROR HANDLING

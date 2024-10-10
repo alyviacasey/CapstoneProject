@@ -39,7 +39,7 @@
                 <br>
                 <h3>Model Name</h3>
                 <p>Choose an noun to describe the toy model</p>
-                <input type = "text" name = "model" placeholder = "Teddy Bear"> <br>
+                <input type = "text" name = "model" placeholder = "Bear"> <br>
                 <br>
                 <h3>Model Material</h3>
                 <input type="radio" id="plush" name="material" value="Plush">
