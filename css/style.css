@@ -19,7 +19,7 @@ header {
     display: block;
     max-width: 60%; 
     min-width: 45%;
-    margin: auto; margin-top: 2em;
+    margin: 0 auto; margin-top: 2em;
 }
 
 .banner {
@@ -64,7 +64,7 @@ header {
     max-width: 60%; 
     min-width: 45%;
     height: 60rem;
-    margin: auto; margin-top: 1rem; margin-bottom: 4rem;
+    margin: 0 auto; margin-top: 1rem; margin-bottom: 4rem;
     padding-top: 3.5rem; padding-bottom: 3.5rem;
     padding-left: 2.5rem; padding-right: 2.5rem;
     background-color: #45364b;
