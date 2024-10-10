@@ -31,13 +31,10 @@ header {
 
 .nav {
     display: flex;
+    justify-content: space-evenly;
     width: 100%;
     background-color: #162638;
     outline: solid #06a2d5;
-}
-
-.nav.space-around {
-    justify-content: space-around;
 }
 
     .nav a {
