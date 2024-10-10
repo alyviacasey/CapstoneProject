@@ -95,7 +95,7 @@ header {
     }
 }
 
-@media screen (max-width: 1500px) {
+@media (max-width: 1500px) {
 
     .wrapper {
         min-width: 70%;
