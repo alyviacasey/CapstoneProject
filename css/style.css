@@ -79,4 +79,29 @@ header {
 
 .stars i.checked {
     color: #f34deb;
-  }
+}
+
+
+/* SCALE BASED ON WINDOW SIZE */
+
+@media (max-width: 971px) {
+
+    .wrapper {
+        max-width: 100%;
+    }
+    
+    header {
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 1500px) {
+
+    .wrapper {
+        max-width: 70%;
+    }
+
+    header {
+        max-width: 70%; 
+    }
+}
