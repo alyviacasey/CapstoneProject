@@ -30,7 +30,7 @@
                 <table>
                     <tr>
                       <th>Toy ID</th>
-                      <th>Toy Name</th>
+                      <th>Name</th>
                       <th>Model</th>
                       <th>Adopted</th>
                     </tr>
