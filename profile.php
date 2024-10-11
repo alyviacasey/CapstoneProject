@@ -45,7 +45,7 @@
                         <?php $profile->fetchIntroText($_SESSION["userid"]); ?>
                     </p>
                     <br><br>
-                    <a href = "profilesettings.php">PROFILE SETTINGS</a> &nbsp; &nbsp; <?php if($_SESSION["admin"] == 1) { ?> <a href = "admin.php">ADMIN PANEL</a> <?php } ?>
+                    <a href = "profilesettings.php">PROFILE SETTINGS</a> &nbsp; &nbsp; <a href = "inventory.php">INVENTORY</a> &nbsp; &nbsp; <?php if($_SESSION["admin"] == 1) { ?> <a href = "admin.php">ADMIN PANEL</a> <?php } ?>
                     <br><br>
                 </div>
             </div>
