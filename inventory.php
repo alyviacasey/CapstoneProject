@@ -37,7 +37,7 @@
                 <table>
                     <tr>
                       <th>Box ID</th>
-                      <th>Model Name</th>
+                      <th>Name</th>
                       <th>Price</th>
                     </tr>
 
