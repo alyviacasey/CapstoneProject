@@ -39,7 +39,7 @@
                         <tr>
                         <td><?= $row['toy_id'] ?></td>
                         <td><?= $row['toy_name'] ?></td>
-                        <td><?= $row['theme'] + $row['model_name']?></td>
+                        <td><?= $row['theme'] . ' ' . $row['model_name']?></td>
                         <td><?= $row['adoption_date'] ?></td>
                     </tr>
                     <?php endforeach ?>
