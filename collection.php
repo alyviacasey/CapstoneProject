@@ -31,7 +31,7 @@
                     <tr>
                       <th>Toy ID</th>
                       <th>Toy Name</th>
-                      <th>Model Name</th>
+                      <th>Model</th>
                       <th>Adopted</th>
                     </tr>
 
@@ -39,7 +39,7 @@
                         <tr>
                         <td><?= htmlspecialchars($row['toy_id']) ?></td>
                         <td><?= htmlspecialchars($row['toy_name']) ?></td>
-                        <td><?= htmlspecialchars($row['model_name']) ?></td>
+                        <td><?= htmlspecialchars($row['theme']); htmlspecialchars($row['model_name']) ?></td>
                         <td><?= htmlspecialchars($row['adoption_date']) ?></td>
                     </tr>
                     <?php endforeach ?>
