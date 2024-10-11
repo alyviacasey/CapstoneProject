@@ -76,6 +76,7 @@ header {
 
 table {
     border-collapse: collapse;
+    background-color: #110622;
 }
 
 table, th, td {
