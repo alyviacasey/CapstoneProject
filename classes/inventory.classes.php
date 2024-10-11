@@ -24,12 +24,12 @@
                 exit();
             }
 
-            // If statement returns no data... ERROR
+            /*// If statement returns no data... ERROR
             if($stmt->rowCount() == 0) {
                 $stmt = null;
                 header("location: ../inventory.php?error=profilenotfound");
                 exit();
-            }
+            }*/
 
             // NO ERRORS
 
