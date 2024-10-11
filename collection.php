@@ -30,14 +30,16 @@
                 <table>
                     <tr>
                       <th>Toy ID</th>
-                      <th>Name</th>
+                      <th>Toy Name</th>
+                      <th>Model Name</th>
                       <th>Adopted</th>
                     </tr>
 
                     <?php foreach($toys as $row): ?>
                         <tr>
                         <td><?= htmlspecialchars($row['toy_id']) ?></td>
-                        <td><?= htmlspecialchars($row['name']) ?></td>
+                        <td><?= htmlspecialchars($row['t.name']) ?></td>
+                        <td><?= htmlspecialchars($row['m.name']) ?></td>
                         <td><?= htmlspecialchars($row['adoption_date']) ?></td>
                     </tr>
                     <?php endforeach ?>

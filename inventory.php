@@ -37,7 +37,6 @@
                 <table>
                     <tr>
                       <th>Box ID</th>
-                      <th>Toy Name</th>
                       <th>Model Name</th>
                       <th>Price</th>
                     </tr>
@@ -45,8 +44,7 @@
                     <?php foreach($boxes as $row): ?>
                         <tr>
                         <td><?= htmlspecialchars($row['box_id']) ?></td>
-                        <td><?= htmlspecialchars($row['t.name']) ?></td>
-                        <td><?= htmlspecialchars($row['m.name']) ?></td>
+                        <td><?= htmlspecialchars($row['name']) ?></td>
                         <td><?= htmlspecialchars($row['price']) ?></td>
                     </tr>
                     <?php endforeach ?>
