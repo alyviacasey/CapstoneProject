@@ -43,7 +43,8 @@
                     <?php foreach($boxes as $row): ?>
                         <tr>
                         <td><?= htmlspecialchars($row['box_id']) ?></td>
-                        <td><?= htmlspecialchars($row['boxmodel_id']) ?></td>
+                        <td><?= htmlspecialchars($row['name']) ?></td>
+                        <td><?= htmlspecialchars($row['price']) ?></td>
                     </tr>
                     <?php endforeach ?>
                 </table>      
