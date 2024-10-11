@@ -4,7 +4,7 @@
     <div class = "nav">
             <a href = "index.php">Home</a>
             <a href = "carnival.php">Carnival</a>
-            <a href = "shop.php">Shop</a>
+            <a href = "store.php">Shop</a>
             <?php
                 if(isset($_SESSION["userid"]))
                 {
