@@ -37,7 +37,8 @@
                 <table style = "border: 1px solid white;">
                     <tr>
                       <th>Box ID</th>
-                      <th>Model ID</th>
+                      <th>Model Name</th>
+                      <th>Price</th>
                     </tr>
 
                     <?php foreach($boxes as $row): ?>
