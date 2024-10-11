@@ -3,8 +3,8 @@
     </div>
     <div class = "nav">
             <a href = "index.php">Home</a>
-            <a href = "">Carnival</a>
-            <a href = "">Shop</a>
+            <a href = "carnival.php">Carnival</a>
+            <a href = "shop.php">Shop</a>
             <?php
                 if(isset($_SESSION["userid"]))
                 {
