@@ -48,7 +48,7 @@
         protected function setToy($mid, $uid, $name) {
             // PREPARE SQL STATEMENT
             // Update 
-            $sql = 'INSERT INTO Toys (model_id, user_id, name, adoption_date) VALUES (?, ?, ?, ?);';
+            $sql = 'INSERT INTO Toys (model_id, user_id, toy_name, adoption_date) VALUES (?, ?, ?, ?);';
             $stmt = $this->connect()->prepare($sql);
 
             $today = date('Y-m-d');
@@ -72,7 +72,7 @@
         protected function updateName($tid, $name) {
             // PREPARE SQL STATEMENT
             // Update 
-            $sql = 'UPDATE Toys SET name = ? WHERE toy_id = ?';
+            $sql = 'UPDATE Toys SET toy_name = ? WHERE toy_id = ?';
             $stmt = $this->connect()->prepare($sql);
 
             // ERROR HANDLING
