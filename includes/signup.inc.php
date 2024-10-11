@@ -30,6 +30,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $profile = new ProfileContr($uid, $usn);
     $profile->defaultProfile();
 
+    include "../classes/inventory.classes.php";
+    include "../classes/inventory-contr.classes.php";
+
+    $inventory = new InventoryContr($uid);
+    $inventory->defaultInventory();
+
     // Going back to front page
     header("location: ../index.php?error=none");
 }
