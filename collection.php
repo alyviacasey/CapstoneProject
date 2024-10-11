@@ -38,8 +38,8 @@
                     <?php foreach($toys as $row): ?>
                         <tr>
                         <td><?= htmlspecialchars($row['toy_id']) ?></td>
-                        <td><?= htmlspecialchars($row['model_name']) ?></td>
                         <td><?= htmlspecialchars($row['toy_name']) ?></td>
+                        <td><?= htmlspecialchars($row['model_name']) ?></td>
                         <td><?= htmlspecialchars($row['adoption_date']) ?></td>
                     </tr>
                     <?php endforeach ?>
