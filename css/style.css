@@ -18,7 +18,7 @@ a:hover {
 header {
     display: block;
     max-width: 100%; 
-    width: 900px;
+    width: 950px;
     margin: 0 auto; margin-top: 2em;
 }
 
@@ -64,7 +64,7 @@ header {
 .wrapper {
     display: block;
     max-width: 100%; 
-    width: 900px;
+    width: 950px;
     height: 60rem;
     margin: 0 auto; margin-top: 1rem; margin-bottom: 4rem;
     padding-top: 3.5rem; padding-bottom: 3.5rem;
