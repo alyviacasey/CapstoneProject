@@ -113,7 +113,7 @@
             // PREPARE SQL STATEMENT
             // Select all user inventory data
             // $sql = 'SELECT * FROM Boxes WHERE user_id = ?;';
-            $sql = 'SELECT b.*, m.* FROM Boxes AS b JOIN BoxModels AS m ON b.model_id = m.boxmodel_id WHERE b.user_id = ?';
+            $sql = 'SELECT b.*, m.* FROM Boxes AS b JOIN BoxModels AS m ON b.boxmodel_id = m.model_id WHERE b.user_id = ?';
             $stmt = $this->connect()->prepare($sql);
 
             // ERROR HANDLING
