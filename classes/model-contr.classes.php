@@ -38,7 +38,7 @@ class ModelContr extends Model {
 
     // METHODS
 
-    // EDIT PROFILE 
+    // EDIT MODEL 
     // User inputs new profile info
 
     /* public function editModel($theme, $name, $material) {
