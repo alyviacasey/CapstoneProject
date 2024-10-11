@@ -1,5 +1,5 @@
 <?php
-    // PROFILE MODEL
+    // TOY MODELS MODEL
     // BRAIN - makes database changes, queries database. Defines data logic and stores and retrieves data from database
 
     class Model extends Dbh {
