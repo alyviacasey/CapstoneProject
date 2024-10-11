@@ -72,6 +72,24 @@ header {
     background-color: #45364b;
 }
 
+/* TABLES */
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid white;
+  }
+
+th, td {
+    padding: 1rem;
+}
+
+th {
+    color: #f34deb;
+}
+
 /* STAR RATING SYSTEM */
 
 .stars i {

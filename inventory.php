@@ -34,7 +34,7 @@
             </div>
             <div class = "boxes">
                 <?php $boxes = $inventory->fetchBoxes($_SESSION["userid"]); ?>
-                <table style = "border: 1px solid white;">
+                <table>
                     <tr>
                       <th>Box ID</th>
                       <th>Model Name</th>

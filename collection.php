@@ -1,0 +1,49 @@
+<?php
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toybox</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+    <link rel="stylesheet" href="/css/reset.css"> 
+</head>
+
+<body>
+    <?php include_once "header.php"; 
+    
+    include "classes/dbh.classes.php";
+    include "classes/collection.classes.php";
+    include "classes/collection-view.classes.php";
+
+    $collection = new CollectionView();
+    ?>
+
+    <div class = "wrapper">
+        <section class = "collection">
+            <div class = "toys">
+                <?php $toys = $collection->fetchToys($_SESSION["userid"]); ?>
+                <table>
+                    <tr>
+                      <th>Toy ID</th>
+                      <th>Name</th>
+                      <th>Adopted</th>
+                    </tr>
+
+                    <?php foreach($toys as $row): ?>
+                        <tr>
+                        <td><?= htmlspecialchars($row['toy_id']) ?></td>
+                        <td><?= htmlspecialchars($row['name']) ?></td>
+                        <td><?= htmlspecialchars($row['adoption_date']) ?></td>
+                    </tr>
+                    <?php endforeach ?>
+                </table>      
+            </div>
+        </section>
+    </div>
+</body>
+</html>
