@@ -70,7 +70,7 @@
         protected function setModel($theme, $name, $material, $rarity) {
             // PREPARE SQL STATEMENT
             // Update 
-            $sql = 'INSERT INTO Models (theme, name, material, rarity, release_date) VALUES (?, ?, ?, ?, ?);';
+            $sql = 'INSERT INTO Models (theme, model_name, material, rarity, release_date) VALUES (?, ?, ?, ?, ?);';
             $stmt = $this->connect()->prepare($sql);
 
             // Set date to update registration date
