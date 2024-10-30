@@ -28,6 +28,7 @@
             <div class = "profile-info">
                 <div class = "profile-img">
                     <img src = "<?php $profile->fetchIcon($_SESSION["userid"]); ?>">
+                    <p><?php $profile->fetchIcon($_SESSION["userid"]); ?></p>
                 </div> 
                 <div class = "profile-about">
                     <h3><?php echo $_SESSION["username"]; ?></h3>
