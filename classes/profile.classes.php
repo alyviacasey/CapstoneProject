@@ -84,4 +84,44 @@
 
             $stmt = null;
         }
+
+
+        // GET ICON
+
+        protected function getIcon($uid){
+            $files = preg_grep('~^'.$uid.'\..*~', scandir("../images/icons/"));
+            return $files;
+        }
+
+
+        // SET ICON
+
+        protected function setIcon($uid, $file){
+            $fileName = $file['name'];
+            $fileTmpName = $file['tmp_name'];
+            $fileSize = $file['size'];
+            $fileError = $file['error'];
+            $fileType = $file['type'];
+
+            $fileExt = explode('.', $fileName);
+            $fileActualExt = strtolower(end($fileExt));
+
+            $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+
+            if (in_array($fileActualExt, $allowed)) {
+                if ($fileError === 0) {
+                    if ($fileSize < 1000000) {
+                        $fileNameNew = $uid.".".$fileType;
+                        $fileDestination = '../images/icons/'.$fileNameNew;
+                        move_uploaded_file($fileTmpName, $fileDestination);
+                    } else {
+                        echo "Your file is too big!";
+                    }
+                } else {
+                    echo "There was an error uploading your file!";
+                }
+            } else {
+                echo "You cannot upload files of this type!";
+            } 
+        }
     }

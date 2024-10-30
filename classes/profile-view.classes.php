@@ -23,4 +23,8 @@ class ProfileView extends Profile {
         echo $profileInfo[0]["intro_text"];
     }
 
+    public function fetchIcon($uid) {
+        echo $this->getIcon($uid);
+    }
+
 }

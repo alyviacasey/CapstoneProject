@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $file = $_FILES['file'];
 
-    $fileName = $file['name'];
+    /*$fileName = $file['name'];
     $fileTmpName = $file['tmp_name'];
     $fileSize = $file['size'];
     $fileError = $file['error'];
@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
 
-    $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+    $allowed = array('jpg', 'jpeg', 'png', 'pdf');*/
 
     // GRAB DATABASE CONNECTION
 
@@ -39,7 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // UPLOAD ICON
 
-    if (in_array($fileActualExt, $allowed)) {
+    /*if (in_array($fileActualExt, $allowed)) {
         if ($fileError === 0) {
             if ($fileSize < 1000000) {
                 $fileNameNew = $uid.".".$fileActualExt;
@@ -53,7 +53,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     } else {
         echo "You cannot upload files of this type!";
-    }
+    }*/
+
+    $profile->editIcon($file);
 
     // SEND BACK TO PROFILE
 

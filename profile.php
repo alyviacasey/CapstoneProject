@@ -26,7 +26,8 @@
     <div class = "wrapper">
         <section class = "profile">
             <div class = "profile-info">
-                <div class = "profile-info-img">
+                <div class = "profile-img">
+                    <?php $profile->fetchIcon($_SESSION["userid"]); ?>
                 </div>
                 <div class = "profile-about">
                     <h3><?php echo $_SESSION["username"]; ?></h3>
