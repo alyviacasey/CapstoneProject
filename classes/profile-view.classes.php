@@ -24,7 +24,7 @@ class ProfileView extends Profile {
     }
 
     public function fetchIcon($uid) {
-        echo $this->getIcon($uid);
+        return $this->getIcon($uid);
     }
 
 }
