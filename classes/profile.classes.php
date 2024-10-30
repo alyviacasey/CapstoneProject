@@ -92,8 +92,8 @@
             //$files = preg_grep('~^'.$uid.'\..*~', scandir(__DIR__ . "../images/icons"));
 
             $path = '../images/icons'; 
-            $files = glob($path.$uid.'.png');
-            return $files[0];
+            $file = glob($path.$uid.'.png');
+            return $file;
         }
 
 
