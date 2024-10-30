@@ -92,7 +92,7 @@
             //$files = preg_grep('~^'.$uid.'\..*~', scandir(__DIR__ . "../images/icons"));
 
             $path = '../images/icons'; 
-            if(count(glob($path.'/'.$uid.'.png')) > 0){
+            if(count(glob(__DIR__ . $path.'/'.$uid.'.png')) > 0){
                 echo $path.'/'.$uid.'.png';
             }
             else {
