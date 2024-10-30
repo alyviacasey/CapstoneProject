@@ -89,7 +89,7 @@
         // GET ICON
 
         protected function getIcon($uid){
-            $files = preg_grep('~^'.$uid.'\..*~', scandir(__DIR__ . "../images/icons/"));
+            $files = preg_grep('~^'.$uid.'\..*~', scandir(__DIR__ . "../images/icons"));
             return $files;
         }
 
