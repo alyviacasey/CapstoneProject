@@ -28,6 +28,8 @@
             <h2>PROFILE SETTINGS</h2>
             <br><br>
             <form action = "includes/profile.inc.php" method = "post">
+                <h3>Icon</h3>
+                <input type="file" name="file" id="file">
                 <h3>About</h3>
                 <textarea name = "about" rows="10" cols="50" placeholder = "Tell us about yourself!"> <?php $profile->fetchAbout($_SESSION["userid"]);?> </textarea>
                 <br><br>
