@@ -8,7 +8,7 @@ class BoxView extends Box {
     // FETCH BALANCE
     public function fetchAllBoxModels() {
         $modelInfo = $this->getAllBoxModels();
-        echo $modelInfo;
+        return $modelInfo;
     }
 
 }
