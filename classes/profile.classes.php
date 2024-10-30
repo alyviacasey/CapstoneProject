@@ -111,7 +111,7 @@
             if (in_array($fileActualExt, $allowed)) {
                 if ($fileError === 0) {
                     if ($fileSize < 1000000) {
-                        $fileNameNew = $uid.".".$fileType;
+                        $fileNameNew = $uid.".png";
                         $fileDestination = '../images/icons/'.$fileNameNew;
                         move_uploaded_file($fileTmpName, $fileDestination);
                     } else {
