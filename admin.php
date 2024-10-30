@@ -29,13 +29,13 @@
             {
         ?>
 
-        <section class = "admin">
+        <section class = "admin-forms">
             <h2>ADMIN PANEL</h2>
             <br>
-            <div class = "admin-model">
-                <h2>Toy Model Creator</h2>
+            <div class = "admin-form">
+                <h3>Toy Model Creator</h3>
                 <br>
-                <form action = "includes/model.inc.php" method = "post">
+                <form action = "includes/admin-model.inc.php" method = "post">
                     <h4>Theme</h4>
                     <p>Choose an adjective to describe the toy model</p>
                     <input type = "text" name = "theme" rows="10" cols="30" placeholder = "Birthday"> <br>
@@ -61,7 +61,23 @@
                         <i class="fa fa-star"></i>
                     </div>
                     <br>
-                    <button type = "submit" name = "submit">SAVE</button>
+                    <button type = "submit" name = "submit">SUBMIT</button>
+                </form>
+            </div>
+            <div class = "admin-form">
+                <h3>GiftBox Model Creator</h3>
+                <br>
+                <form action = "includes/admin-box.inc.php" method = "post">
+                    <h4>Name</h4>
+                    <p>Choose an name/theme for your box, will automatically add "Box" to the end.</p>
+                    <input type = "text" name = "theme" rows="10" cols="30" placeholder = "Birthday"> <br>
+                    <br>
+                    <h4>Price</h4>
+                    <p>Enter an integer for how many coins the box will cost.</p>
+                    <input type = "text" name = "model" placeholder = "100"> <br>
+                    </div>
+                    <br>
+                    <button type = "submit" name = "submit">SUBMIT</button>
                 </form>
             </div>
         </section>
