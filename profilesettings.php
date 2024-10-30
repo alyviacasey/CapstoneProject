@@ -27,7 +27,7 @@
         <section class = "profile-settings">
             <h2>PROFILE SETTINGS</h2>
             <br><br>
-            <form action = "includes/profile.inc.php" method = "post">
+            <form action = "includes/profile.inc.php" method = "post"  enctype="multipart/form-data">
                 <h3>Icon</h3>
                 <input type="file" name="file" id="file">
                 <br><br>
