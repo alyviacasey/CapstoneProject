@@ -43,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if ($fileError === 0) {
             if ($fileSize < 1000000) {
                 $fileNameNew = uniqid('', true).".".$fileActualExt;
-                $fileDestination = 'uploads/'.$fileNameNew;
+                $fileDestination = '../images/icons/'.$fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestination);
             } else {
                 echo "Your file is too big!";
