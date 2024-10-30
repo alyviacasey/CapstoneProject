@@ -94,9 +94,12 @@ header {
 
 /* ADMIN PAGE */
 
-.admin-forms {
+.admin {
     background-color: #2f2533;
     margin: 0.5vw;
+}
+
+.admin-forms {
     display: flex;
     justify-content: space-evenly;
     width: auto;

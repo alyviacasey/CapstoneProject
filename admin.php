@@ -28,59 +28,61 @@
             if($_SESSION["admin"] == 1)
             {
         ?>
-
-        <section class = "admin-forms">
+        <div class = "admin">
             <h2>ADMIN PANEL</h2>
             <br>
-            <div class = "admin-form">
-                <h3>Toy Model Creator</h3>
-                <br>
-                <form action = "includes/admin-model.inc.php" method = "post">
-                    <h4>Theme</h4>
-                    <p>Choose an adjective to describe the toy model</p>
-                    <input type = "text" name = "theme" rows="10" cols="30" placeholder = "Birthday"> <br>
+            <section class = "admin-forms">
+                <div class = "admin-form">
+                    <h3>Toy Model Creator</h3>
                     <br>
-                    <h4>Model Name</h4>
-                    <p>Choose an noun to describe the toy model</p>
-                    <input type = "text" name = "model" placeholder = "Bear"> <br>
+                    <form action = "includes/admin-model.inc.php" method = "post">
+                        <h4>Theme</h4>
+                        <p>Choose an adjective to describe the toy model</p>
+                        <input type = "text" name = "theme" rows="10" cols="30" placeholder = "Birthday"> <br>
+                        <br>
+                        <h4>Model Name</h4>
+                        <p>Choose an noun to describe the toy model</p>
+                        <input type = "text" name = "model" placeholder = "Bear"> <br>
+                        <br>
+                        <h4>Model Material</h4>
+                        <input type="radio" id="plush" name="material" value="Plush">
+                        <label for="plush">Plush</label> &nbsp; &nbsp;
+                        <input type="radio" id="plastic" name="material" value="Plastic">
+                        <label for="plastic">Plastic</label> <br>
+                        <br>
+                        <h4>Rarity</h4>
+                        <p>Select a rarity for this pet</p>
+                        <input type="hidden" id="rarity" name="rarity" value="0">
+                        <div class = "stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <br>
+                        <button type = "submit" name = "submit">SUBMIT</button>
+                    </form>
+                </div>
+                <div class = "admin-form">
+                    <h3>GiftBox Model Creator</h3>
                     <br>
-                    <h4>Model Material</h4>
-                    <input type="radio" id="plush" name="material" value="Plush">
-                    <label for="plush">Plush</label> &nbsp; &nbsp;
-                    <input type="radio" id="plastic" name="material" value="Plastic">
-                    <label for="plastic">Plastic</label> <br>
-                    <br>
-                    <h4>Rarity</h4>
-                    <p>Select a rarity for this pet</p>
-                    <input type="hidden" id="rarity" name="rarity" value="0">
-                    <div class = "stars">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <br>
-                    <button type = "submit" name = "submit">SUBMIT</button>
-                </form>
-            </div>
-            <div class = "admin-form">
-                <h3>GiftBox Model Creator</h3>
-                <br>
-                <form action = "includes/admin-box.inc.php" method = "post">
-                    <h4>Name</h4>
-                    <p>Choose an name/theme for your box, will automatically add "Box" to the end.</p>
-                    <input type = "text" name = "theme" rows="10" cols="30" placeholder = "Birthday"> <br>
-                    <br>
-                    <h4>Price</h4>
-                    <p>Enter an integer for how many coins the box will cost.</p>
-                    <input type = "text" name = "model" placeholder = "100"> <br>
-                    </div>
-                    <br>
-                    <button type = "submit" name = "submit">SUBMIT</button>
-                </form>
-            </div>
-        </section>
+                    <form action = "includes/admin-box.inc.php" method = "post">
+                        <h4>Name</h4>
+                        <p>Choose an name/theme for your box, will automatically add "Box" to the end.</p>
+                        <input type = "text" name = "theme" rows="10" cols="30" placeholder = "Birthday"> <br>
+                        <br>
+                        <h4>Price</h4>
+                        <p>Enter an integer for how many coins the box will cost.</p>
+                        <input type = "text" name = "model" placeholder = "100"> <br>
+                        <br>
+                        <button type = "submit" name = "submit">SUBMIT</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- If user is not an admin... -->
 
         <?php
                 }
