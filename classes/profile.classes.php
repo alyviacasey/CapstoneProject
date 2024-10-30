@@ -93,7 +93,7 @@
 
             $path = '../images/icons'; 
             $files = glob($path.$uid.'/*');
-            return $files[0];
+            return $files[0][0];
         }
 
 
