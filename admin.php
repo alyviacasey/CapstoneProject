@@ -69,8 +69,8 @@
                     <br>
                     <form action = "includes/admin-box.inc.php" method = "post">
                         <h4>Name</h4>
-                        <p>Choose an name/theme for your box, will automatically add "Box" to the end.</p>
-                        <input type = "text" name = "theme" rows="10" cols="30" placeholder = "Birthday"> <br>
+                        <p>Choose an name/theme for your box.</p>
+                        <input type = "text" name = "theme" rows="10" cols="30" placeholder = "Birthday"> Box<br>
                         <br>
                         <h4>Price</h4>
                         <p>Enter an integer for how many coins the box will cost.</p>
