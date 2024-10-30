@@ -3,7 +3,7 @@
 // If the file was accessed with the submit button...
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // SET VARIABLES from form input
-    $name = htmlspecialchars($_POST["name"], ENT_QUOTES, 'UTF-8');
+    $name = htmlspecialchars($_POST["theme"], ENT_QUOTES, 'UTF-8');
     $price = htmlspecialchars($_POST["price"], ENT_QUOTES, 'UTF-8');
     
 
