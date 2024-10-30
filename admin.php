@@ -74,7 +74,7 @@
                         <br>
                         <h4>Price</h4>
                         <p>Enter an integer for how many coins the box will cost.</p>
-                        <input type = "text" name = "model" placeholder = "100"> <br>
+                        <input type = "text" name = "price" placeholder = "100"> <br>
                         <br>
                         <button type = "submit" name = "submit">SUBMIT</button>
                     </form>
