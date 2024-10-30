@@ -24,5 +24,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //$mid = $create->fetchUserID(($usn));
 
     // Going back to front page
-    header("location: ../index.php?error=none");
+    header("location: ../admin.php?error=none");
 }

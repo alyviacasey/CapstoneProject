@@ -7,13 +7,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $price = htmlspecialchars($_POST["price"], ENT_QUOTES, 'UTF-8');
     
 
-    // INSTANTIATE MODEL CONTROLLER ( create new model )
+    // INSTANTIATE CONTROLLER 
 
     include "../classes/dbh.classes.php";
-    include "../classes/model.classes.php";
-    include "../classes/model-contr.classes.php";
+    include "../classes/box.classes.php";
+    include "../classes/box-contr.classes.php";
 
-    $create = new ModelContr($theme, $name, $material, $rarity);
+    $create = new BoxContr($name, $price);
 
     // Running error handlers and user signup
 
@@ -22,5 +22,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //$mid = $create->fetchUserID(($usn));
 
     // Going back to front page
-    header("location: ../index.php?error=none");
+    header("location: ../admin.php?error=none");
 }
