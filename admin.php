@@ -20,6 +20,10 @@
     
     include "classes/dbh.classes.php";
     include "classes/model.classes.php";
+    include "classes/box.classes.php";
+    include "classes/box-view.classes.php";
+
+    $fullInventory = new BoxView();
 
     ?>
 
@@ -78,6 +82,26 @@
                         <br>
                         <button type = "submit" name = "submit">SUBMIT</button>
                     </form>
+                </div>
+            </section>
+            <section class = "admin-tables">
+                <div class = "box-table">
+                    <?php $allBoxes = $fullInventory->fetchAllBoxModels(); ?>
+                    <table>
+                        <tr>
+                        <th>GiftBox ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        </tr>
+
+                        <?php foreach($allBoxes as $row): ?>
+                            <tr>
+                            <td><?= $row['model_id'] ?></td>
+                            <td><?= $row['name'] ?></td>
+                            <td><?= $row['price']?></td>
+                        </tr>
+                        <?php endforeach ?>
+                    </table>      
                 </div>
             </section>
         </div>

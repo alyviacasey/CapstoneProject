@@ -168,4 +168,40 @@
             $stmt = null;
         }
 
+
+        // GET ALL BOX MODELS
+
+        // GET BOX MODEL INFO
+        // Returns associative array of all data for model
+
+        protected function getAllBoxModels() {
+            // PREPARE SQL STATEMENT
+            // Select all user profile data
+            $sql = 'SELECT * FROM BoxModels;';
+            $stmt = $this->connect()->prepare($sql);
+
+            // ERROR HANDLING
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute()) {
+                $stmt = null;
+                header("location: ../admin.php?error=stmtfailed");
+                exit();
+            }
+
+            // If statement returns no data... ERROR
+            if($stmt->rowCount() == 0) {
+                $stmt = null;
+                header("location: ../admin.php?error=modelsnotfound");
+                exit();
+            }
+
+            // NO ERRORS
+
+            // Fetch all the data from the query as an associative array
+            $modelData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $modelData;
+        }
+
     }
