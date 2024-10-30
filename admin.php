@@ -32,34 +32,36 @@
         <section class = "admin">
             <h2>ADMIN PANEL</h2>
             <br>
-            <form action = "includes/admin.inc.php" method = "post">
-                <h3>Theme</h3>
-                <p>Choose an adjective to describe the toy model</p>
-                <input type = "text" name = "theme" rows="10" cols="30" placeholder = "Birthday"> <br>
-                <br>
-                <h3>Model Name</h3>
-                <p>Choose an noun to describe the toy model</p>
-                <input type = "text" name = "model" placeholder = "Bear"> <br>
-                <br>
-                <h3>Model Material</h3>
-                <input type="radio" id="plush" name="material" value="Plush">
-                <label for="plush">Plush</label> &nbsp; &nbsp;
-                <input type="radio" id="plastic" name="material" value="Plastic">
-                <label for="plastic">Plastic</label> <br>
-                <br>
-                <h3>Rarity</h3>
-                <p>Select a rarity for this pet</p>
-                <input type="hidden" id="rarity" name="rarity" value="0">
-                <div class = "stars">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </div>
-                <br>
-                <button type = "submit" name = "submit">SAVE</button>
-            </form>
+            <div class = "admin-model">
+                <form action = "includes/model.inc.php" method = "post">
+                    <h3>Theme</h3>
+                    <p>Choose an adjective to describe the toy model</p>
+                    <input type = "text" name = "theme" rows="10" cols="30" placeholder = "Birthday"> <br>
+                    <br>
+                    <h3>Model Name</h3>
+                    <p>Choose an noun to describe the toy model</p>
+                    <input type = "text" name = "model" placeholder = "Bear"> <br>
+                    <br>
+                    <h3>Model Material</h3>
+                    <input type="radio" id="plush" name="material" value="Plush">
+                    <label for="plush">Plush</label> &nbsp; &nbsp;
+                    <input type="radio" id="plastic" name="material" value="Plastic">
+                    <label for="plastic">Plastic</label> <br>
+                    <br>
+                    <h3>Rarity</h3>
+                    <p>Select a rarity for this pet</p>
+                    <input type="hidden" id="rarity" name="rarity" value="0">
+                    <div class = "stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <br>
+                    <button type = "submit" name = "submit">SAVE</button>
+                </form>
+            </div>
         </section>
 
         <?php
