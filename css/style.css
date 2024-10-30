@@ -95,9 +95,10 @@ header {
 /* ADMIN PAGE */
 
 .admin {
-    background-color: #130938;;
+    background-color: #2f273b;
     margin: 0.5vw;
     padding: 1vw;
+    outline: solid white;
 }
 
 .admin h2 {
