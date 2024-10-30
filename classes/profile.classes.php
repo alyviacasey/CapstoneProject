@@ -92,8 +92,12 @@
             //$files = preg_grep('~^'.$uid.'\..*~', scandir(__DIR__ . "../images/icons"));
 
             $path = '../images/icons'; 
-            $file = glob($path.$uid.'.png');
-            return $file;
+            if(!glob($path.'/'.$uid.'.png')){
+                echo $path.'/'.$uid.'.png';
+            }
+            else {
+                echo $path.'/default.png';
+            }
         }
 
 
