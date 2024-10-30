@@ -17,7 +17,7 @@
     <?php include_once "header.php"; 
     
     include "classes/dbh.classes.php";
-    // include "classes/collection.classes.php";
+    include "classes/collection.classes.php";
     include "classes/collection-view.classes.php";
 
     $collection = new CollectionView();
