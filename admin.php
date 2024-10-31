@@ -128,7 +128,7 @@
                                 </form>
                             </td>
                             <td> 
-                                <form action = "includes/admin-contents.inc.php" method = "post">
+                                <form action = "includes/admin-box.inc.php" method = "post">
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> <br>
                                     <button type = "submit" name = "delete">DELETE</button>
                                 </form>
