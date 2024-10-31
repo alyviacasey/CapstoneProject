@@ -37,10 +37,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         header("location: ../admin.php?error=none");
     }
-    else if(isset($_POST['boximage'])) {
+    else if(isset($_POST['image'])) {
 
         $boxID = htmlspecialchars($_POST["boxid"], ENT_QUOTES, 'UTF-8');
-        $file = $_FILES['boxfile'];
+        $file = $_FILES['file'];
 
         $edit = new BoxView();
         $edit->editImg($boxID, $file);
