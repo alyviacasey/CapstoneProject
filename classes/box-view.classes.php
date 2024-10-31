@@ -11,4 +11,9 @@ class BoxView extends Box {
         return $modelInfo;
     }
 
+    public function fetchContents($bmid){
+        $contents = $this->getBoxContent($bmid);
+        return $contents;
+    }
+
 }

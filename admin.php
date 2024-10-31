@@ -84,21 +84,32 @@
                     </form>
                 </div>
             </section>
+            <br> <br>
             <section class = "admin-tables">
+                <h3>GiftBoxes</h3>
+                <br>
                 <div class = "box-table">
-                    <?php $allBoxes = $fullInventory->fetchAllBoxModels(); ?>
+                    <?php $boxes = $fullInventory->fetchAllBoxModels(); ?>
                     <table>
                         <tr>
                         <th>GiftBox ID</th>
                         <th>Name</th>
                         <th>Price</th>
+                        <th>Contents</th>
                         </tr>
 
-                        <?php foreach($allBoxes as $row): ?>
+                        <?php foreach($boxes as $row): ?>
                             <tr>
                             <td><?= $row['model_id'] ?></td>
                             <td><?= $row['name'] ?></td>
                             <td><?= $row['price']?></td>
+                            <td>
+                                <?php $contents = $fullInventory->fetchContents($row['model_id']); 
+                                
+                                foreach($contents as $row2): ?>
+                                <?= $row2['theme'].' '.$row2["model_name"] ?>
+                                <?php endforeach ?>
+                            </td>
                         </tr>
                         <?php endforeach ?>
                     </table>      

@@ -95,7 +95,8 @@
         protected function getBoxContent($bmid) {
             // PREPARE SQL STATEMENT
             // Select all user profile data
-            $sql = 'SELECT * FROM BoxContents WHERE boxmodel_id = ?;';
+            //$sql = 'SELECT * FROM BoxContents WHERE boxmodel_id = ?;';
+            $sql = 'SELECT m.* FROM Models AS m JOIN BoxContents AS b ON m.model_id = b.toymodel_id WHERE b.boxmodel_id = ?';
             $stmt = $this->connect()->prepare($sql);
 
             // ERROR HANDLING
