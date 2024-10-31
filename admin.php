@@ -121,7 +121,7 @@
                                             <option value="<?=$row2['model_id']?>"><?= $row2['theme'] . ' ' . $row2['model_name'] ?></option>
                                             <?php endforeach ?>
                                     </select>
-                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> <br>
+                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> <br><br>
                                     <button type = "submit" name = "set">ADD / REMOVE</button>
                                 </form>
                             </td>
