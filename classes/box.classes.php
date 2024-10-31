@@ -109,11 +109,11 @@
             }
 
             // If statement returns no data... ERROR
-            if($stmt->rowCount() == 0) {
+            /*if($stmt->rowCount() == 0) {
                 $stmt = null;
                 header("location: ../admin.php?error=modelnotfound");
                 exit();
-            }
+            }*/
 
             // NO ERRORS
 

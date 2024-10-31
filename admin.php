@@ -107,7 +107,7 @@
                                 <?php $contents = $fullInventory->fetchContents($row['model_id']); 
                                 
                                 foreach($contents as $row2): ?>
-                                <?= $row2['theme'].' '.$row2["model_name"] ?>
+                                <?= $row2['theme'] . ' ' . $row2["model_name"] . ', ' ?>
                                 <?php endforeach ?>
                             </td>
                         </tr>
