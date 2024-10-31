@@ -27,6 +27,8 @@
     $fullInventory = new BoxView();
     $fullCollection= new ModelView();
 
+    $boxes = $fullInventory->fetchAllBoxModels(); 
+    $toys = $fullCollection->fetchAllModels();
     ?>
 
     <div class = "wrapper">
@@ -89,16 +91,16 @@
 
             <br> <br>
             <section class = "admin-tables">
-                <h3>GiftBoxes</h3>
+                <h3>GiftBox Models</h3>
                 <br>
                 <div class = "box-table">
-                    <?php $boxes = $fullInventory->fetchAllBoxModels(); ?>
                     <table>
                         <tr>
                         <th>Model ID</th>
                         <th>Name</th>
                         <th>Price</th>
                         <th>Contents</th>
+                        <th> <th>
                         </tr>
 
                         <?php foreach($boxes as $row): ?>
@@ -113,6 +115,15 @@
                                 <?= $row2['theme'] . ' ' . $row2["model_name"] . ', ' ?>
                                 <?php endforeach ?>
                             </td>
+                            <td> 
+                                <form>
+                                    <select id="contents" name="contents">
+                                        <?php foreach($toys as $row): ?>
+                                            <option value="<?=$row['model_id']?>"><?= $row['theme'] . ' ' . $row['model_name'] ?></option>
+                                            <?php endforeach ?>
+                                    </select>
+                                    <button type = "submit" name = "add">ADD</button> <button type = "submit" name = "remove">REMOVE</button>
+                                </form>
                         </tr>
                         <?php endforeach ?>
                     </table>      
@@ -121,7 +132,6 @@
                 <h3>Toy Models</h3>
                 <br>
                 <div class = "toy-table">
-                    <?php $toys = $fullCollection->fetchAllModels(); ?>
                     <table>
                         <tr>
                         <th>Model ID</th>
