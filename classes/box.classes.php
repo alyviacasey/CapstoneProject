@@ -66,8 +66,27 @@
 
 
 
-        // SET BOX MODEL
+        // dELETE BOX MODEL
         // Update model data 
+
+        protected function unsetBoxModel($bmid) {
+            // PREPARE SQL STATEMENT
+            // Update 
+            $sql = 'INSERT INTO BoxModels (price, name) VALUES (?, ?);';
+            $stmt = $this->connect()->prepare($sql);
+
+            // ERROR HANDLING
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($bmid))) {
+                $stmt = null;
+                header("location: ../admin.php?error=stmtfailed");
+                exit();
+            }
+
+            $stmt = null;
+        }
+
 
         protected function setBoxModel($name, $price) {
             // PREPARE SQL STATEMENT
@@ -89,7 +108,7 @@
             $stmt = null;
         }
 
-        // BOX CONTENTS
+        // GET BOX CONTENTS
 
         // GET BOX CONTENT INFO
         // Returns associative array of all data for model
@@ -98,7 +117,7 @@
             // PREPARE SQL STATEMENT
             // Select all user profile data
             //$sql = 'SELECT * FROM BoxContents WHERE boxmodel_id = ?;';
-            $sql = 'SELECT m.* FROM Models AS m JOIN BoxContents AS b ON m.model_id = b.toymodel_id WHERE b.boxmodel_id = ?';
+            $sql = 'DELETE FROM BoxContents WHERE boxmodel_id = ?';
             $stmt = $this->connect()->prepare($sql);
 
             // ERROR HANDLING
@@ -109,20 +128,6 @@
                 header("location: ../admin.php?error=stmtfailed");
                 exit();
             }
-
-            // If statement returns no data... ERROR
-            /*if($stmt->rowCount() == 0) {
-                $stmt = null;
-                header("location: ../admin.php?error=modelnotfound");
-                exit();
-            }*/
-
-            // NO ERRORS
-
-            // Fetch all the data from the query as an associative array
-            $contentData = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            return $contentData;
         }
 
 
@@ -154,30 +159,6 @@
             }
 
         }
-
-
-
-        /* // UPDATE MODEL
-        // Update model data 
-
-        protected function updateModel($theme, $name, $material, $mid) {
-            // PREPARE SQL STATEMENT
-            // Update 
-            $sql = 'UPDATE Models SET theme = ?, name = ?, material = ? WHERE model_id = ?';
-            $stmt = $this->connect()->prepare($sql);
-
-            // ERROR HANDLING
-
-            // If statement fails to execute... ERROR
-            if(!$stmt->execute(array($theme, $name, $material, $mid))) {
-                $stmt = null;
-                header("location: ../admin.php?error=stmtfailed");
-                exit();
-            }
-
-            $stmt = null;
-        } */
-
 
 
         // SET BOX CONTENT

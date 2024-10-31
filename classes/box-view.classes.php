@@ -15,4 +15,8 @@ class BoxView extends Box {
         $contents = $this->getBoxContent($bmid);
         return $contents;
     }
+
+    public function deleteBoxModel($bmid){
+        $this->unsetBoxModel($bmid);
+    }
 }

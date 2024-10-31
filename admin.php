@@ -84,7 +84,7 @@
                         <p>Enter an integer for how many coins the box will cost.</p>
                         <input type = "text" name = "price" placeholder = "100"> <br>
                         <br>
-                        <button type = "submit" name = "submit">SUBMIT</button>
+                        <button type = "submit" name = "create">SUBMIT</button>
                     </form>
                 </div>
             </section>
@@ -100,6 +100,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Contents</th>
+                        <th> </th>
                         <th> </th>
                         </tr>
 
@@ -124,6 +125,12 @@
                                     </select>
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> <br>
                                     <button type = "submit" name = "set">ADD / REMOVE</button>
+                                </form>
+                            </td>
+                            <td> 
+                                <form action = "includes/admin-contents.inc.php" method = "post">
+                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> <br>
+                                    <button type = "submit" name = "delete">DELETE</button>
                                 </form>
                             </td>
                         </tr>

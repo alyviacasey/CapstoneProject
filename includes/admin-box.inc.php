@@ -3,8 +3,6 @@
 // If the file was accessed with the submit button...
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // SET VARIABLES from form input
-    $name = htmlspecialchars($_POST["theme"], ENT_QUOTES, 'UTF-8');
-    $price = htmlspecialchars($_POST["price"], ENT_QUOTES, 'UTF-8');
     
 
     // INSTANTIATE CONTROLLER 
@@ -12,15 +10,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include "../classes/dbh.classes.php";
     include "../classes/box.classes.php";
     include "../classes/box-contr.classes.php";
+    include "../classes/box-view.classes.php";
 
-    $create = new BoxContr($name, $price);
 
-    // Running error handlers and user signup
+    if(isset($_POST['create'])) {
 
-    $create->createModel($name, $price);
+        $name = htmlspecialchars($_POST["theme"], ENT_QUOTES, 'UTF-8');
+        $price = htmlspecialchars($_POST["price"], ENT_QUOTES, 'UTF-8');
 
-    //$mid = $create->fetchUserID(($usn));
+        $create = new BoxContr($name, $price);
 
-    // Going back to front page
-    header("location: ../admin.php?error=none");
+        // Running error handlers and user signup
+
+        $create->createModel($name, $price);
+
+        //$mid = $create->fetchUserID(($usn));
+
+        // Going back to front page
+        header("location: ../admin.php?error=none");
+    }
+    else if(isset($_POST['delete'])) {
+        $boxID = htmlspecialchars($_POST["boxid"], ENT_QUOTES, 'UTF-8');
+
+        $delete = new BoxView();
+        $delete->deleteBoxModel($bmid);
+    }
 }
