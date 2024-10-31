@@ -20,10 +20,12 @@
     
     include "classes/dbh.classes.php";
     include "classes/model.classes.php";
+    include "classes/model-view.classes.php";
     include "classes/box.classes.php";
     include "classes/box-view.classes.php";
 
     $fullInventory = new BoxView();
+    $fullCollection= new ModelView();
 
     ?>
 
@@ -84,6 +86,7 @@
                     </form>
                 </div>
             </section>
+
             <br> <br>
             <section class = "admin-tables">
                 <h3>GiftBoxes</h3>
@@ -92,7 +95,7 @@
                     <?php $boxes = $fullInventory->fetchAllBoxModels(); ?>
                     <table>
                         <tr>
-                        <th>GiftBox ID</th>
+                        <th>Model ID</th>
                         <th>Name</th>
                         <th>Price</th>
                         <th>Contents</th>
@@ -110,6 +113,29 @@
                                 <?= $row2['theme'] . ' ' . $row2["model_name"] . ', ' ?>
                                 <?php endforeach ?>
                             </td>
+                        </tr>
+                        <?php endforeach ?>
+                    </table>      
+                </div>
+                <br> <br>
+                <h3>Toy Models</h3>
+                <br>
+                <div class = "toy-table">
+                    <?php $toys = $fullCollection->fetchAllModels(); ?>
+                    <table>
+                        <tr>
+                        <th>Model ID</th>
+                        <th>Name</th>
+                        <th>Material</th>
+                        <th>Rarity</th>
+                        </tr>
+
+                        <?php foreach($toys as $row): ?>
+                            <tr>
+                            <td><?= $row['model_id'] ?></td>
+                            <td><?= $row['theme'] . ' ' . $row['model_name'] ?></td>
+                            <td><?= $row['material']?></td>
+                            <td><?= $row['rarity']?></td>
                         </tr>
                         <?php endforeach ?>
                     </table>      
