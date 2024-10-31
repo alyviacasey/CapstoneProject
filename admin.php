@@ -138,7 +138,7 @@
                                 <form action = "includes/admin-box.inc.php" method = "post">
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> 
                                     <input type="file" name="file" id="file"> <br>
-                                    <button type = "submit" name = "image">SAVE</button>
+                                    <button type = "submit" name = "boximage">SAVE</button>
                                 </form>
                             </td>
                         </tr>
