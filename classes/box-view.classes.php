@@ -19,4 +19,8 @@ class BoxView extends Box {
     public function deleteBoxModel($bmid){
         $this->unsetBoxModel($bmid);
     }
+
+    public function editImg ($boxID, $file) {
+        $this->setImg($boxID, $file);
+    }
 }

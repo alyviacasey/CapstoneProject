@@ -54,7 +54,6 @@ class BoxContr extends Box {
     } */
 
 
-
     // EMPTY INPUT
     // Check for empty / blank inputs in form
 

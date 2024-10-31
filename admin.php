@@ -102,6 +102,7 @@
                         <th>Contents</th>
                         <th> </th>
                         <th> </th>
+                        <th> </th>
                         </tr>
 
                         <?php foreach($boxes as $row): ?>
@@ -131,6 +132,13 @@
                                 <form action = "includes/admin-box.inc.php" method = "post">
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> <br>
                                     <button type = "submit" name = "delete">DELETE</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action = "includes/admin-box.inc.php" method = "post">
+                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> 
+                                    <input type="file" name="file" id="file"> <br>
+                                    <button type = "submit" name = "image">SAVE</button>
                                 </form>
                             </td>
                         </tr>
