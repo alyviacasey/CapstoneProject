@@ -33,6 +33,6 @@ class ContentContr extends Box {
     }
 
     public function matchContents(){
-        $this->getContentMatch($this->bmid, $this->tmid);
+        return $this->getContentMatch($this->bmid, $this->tmid);
     }
 }
