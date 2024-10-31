@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     else if(isset($_POST['boximage'])) {
 
         $boxID = htmlspecialchars($_POST["boxid"], ENT_QUOTES, 'UTF-8');
-        $file = $_FILES['file'];
+        $file = $_FILES['boxfile'];
 
         $edit = new BoxView();
         $edit->editImg($boxID, $file);
