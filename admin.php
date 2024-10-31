@@ -120,8 +120,8 @@
                                         <?php foreach($toys as $row2): ?>
                                             <option value="<?=$row2['model_id']?>"><?= $row2['theme'] . ' ' . $row2['model_name'] ?></option>
                                             <?php endforeach ?>
-                                    </select>
-                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> <br><br>
+                                    </select> <br><br>
+                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>">
                                     <button type = "submit" name = "set">ADD / REMOVE</button>
                                 </form>
                             </td>
