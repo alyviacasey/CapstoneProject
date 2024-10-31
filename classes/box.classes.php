@@ -75,6 +75,8 @@
             $sql = 'INSERT INTO BoxModels (price, name) VALUES (?, ?);';
             $stmt = $this->connect()->prepare($sql);
 
+            $name = $name . ' Box';
+
             // ERROR HANDLING
 
             // If statement fails to execute... ERROR
