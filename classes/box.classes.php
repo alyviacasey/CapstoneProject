@@ -169,6 +169,30 @@
             $stmt = null;
         }
 
+        
+
+
+        // REMOVE BOX CONTENT
+        // Update model data 
+
+        protected function unsetBoxContent($bid, $tid) {
+            // PREPARE SQL STATEMENT
+            // Update 
+            $sql = 'DELETE FROM BoxModels WHERE boxmodel_id = ? AND toymodel_id = ?;';
+            $stmt = $this->connect()->prepare($sql);
+
+            // ERROR HANDLING
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($bid, $tid))) {
+                $stmt = null;
+                header("location: ../admin.php?error=stmtfailed");
+                exit();
+            }
+
+            $stmt = null;
+        }
+
 
         // GET ALL BOX MODELS
 

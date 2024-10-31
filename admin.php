@@ -116,14 +116,16 @@
                                 <?php endforeach ?>
                             </td>
                             <td> 
-                                <form>
+                                <form action = "includes/admin-contents.inc.php" method = "post">
                                     <select id="contents" name="contents">
-                                        <?php foreach($toys as $row): ?>
-                                            <option value="<?=$row['model_id']?>"><?= $row['theme'] . ' ' . $row['model_name'] ?></option>
+                                        <?php foreach($toys as $row2): ?>
+                                            <option value="<?=$row2['model_id']?>"><?= $row2['theme'] . ' ' . $row2['model_name'] ?></option>
                                             <?php endforeach ?>
                                     </select>
+                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>">
                                     <button type = "submit" name = "add">ADD</button> <button type = "submit" name = "remove">REMOVE</button>
                                 </form>
+                            </td>
                         </tr>
                         <?php endforeach ?>
                     </table>      

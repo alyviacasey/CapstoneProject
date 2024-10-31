@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Running error handlers and user signup
 
-    $create->createModel();
+    $create->createModel($name, $price);
 
     //$mid = $create->fetchUserID(($usn));
 
