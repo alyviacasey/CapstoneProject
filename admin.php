@@ -102,7 +102,6 @@
                         <th>Contents</th>
                         <th> </th>
                         <th> </th>
-                        <th> </th>
                         </tr>
 
                         <?php foreach($boxes as $row): ?>
@@ -115,9 +114,7 @@
                                 
                                 foreach($contents as $row2): ?>
                                 <?= $row2['theme'] . ' ' . $row2["model_name"] . ', ' ?>
-                                <?php endforeach ?>
-                            </td>
-                            <td> 
+                                <?php endforeach ?> <br>
                                 <form action = "includes/admin-contents.inc.php" method = "post">
                                     <select id="contents" name="contents">
                                         <?php foreach($toys as $row2): ?>
