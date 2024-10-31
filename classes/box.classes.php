@@ -64,29 +64,8 @@
             $stmt = null;
         } */
 
-
-
-        // dELETE BOX MODEL
+        // SET BOX MODEL
         // Update model data 
-
-        protected function unsetBoxModel($bmid) {
-            // PREPARE SQL STATEMENT
-            // Update 
-            $sql = 'INSERT INTO BoxModels (price, name) VALUES (?, ?);';
-            $stmt = $this->connect()->prepare($sql);
-
-            // ERROR HANDLING
-
-            // If statement fails to execute... ERROR
-            if(!$stmt->execute(array($bmid))) {
-                $stmt = null;
-                header("location: ../admin.php?error=stmtfailed");
-                exit();
-            }
-
-            $stmt = null;
-        }
-
 
         protected function setBoxModel($name, $price) {
             // PREPARE SQL STATEMENT
@@ -108,6 +87,28 @@
             $stmt = null;
         }
 
+
+        // dELETE BOX MODEL
+        // Update model data 
+
+        protected function unsetBoxModel($bmid) {
+            // PREPARE SQL STATEMENT
+            // Update 
+            $sql = 'DELETE FROM BoxModels WHERE boxmodel_id = ?';
+            $stmt = $this->connect()->prepare($sql);
+
+            // ERROR HANDLING
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($bmid))) {
+                $stmt = null;
+                header("location: ../admin.php?error=stmtfailed");
+                exit();
+            }
+
+            $stmt = null;
+        }
+
         // GET BOX CONTENTS
 
         // GET BOX CONTENT INFO
@@ -116,8 +117,7 @@
         protected function getBoxContent($bmid) {
             // PREPARE SQL STATEMENT
             // Select all user profile data
-            //$sql = 'SELECT * FROM BoxContents WHERE boxmodel_id = ?;';
-            $sql = 'DELETE FROM BoxContents WHERE boxmodel_id = ?';
+            $sql = 'SELECT m.* FROM Models AS m JOIN BoxContents AS b ON m.model_id = b.toymodel_id WHERE b.boxmodel_id = ?';
             $stmt = $this->connect()->prepare($sql);
 
             // ERROR HANDLING
