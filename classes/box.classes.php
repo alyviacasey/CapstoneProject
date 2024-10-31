@@ -154,7 +154,7 @@
         protected function setBoxContent($bid, $tid) {
             // PREPARE SQL STATEMENT
             // Update 
-            $sql = 'INSERT INTO BoxModels (boxmodel_id, toymodel_id) VALUES (?, ?);';
+            $sql = 'INSERT INTO BoxContents (boxmodel_id, toymodel_id) VALUES (?, ?);';
             $stmt = $this->connect()->prepare($sql);
 
             // ERROR HANDLING
@@ -178,7 +178,7 @@
         protected function unsetBoxContent($bid, $tid) {
             // PREPARE SQL STATEMENT
             // Update 
-            $sql = 'DELETE FROM BoxModels WHERE boxmodel_id = ? AND toymodel_id = ?;';
+            $sql = 'DELETE FROM BoxContents WHERE boxmodel_id = ? AND toymodel_id = ?;';
             $stmt = $this->connect()->prepare($sql);
 
             // ERROR HANDLING
