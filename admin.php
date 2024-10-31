@@ -100,7 +100,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Contents</th>
-                        <th> <th>
+                        <th> </th>
                         </tr>
 
                         <?php foreach($boxes as $row): ?>
@@ -122,8 +122,8 @@
                                             <option value="<?=$row2['model_id']?>"><?= $row2['theme'] . ' ' . $row2['model_name'] ?></option>
                                             <?php endforeach ?>
                                     </select>
-                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>">
-                                    <button type = "submit" name = "add">ADD</button> <button type = "submit" name = "remove">REMOVE</button>
+                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> <br>
+                                    <button type = "submit" name = "set">ADD / REMOVE</button>
                                 </form>
                             </td>
                         </tr>

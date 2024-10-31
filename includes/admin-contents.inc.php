@@ -15,11 +15,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $contents = new ContentContr($boxID, $toyID);
 
 
-    if(isset($_POST['add'])) {
+    /*if(isset($_POST['add'])) {
         $contents->addContents();
 
     }
     else if(isset($_POST['remove'])) {
+        $contents->removeContents();
+    }*/
+
+
+    if($contents->matchContents() == false){
+        $contents->addContents();
+    }
+    else if($contents->matchContents() == true){
         $contents->removeContents();
     }
 

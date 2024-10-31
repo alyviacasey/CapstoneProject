@@ -31,4 +31,8 @@ class ContentContr extends Box {
         // Create new user
         $this->unsetBoxContent($this->bmid, $this->tmid);
     }
+
+    public function matchContents(){
+        $this->getContentMatch($this->bmid, $this->tmid);
+    }
 }

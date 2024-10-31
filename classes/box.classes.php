@@ -124,6 +124,36 @@
         }
 
 
+        // SEE IF TOY IS ALREADY IN BOXC ONTENTS
+
+        // GET BOX CONTENT INFO
+        // Returns true or false
+
+        protected function getContentMatch($bmid, $tmid) {
+            // PREPARE SQL STATEMENT
+            // Select all user profile data
+            $sql = 'SELECT * FROM BoxContents WHERE toymodel_id = ? AND boxmodel_id = ?';
+            $stmt = $this->connect()->prepare($sql);
+
+            // ERROR HANDLING
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($tmid, $bmid))) {
+                $stmt = null;
+                header("location: ../admin.php?error=stmtfailed");
+                exit();
+            }
+
+            if($stmt->rowCount() == 0) {
+                return false;
+            }
+            else {
+                return true;
+            }
+
+        }
+
+
 
         /* // UPDATE MODEL
         // Update model data 
