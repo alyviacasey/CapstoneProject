@@ -128,6 +128,13 @@
                 header("location: ../admin.php?error=stmtfailed");
                 exit();
             }
+
+            // NO ERRORS
+
+            // Fetch all the data from the query as an associative array
+            $modelData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $modelData;
         }
 
 
