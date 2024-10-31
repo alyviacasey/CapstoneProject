@@ -34,5 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $delete = new BoxView();
         $delete->deleteBoxModel($boxID);
+
+        header("location: ../admin.php?error=none");
     }
 }
