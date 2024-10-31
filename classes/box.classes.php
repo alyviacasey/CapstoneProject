@@ -94,7 +94,7 @@
         protected function unsetBoxModel($bmid) {
             // PREPARE SQL STATEMENT
             // Update 
-            $sql = 'DELETE FROM BoxModels WHERE boxmodel_id = ?';
+            $sql = 'DELETE FROM BoxModels WHERE model_id = ?';
             $stmt = $this->connect()->prepare($sql);
 
             // ERROR HANDLING
