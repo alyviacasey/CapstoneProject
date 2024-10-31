@@ -33,6 +33,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $boxID = htmlspecialchars($_POST["boxid"], ENT_QUOTES, 'UTF-8');
 
         $delete = new BoxView();
-        $delete->deleteBoxModel($bmid);
+        $delete->deleteBoxModel($boxID);
     }
 }
