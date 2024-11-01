@@ -130,7 +130,7 @@
                                 <form action = "includes/admin-box.inc.php" method = "post" enctype="multipart/form-data">
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> 
                                     <label for = "file" class = "custom-file">
-                                        <input type="file" name="boxfile<?= $row['model_id'] ?>" id="file">
+                                        <input type="file" name="boxfile<?= $row['model_id'] ?>">
                                         <i class="fa fa-cloud-upload"></i> Upload Image
                                     </label> <br> <br>
                                     <button type = "submit" name = "boximage">SAVE</button>
@@ -170,7 +170,7 @@
                                 <form action = "includes/admin-model.inc.php" method = "post" enctype="multipart/form-data">
                                     <input type = "hidden" name = "toyid" value = "<?= $row['model_id'] ?>"> 
                                     <label for = "file" class = "custom-file">
-                                        <input type="file" name="toyfile<?= $row['model_id'] ?>" id="file">
+                                        <input type="file" name="toyfile<?= $row['model_id'] ?>">
                                         <i class="fa fa-cloud-upload"></i> Upload Image
                                     </label> <br> <br>
                                     <button type = "submit" name = "toyimage">SAVE</button>
