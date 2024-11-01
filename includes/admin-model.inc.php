@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include "../classes/model-view.classes.php";
 
 
-    if(isset($_POST['submit'])) {
+    if(isset($_POST['create'])) {
         // SET VARIABLES from form input
         $theme = htmlspecialchars($_POST["theme"], ENT_QUOTES, 'UTF-8');
         $name = htmlspecialchars($_POST["model"], ENT_QUOTES, 'UTF-8');

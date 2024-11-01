@@ -69,7 +69,7 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <br>
-                        <button type = "create" name = "create">SUBMIT</button>
+                        <button type = "submit" name = "create">SUBMIT</button>
                     </form>
                 </div>
                 <div class = "admin-form">
@@ -118,7 +118,7 @@
                                 <br> <br>
                                 <form action = "includes/admin-contents.inc.php" method = "post">
                                     <select id="contents" name="contents">
-                                        <?php foreach($toys as $row2): ?>
+                                        <?php foreach ($toys as $row2): ?>
                                             <option value="<?=$row2['model_id']?>"><?= $row2['theme'] . ' ' . $row2['model_name'] ?></option>
                                             <?php endforeach ?>
                                     </select> 
