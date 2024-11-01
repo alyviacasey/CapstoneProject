@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     else if(isset($_POST['toyimage'])) {
 
-        $toyID = $_POST["toyid"];
+        $toyID = htmlspecialchars($_POST["toyid"]);
         $file = $_FILES['toyfile'.$toyID];
 
         // Check for file upload errors
