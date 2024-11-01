@@ -175,7 +175,7 @@
             $fileExt = explode('.', $fileName);
             $fileActualExt = strtolower(end($fileExt));
 
-            $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+            $allowed = array('jpg', 'jpeg', 'png');
 
             if (in_array($fileActualExt, $allowed)) {
                 if ($fileError === 0) {

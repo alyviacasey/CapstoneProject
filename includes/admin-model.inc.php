@@ -3,7 +3,6 @@
 // If the file was accessed with the submit button...
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    
 
     // INSTANTIATE MODEL CONTROLLER ( create new model )
 
