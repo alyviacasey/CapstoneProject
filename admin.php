@@ -127,7 +127,7 @@
                                 </form>
                             </td>
                             <td>
-                                <form action = "includes/admin-box.inc.php" method = "post"  enctype="multipart/form-data">
+                                <form action = "includes/admin-box.inc.php" method = "post" enctype="multipart/form-data">
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> 
                                     <label for = "file" class = "custom-file">
                                         <input type="file" name="file" id="file">
@@ -167,7 +167,7 @@
                             <td><?= $row['material']?></td>
                             <td><?= $row['rarity']?></td>
                             <td>
-                                <form action = "includes/admin-model.inc.php" method = "post"  enctype="multipart/form-data">
+                                <form action = "includes/admin-model.inc.php" method = "post" enctype="multipart/form-data">
                                     <input type = "hidden" name = "toyid" value = "<?= $row['model_id'] ?>"> 
                                     <label for = "file" class = "custom-file">
                                         <input type="file" name="file" id="file">

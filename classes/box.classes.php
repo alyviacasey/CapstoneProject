@@ -246,6 +246,8 @@
             // Fetch all the data from the query as an associative array
             $modelData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+            $stmt = null;
+
             return $modelData;
         }
 
