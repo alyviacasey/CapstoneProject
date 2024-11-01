@@ -138,7 +138,7 @@
                             </td>
                             <td> 
                                 <form action = "includes/admin-box.inc.php" method = "post">
-                                    <input type = "hidden" name = "boxids" value = "<?= htmlspecialchars($row['model_id']) ?>"> <br>
+                                    <input type = "hidden" name = "boxids" value = "<?= $row['model_id'] ?>"> <br>
                                     <button type = "submit" name = "delete">DELETE</button>
                                 </form>
                             </td>
@@ -168,7 +168,7 @@
                             <td><?= htmlspecialchars($row['rarity'])?></td>
                             <td>
                                 <form action = "includes/admin-model.inc.php" method = "post" enctype="multipart/form-data">
-                                    <input type = "hidden" name = "toyid" value = "<?= htmlspecialchars($row['model_id']) ?>"> 
+                                    <input type = "hidden" name = "toyid" value = "<?= $row['model_id'] ?>"> 
                                     <label for = "file" class = "custom-file">
                                         <input type="file" name="toyfile<?= $row['model_id'] ?>">
                                         <i class="fa fa-cloud-upload"></i> Upload Image
