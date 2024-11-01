@@ -20,6 +20,7 @@ class ModelContr extends Model {
         $this->rarity = $rarity;
     }
 
+    
     // CREATE MODEL
     // Create new toy model
 

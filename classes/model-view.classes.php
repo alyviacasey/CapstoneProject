@@ -17,5 +17,6 @@ class ModelView extends Model {
 
     public function editImg ($toyID, $file) {
         $this->setImg($toyID, $file);
-    }
+    } 
+    
 }

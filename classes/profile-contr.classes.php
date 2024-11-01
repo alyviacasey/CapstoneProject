@@ -54,6 +54,7 @@ class ProfileContr extends Profile {
     public function editIcon ($file) {
         $this->setIcon($this->uid, $file);
     }
+    
 
     // EMPTY INPUT
     // Check for empty / blank inputs in form
