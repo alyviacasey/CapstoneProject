@@ -135,7 +135,10 @@
                             <td>
                                 <form action = "includes/admin-box.inc.php" method = "post"  enctype="multipart/form-data">
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> 
-                                    <input type="file" name="file" id="file"> <br>
+                                    <label for = "file" class = "custom-file">
+                                        <input type="file" name="file" id="file">
+                                        <i class="fa fa-cloud-upload"></i> Upload
+                                    </label> <br>
                                     <button type = "submit" name = "image">SAVE</button>
                                 </form>
                             </td>
