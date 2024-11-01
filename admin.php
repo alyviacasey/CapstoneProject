@@ -158,8 +158,6 @@
                         <th>Rarity</th>
                         <th> </th>
                         <th> </th>
-                        <th> </th>
-                        <th> </th>
                         </tr>
 
                         <?php foreach($toys as $row): ?>
