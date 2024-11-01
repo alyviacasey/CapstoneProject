@@ -31,7 +31,7 @@
         <section class = "store">
         <?php foreach($store as $box): ?>
             <div class = "store-box">
-                <img src = "<?php $boxView->fetchImg($box['model_id']); ?>" alt = "box image">
+                <img src = "<?php $boxView->fetchImg($box['model_id']); ?>" alt = "box image" style = "width: 100px; height:100px;">
                 <h4><?= $box['name']; ?></h4>
                 <p><?php echo $box['price']; ?></p>
                 <form action = "includes/store.inc.php" method = "post">
