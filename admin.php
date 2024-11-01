@@ -126,12 +126,6 @@
                                     <button type = "submit" name = "set">ADD / REMOVE</button>
                                 </form>
                             </td>
-                            <td> 
-                                <form action = "includes/admin-box.inc.php" method = "post">
-                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> <br>
-                                    <button type = "submit" name = "delete">DELETE</button>
-                                </form>
-                            </td>
                             <td>
                                 <form action = "includes/admin-box.inc.php" method = "post"  enctype="multipart/form-data">
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> 
@@ -140,6 +134,12 @@
                                         <i class="fa fa-cloud-upload"></i> Upload Image
                                     </label> <br> <br>
                                     <button type = "submit" name = "image">SAVE</button>
+                                </form>
+                            </td>
+                            <td> 
+                                <form action = "includes/admin-box.inc.php" method = "post">
+                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> <br>
+                                    <button type = "submit" name = "delete">DELETE</button>
                                 </form>
                             </td>
                         </tr>
