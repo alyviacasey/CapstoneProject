@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // If the file was accessed with the submit button...
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // SET VARIABLES from form input
