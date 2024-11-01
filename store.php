@@ -48,7 +48,7 @@
         ?>
             <h2>Admin</h2> <br>
             <form action = "includes/admin-store.inc.php" method = "post">
-                <select id="box" name="box">
+                <select id="boxid" name="boxid">
                     <?php foreach ($allBoxes as $row): ?>
                             <option value="<?=htmlspecialchars($row['model_id'])?>"><?= htmlspecialchars($row['name']) ?></option>
                             <?php endforeach ?>
