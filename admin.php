@@ -129,8 +129,8 @@
                             <td>
                                 <form action = "includes/admin-box.inc.php" method = "post" enctype="multipart/form-data">
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> 
-                                    <label for = "file" class = "custom-file">
-                                        <input type="file" name="file" />
+                                    <label for = "file_<?= htmlspecialchars($row['model_id']) ?>" class = "custom-file">
+                                        <input type="file" name="file" id ="file_<?= htmlspecialchars($row['model_id']) ?>" />
                                         <i class="fa fa-cloud-upload"></i> Upload Image
                                     </label> <br> <br>
                                     <button type = "submit" name = "boximage">SAVE</button>
@@ -169,8 +169,8 @@
                             <td>
                                 <form action = "includes/admin-model.inc.php" method = "post" enctype="multipart/form-data">
                                     <input type = "hidden" name = "toyid" value = "<?= $row['model_id'] ?>"> 
-                                    <label for = "file" class = "custom-file">
-                                        <input type="file" name="file" />
+                                    <label for = "file_<?= htmlspecialchars($row['model_id']) ?>" class = "custom-file">
+                                        <input type="file" name="file" id ="file_<?= htmlspecialchars($row['model_id']) ?>"/>
                                         <i class="fa fa-cloud-upload"></i> Upload Image
                                     </label> <br> <br>
                                     <button type = "submit" name = "toyimage">SAVE</button>
