@@ -10,6 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include "../classes/dbh.classes.php";
     include "../classes/model.classes.php";
     include "../classes/model-contr.classes.php";
+    include "../classes/model-view.classes.php";
 
     if(isset($_POST['submit'])) {
         // SET VARIABLES from form input
