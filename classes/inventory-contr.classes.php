@@ -47,10 +47,8 @@ class InventoryContr extends Inventory {
 
     }
 
-    // GET GIFT BOX
-    // Give user a gift box
 
-    public function getBox($bid) { 
+    public function purchaseBox($bid, $price) { 
 
         //ERROR HANDLING
 
@@ -62,7 +60,16 @@ class InventoryContr extends Inventory {
         // NO ERRORS
         // Set box
 
-        $this->setBox($this->uid, $bid);
+        $inventory = $this->getInventory($this->uid);
+
+        if ($inventory['balance'] < $price) {
+            header("location: ../index.php?error=insufficientfunds");
+            exit();
+        }
+        else {
+            $this->updateBalance($inventory['balance'] - $price, $this->uid);
+            $this->setBox($this->uid, $bid);
+        }
     }
 
 

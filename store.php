@@ -14,11 +14,34 @@
 </head>
 
 <body>
-    <?php include_once "header.php"; ?>
+    <?php include_once "header.php";  
+    
+    include "classes/dbh.classes.php";
+    include "classes/box.classes.php";
+    include "classes/box-view.classes.php";
+
+    $boxView = new BoxView();
+
+    $allBoxes = $boxView->fetchAllBoxModels(); 
+    $store = $boxView->fetchStore();
+    ?>
 
     <div class = "wrapper">
         <h3>Store</h3>
-        <p>You will be able to purchase gift boxes that when opened, give the user a toy.</p>
+        <section class = "store">
+        <?php foreach($store as $box): ?>
+            <div class = "store-box">
+                <!-- <img src = "<?php echo $box['boximg']; ?>" alt = "box image"> -->
+                <h4><?= $box['model_name']; ?></h4>
+                <p><?php echo $box['price']; ?></p>
+                <form action = "includes/store.inc.php" method = "post">
+                    <input type = "hidden" name = "boxid" value = "<?= $box['model_id']; ?>">
+                    <input type = "hidden" name = "price" value = "<?= $box['price']; ?>">
+                    <button type = "submit" name = "purchase">PURCHASE</button>
+                </form>
+            </div>
+        <?php endforeach; ?>
+        </section>
     </div>
 </body>
 </html>

@@ -137,6 +137,76 @@
             return $modelData;
         }
 
+        // GET ALL BOXES IN STORE
+
+        protected function getStore() {
+            // PREPARE SQL STATEMENT
+            $sql = 'SELECT * FROM BoxModels WHERE in_store = 1';
+            $stmt = $this->connect()->prepare($sql);
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute()) {
+                $stmt = null;
+                header("location: ../store.php?error=stmtfailed");
+                exit();
+            }
+
+            // Fetch all the data from the query as an associative array
+            $modelData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $modelData;
+        }
+
+        // CHECK IF BOX IS IN STORE BY ID
+
+        protected function checkStore($bmid) {
+            // PREPARE SQL STATEMENT
+            $sql = 'SELECT * FROM BoxModels WHERE model_id = ? AND in_store = 1';
+            $stmt = $this->connect()->prepare($sql);
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($bmid))) {
+                $stmt = null;
+                header("location: ../store.php?error=stmtfailed");
+                exit();
+            }
+
+            if($stmt->rowCount() == 0) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        // SET BOX IN STORE
+        protected function setStore($bmid) {
+            // PREPARE SQL STATEMENT
+            $sql = 'UPDATE BoxModels SET in_store = 1 WHERE model_id = ?';
+            $stmt = $this->connect()->prepare($sql);
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($bmid))) {
+                $stmt = null;
+                header("location: ../store.php?error=stmtfailed");
+                exit();
+            }
+        }
+
+        // UNSET BOX IN STORE
+        protected function unsetStore($bmid) {
+            // PREPARE SQL STATEMENT
+            $sql = 'UPDATE BoxModels SET in_store = 0 WHERE model_id = ?';
+            $stmt = $this->connect()->prepare($sql);
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($bmid))) {
+                $stmt = null;
+                header("location: ../store.php?error=stmtfailed");
+                exit();
+            }
+        }
+
 
         // SEE IF TOY IS ALREADY IN BOXC ONTENTS
 

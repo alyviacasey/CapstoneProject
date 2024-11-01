@@ -23,4 +23,21 @@ class BoxView extends Box {
     public function editImg ($boxID, $file) {
         $this->setImg($boxID, $file);
     }
+
+    public function fetchStore () {
+        $modelInfo = $this->getStore();
+        return $modelInfo;
+    }
+
+    public function inStore($boxID){
+        return $this->checkStore($boxID);
+    }
+
+    public function addToStore($boxID){
+        $this->setStore($boxID);
+    }
+
+    public function removeFromStore($boxID){
+        $this->unsetStore($boxID);
+    }
 }
