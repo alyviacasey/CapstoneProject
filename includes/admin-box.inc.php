@@ -22,13 +22,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             exit();
         }
 
+        $create = new BoxContr($name, $price);
+
         // Create new box model
 
-        $create->createBoxModel($name, $price);
-
-        // Running error handlers and user signup
-
-        $create->createModel($name, $price);
+        $create->createModel();
 
         //$mid = $create->fetchUserID(($usn));
 
