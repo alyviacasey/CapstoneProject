@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     else if(isset($_POST['boximage'])) {
 
         $boxID = $_POST["boxid"];
-        $file = $_FILES['boxfile'.$boxID];
+        $file = $_FILES['file'];
 
         if ($file['error'] === UPLOAD_ERR_OK) {
             $edit = new BoxView();
