@@ -22,5 +22,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Going back to front page
-    header("location: ../admin.php?error=none");
+    header("location: ../store.php?error=none");
 }

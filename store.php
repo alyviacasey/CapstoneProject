@@ -41,7 +41,7 @@
                 </form>
             </div>
         <?php endforeach; ?>
-        </section>
+        </section> <br> <br>
         <?php
             if($_SESSION["admin"] == 1)
             {
