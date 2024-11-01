@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             header("location: ../admin.php?error=none");
         } else {
             // Handle file upload error
-            header("location: ../admin.php?error=upload_failed");
+            header("location: ../admin.php?error=upload_failed".$_FILES['error']);
         }
     }
 }
