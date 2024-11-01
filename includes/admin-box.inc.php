@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             header("location: ../admin.php?error=invalidprice");
             exit();
         }
-        
+
         // Create new box model
 
         $create->createBoxModel($name, $price);
@@ -48,9 +48,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $boxID = htmlspecialchars($_POST["boxid"], ENT_QUOTES, 'UTF-8');
         $file = $_FILES['file'];
 
-        $edit = new BoxView();
-        $edit->editImg($boxID, $file);
-
-        header("location: ../admin.php?error=none");
+        if ($file['error'] === UPLOAD_ERR_OK) {
+            $edit = new BoxView();
+            $edit->editImg($boxID, $file);
+            header("location: ../admin.php?error=none");
+        } else {
+            // Handle file upload error
+            header("location: ../admin.php?error=upload_failed");
+        }
     }
 }
