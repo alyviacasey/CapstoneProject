@@ -109,7 +109,7 @@
                             <td><?= $row['model_id'] ?></td>
                             <td><?= $row['name'] ?></td>
                             <td><?= $row['price']?></td>
-                            <td>
+                            <td style = "width: 10em">
                                 <?php $contents = $fullInventory->fetchContents($row['model_id']); 
                                 
                                 foreach($contents as $row2): ?>
@@ -138,7 +138,7 @@
                                     <label for = "file" class = "custom-file">
                                         <input type="file" name="file" id="file">
                                         <i class="fa fa-cloud-upload"></i> Upload Image
-                                    </label> <br>
+                                    </label> <br> <br>
                                     <button type = "submit" name = "image">SAVE</button>
                                 </form>
                             </td>
