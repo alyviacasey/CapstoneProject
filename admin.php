@@ -109,7 +109,7 @@
                             <td><?= $row['model_id'] ?></td>
                             <td><?= $row['name'] ?></td>
                             <td><?= $row['price']?></td>
-                            <td style = "width: 10em">
+                            <td style = "width: 10em;">
                                 <?php $contents = $fullInventory->fetchContents($row['model_id']); 
                                 
                                 foreach($contents as $row2): ?>
