@@ -27,7 +27,7 @@
     ?>
 
     <div class = "wrapper">
-        <h3>Store</h3>
+        <h2>Store</h2> <br>
         <section class = "store">
         <?php foreach($store as $box): ?>
             <div class = "store-box">
@@ -42,6 +42,20 @@
             </div>
         <?php endforeach; ?>
         </section>
+        <?php
+            if($_SESSION["admin"] == 1)
+            {
+        ?>
+            <h2>Admin</h2> <br>
+            <form action = "includes/admin-store.inc.php" method = "post">
+                <select id="box" name="box">
+                    <?php foreach ($allBoxes as $row): ?>
+                            <option value="<?=htmlspecialchars($row['model_id'])?>"><?= htmlspecialchars($row['name']) ?></option>
+                            <?php endforeach ?>
+                    </select> 
+                    <button type = "submit" name = "set">ADD / REMOVE</button>
+                    </form>
+        <?php } ?>
     </div>
 </body>
 </html>

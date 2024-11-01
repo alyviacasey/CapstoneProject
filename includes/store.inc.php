@@ -10,9 +10,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // INCLUDE CLASS FILES
 
     include "../classes/dbh.classes.php";
-    include "../classes/box.classes.php";
-    include "../classes/box-contr.classes.php";
-    include "../classes/box-view.classes.php";
     include "../classes/inventory.classes.php";
     include "../classes/inventory-contr.classes.php";
 
