@@ -24,6 +24,10 @@ class BoxView extends Box {
         $this->setImg($boxID, $file);
     }
 
+    public function fetchImg ($boxID) {
+        $this->getImg($boxID);
+    }
+
     public function fetchStore () {
         $modelInfo = $this->getStore();
         return $modelInfo;
