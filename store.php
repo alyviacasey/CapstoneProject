@@ -32,7 +32,7 @@
         <?php foreach($store as $box): ?>
             <div class = "store-box">
                 <!-- <img src = "<?php echo $box['boximg']; ?>" alt = "box image"> -->
-                <h4><?= $box['model_name']; ?></h4>
+                <h4><?= $box['name']; ?></h4>
                 <p><?php echo $box['price']; ?></p>
                 <form action = "includes/store.inc.php" method = "post">
                     <input type = "hidden" name = "boxid" value = "<?= $box['model_id']; ?>">
