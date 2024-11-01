@@ -2,11 +2,7 @@
 
 // If the file was accessed with the submit button...
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    // SET VARIABLES from form input
-    $theme = htmlspecialchars($_POST["theme"], ENT_QUOTES, 'UTF-8');
-    $name = htmlspecialchars($_POST["model"], ENT_QUOTES, 'UTF-8');
-    $material = htmlspecialchars($_POST["material"], ENT_QUOTES, 'UTF-8');
-    $rarity = htmlspecialchars($_POST["rarity"], ENT_QUOTES, 'UTF-8');
+
     
 
     // INSTANTIATE MODEL CONTROLLER ( create new model )
@@ -16,6 +12,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include "../classes/model-contr.classes.php";
 
     if(isset($_POST['submit'])) {
+        // SET VARIABLES from form input
+        $theme = htmlspecialchars($_POST["theme"], ENT_QUOTES, 'UTF-8');
+        $name = htmlspecialchars($_POST["model"], ENT_QUOTES, 'UTF-8');
+        $material = htmlspecialchars($_POST["material"], ENT_QUOTES, 'UTF-8');
+        $rarity = htmlspecialchars($_POST["rarity"], ENT_QUOTES, 'UTF-8');
+
         $create = new ModelContr($theme, $name, $material, $rarity);
 
         // Running error handlers and user signup
