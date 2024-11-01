@@ -160,7 +160,7 @@
                         <th> </th>
                         </tr>
 
-                        <?php foreach($toys as $row): ?>
+                        <?php foreach ($toys as $row): ?>
                             <tr>
                             <td><?= $row['model_id'] ?></td>
                             <td><?= $row['theme'] . ' ' . $row['model_name'] ?></td>
