@@ -183,7 +183,7 @@
                 if ($fileError === 0) {
                     if ($fileSize < 1000000) {
                         $fileNameNew = $tmid.".png";
-                        $fileDestination = '../images/giftboxes/'.$fileNameNew;
+                        $fileDestination = '../images/toys/'.$fileNameNew;
                         move_uploaded_file($fileTmpName, $fileDestination);
                     } else {
                         echo "Your file is too big!";
