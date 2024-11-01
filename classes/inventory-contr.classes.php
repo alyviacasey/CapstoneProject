@@ -62,12 +62,12 @@ class InventoryContr extends Inventory {
 
         $inventory = $this->getInventory($this->uid);
 
-        if ($inventory['balance'] < $price) {
+        if ($inventory[0]['balance'] < $price) {
             header("location: ../index.php?error=insufficientfunds");
             exit();
         }
         else {
-            $this->updateBalance($inventory['balance'] - $price, $this->uid);
+            $this->updateBalance($inventory[0]['balance'] - $price, $this->uid);
             $this->setBox($this->uid, $bid);
         }
     }
