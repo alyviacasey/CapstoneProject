@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // SET VARIABLES from form input
     
 
-    // INSTANTIATE CONTROLLER 
+    // INCLUDE CLASS FILES
 
     include "../classes/dbh.classes.php";
     include "../classes/box.classes.php";
@@ -17,8 +17,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $name = htmlspecialchars($_POST["theme"], ENT_QUOTES, 'UTF-8');
         $price = htmlspecialchars($_POST["price"], ENT_QUOTES, 'UTF-8');
+        if (!is_numeric($price) || $price < 0) {
+            header("location: ../admin.php?error=invalidprice");
+            exit();
+        }
+        
+        // Create new box model
 
-        $create = new BoxContr($name, $price);
+        $create->createBoxModel($name, $price);
 
         // Running error handlers and user signup
 
