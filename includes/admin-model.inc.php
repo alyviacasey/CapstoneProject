@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     else if(isset($_POST['toyimage'])) {
 
         $toyID = htmlspecialchars($_POST["toyid"], ENT_QUOTES, 'UTF-8');
-        $file = $_FILES['file'];
+        $file = $_FILES['toyfile'];
 
         // Check for file upload errors
         if ($file['error'] === UPLOAD_ERR_OK) {
