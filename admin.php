@@ -133,7 +133,7 @@
                                         <input type="file" name="file" id="file">
                                         <i class="fa fa-cloud-upload"></i> Upload Image
                                     </label> <br> <br>
-                                    <button type = "submit" name = "image">SAVE</button>
+                                    <button type = "submit" name = "boximage">SAVE</button>
                                 </form>
                             </td>
                             <td> 
@@ -173,7 +173,7 @@
                                         <input type="file" name="file" id="file">
                                         <i class="fa fa-cloud-upload"></i> Upload Image
                                     </label> <br> <br>
-                                    <button type = "submit" name = "image">SAVE</button>
+                                    <button type = "submit" name = "toyimage">SAVE</button>
                                 </form>
                             </td>
                             <td> 

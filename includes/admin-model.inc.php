@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         header("location: ../admin.php?error=none");
     }
-    else if(isset($_POST['image'])) {
+    else if(isset($_POST['toyimage'])) {
 
         $toyID = htmlspecialchars($_POST["toyid"], ENT_QUOTES, 'UTF-8');
         $file = $_FILES['file'];
