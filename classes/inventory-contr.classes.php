@@ -68,7 +68,7 @@ class InventoryContr extends Inventory {
         }
         else {
             $this->updateBalance($inventory[0]['balance'] - $price, $this->uid);
-            $this->setBox($this->uid, $bid);
+            $this->setBox($bid, $this->uid);
         }
     }
 
