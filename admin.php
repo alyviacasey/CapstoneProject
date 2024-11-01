@@ -156,6 +156,8 @@
                         <th>Name</th>
                         <th>Material</th>
                         <th>Rarity</th>
+                        <th> </th>
+                        <th> </th>
                         </tr>
 
                         <?php foreach($toys as $row): ?>
@@ -164,7 +166,23 @@
                             <td><?= $row['theme'] . ' ' . $row['model_name'] ?></td>
                             <td><?= $row['material']?></td>
                             <td><?= $row['rarity']?></td>
-                        </tr>
+                            <td>
+                                <form action = "includes/admin-toy.inc.php" method = "post"  enctype="multipart/form-data">
+                                    <input type = "hidden" name = "toyid" value = "<?= $row['model_id'] ?>"> 
+                                    <label for = "file" class = "custom-file">
+                                        <input type="file" name="file" id="file">
+                                        <i class="fa fa-cloud-upload"></i> Upload Image
+                                    </label> <br> <br>
+                                    <button type = "submit" name = "image">SAVE</button>
+                                </form>
+                            </td>
+                            <td> 
+                                <form action = "includes/admin-model.inc.php" method = "post">
+                                    <input type = "hidden" name = "toyid" value = "<?= $row['model_id'] ?>"> <br>
+                                    <button type = "submit" name = "delete">DELETE</button>
+                                </form>
+                            </td>
+                            </tr>
                         <?php endforeach ?>
                     </table>      
                 </div>
