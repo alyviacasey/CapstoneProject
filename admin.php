@@ -114,13 +114,14 @@
                                 
                                 foreach($contents as $row2): ?>
                                 <?= $row2['theme'] . ' ' . $row2["model_name"] . ', ' ?>
-                                <?php endforeach ?> <br>
+                                <?php endforeach ?> 
+                                <br> <br>
                                 <form action = "includes/admin-contents.inc.php" method = "post">
                                     <select id="contents" name="contents">
                                         <?php foreach($toys as $row2): ?>
                                             <option value="<?=$row2['model_id']?>"><?= $row2['theme'] . ' ' . $row2['model_name'] ?></option>
                                             <?php endforeach ?>
-                                    </select> <br> <br>
+                                    </select> 
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>">
                                     <button type = "submit" name = "set">ADD / REMOVE</button>
                                 </form>
