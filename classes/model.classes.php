@@ -144,6 +144,8 @@
             // Fetch all the data from the query as an associative array
             $modelData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+            $stmt = null;
+
             return $modelData;
         }
 
@@ -181,7 +183,7 @@
                 if ($fileError === 0) {
                     if ($fileSize < 1000000) {
                         $fileNameNew = $tmid.".png";
-                        $fileDestination = '../images/toys/'.$fileNameNew;
+                        $fileDestination = '../images/giftboxes/'.$fileNameNew;
                         move_uploaded_file($fileTmpName, $fileDestination);
                     } else {
                         echo "Your file is too big!";
