@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         header("location: ../admin.php?error=none");
     }
     else if(isset($_POST['delete'])) {
-        $toyID = htmlspecialchars($_POST["toyid"], ENT_QUOTES, 'UTF-8');
+        $toyID = $_POST["toyid"];
 
         $delete = new ModelView();
         $delete->deleteModel($toyID);
@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     else if(isset($_POST['toyimage'])) {
 
-        $toyID = htmlspecialchars($_POST["toyid"], ENT_QUOTES, 'UTF-8');
+        $toyID = $_POST["toyid"];
         $file = $_FILES['toyfile'.$toyID];
 
         // Check for file upload errors

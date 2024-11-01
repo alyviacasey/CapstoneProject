@@ -106,20 +106,20 @@
 
                         <?php foreach($boxes as $row): ?>
                             <tr>
-                            <td><?= $row['model_id'] ?></td>
-                            <td><?= $row['name'] ?></td>
-                            <td><?= $row['price']?></td>
+                            <td><?= htmlspecialchars($row['model_id']) ?></td>
+                            <td><?= htmlspecialchars($row['name']) ?></td>
+                            <td><?= htmlspecialchars($row['price']) ?></td>
                             <td style = "width: 10em;">
                                 <?php $contents = $fullInventory->fetchContents($row['model_id']); 
                                 
                                 foreach($contents as $row2): ?>
-                                <?= $row2['theme'] . ' ' . $row2["model_name"] . ', ' ?>
+                                <?= htmlspecialchars($row2['theme']) . ' ' . htmlspecialchars($row2["model_name"]) . ', ' ?>
                                 <?php endforeach ?> 
                                 <br> <br>
                                 <form action = "includes/admin-contents.inc.php" method = "post">
                                     <select id="contents" name="contents">
                                         <?php foreach ($toys as $row2): ?>
-                                            <option value="<?=$row2['model_id']?>"><?= $row2['theme'] . ' ' . $row2['model_name'] ?></option>
+                                            <option value="<?=htmlspecialchars($row2['model_id'])?>"><?= htmlspecialchars($row2['theme']) . ' ' . htmlspecialchars($row2['model_name']) ?></option>
                                             <?php endforeach ?>
                                     </select> 
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>">
@@ -138,7 +138,7 @@
                             </td>
                             <td> 
                                 <form action = "includes/admin-box.inc.php" method = "post">
-                                    <input type = "hidden" name = "boxids" value = "<?= $row['model_id'] ?>"> <br>
+                                    <input type = "hidden" name = "boxids" value = "<?= htmlspecialchars($row['model_id']) ?>"> <br>
                                     <button type = "submit" name = "delete">DELETE</button>
                                 </form>
                             </td>
@@ -162,13 +162,13 @@
 
                         <?php foreach ($toys as $row): ?>
                             <tr>
-                            <td><?= $row['model_id'] ?></td>
-                            <td><?= $row['theme'] . ' ' . $row['model_name'] ?></td>
-                            <td><?= $row['material']?></td>
-                            <td><?= $row['rarity']?></td>
+                            <td><?= htmlspecialchars($row['model_id']) ?></td>
+                            <td><?= htmlspecialchars($row['theme']) . ' ' . htmlspecialchars($row['model_name']) ?></td>
+                            <td><?= htmlspecialchars($row['material'])?></td>
+                            <td><?= htmlspecialchars($row['rarity'])?></td>
                             <td>
                                 <form action = "includes/admin-model.inc.php" method = "post" enctype="multipart/form-data">
-                                    <input type = "hidden" name = "toyid" value = "<?= $row['model_id'] ?>"> 
+                                    <input type = "hidden" name = "toyid" value = "<?= htmlspecialchars($row['model_id']) ?>"> 
                                     <label for = "file" class = "custom-file">
                                         <input type="file" name="toyfile<?= $row['model_id'] ?>">
                                         <i class="fa fa-cloud-upload"></i> Upload Image
