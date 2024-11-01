@@ -11,4 +11,11 @@ class ModelView extends Model {
         return $modelInfo;
     }
 
+    public function deleteModel($toyID){
+        $this->unsetModel($toyID);
+    }
+
+    public function editImg ($toyID, $file) {
+        $this->setImg($toyID, $file);
+    }
 }

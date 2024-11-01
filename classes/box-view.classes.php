@@ -11,13 +11,13 @@ class BoxView extends Box {
         return $modelInfo;
     }
 
-    public function fetchContents($bmid){
-        $contents = $this->getBoxContent($bmid);
+    public function fetchContents($boxID){
+        $contents = $this->getBoxContent($boxID);
         return $contents;
     }
 
-    public function deleteBoxModel($bmid){
-        $this->unsetBoxModel($bmid);
+    public function deleteBoxModel($boxID){
+        $this->unsetBoxModel($boxID);
     }
 
     public function editImg ($boxID, $file) {

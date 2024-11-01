@@ -90,6 +90,28 @@
         }
 
 
+        // dELETE TOY MODEL
+        // Update model data 
+
+        protected function unsetModel($tmid) {
+            // PREPARE SQL STATEMENT
+            // Update 
+            $sql = 'DELETE FROM Models WHERE model_id = ?';
+            $stmt = $this->connect()->prepare($sql);
+
+            // ERROR HANDLING
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($tmid))) {
+                $stmt = null;
+                header("location: ../admin.php?error=stmtfailed");
+                exit();
+            }
+
+            $stmt = null;
+        }
+
+
         // GET ALL MODELS
 
         // GET MODEL INFO
@@ -125,4 +147,50 @@
             return $modelData;
         }
 
+
+        // GET IMAGE
+        // Returns image by ID
+
+        protected function getImg($tmid){
+
+            $path = '../images/toys'; 
+            if(count(glob('images/toys/'.$tmid.'.png')) > 0){
+                echo $path.'/'.$tmid.'.png';
+            }
+            else {
+                echo $path.'/default.png';
+            }
+        }
+
+
+        // SET IMAGE
+
+        protected function setImg($tmid, $file){
+            $fileName = $file['name'];
+            $fileTmpName = $file['tmp_name'];
+            $fileSize = $file['size'];
+            $fileError = $file['error'];
+            $fileType = $file['type'];
+
+            $fileExt = explode('.', $fileName);
+            $fileActualExt = strtolower(end($fileExt));
+
+            $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+
+            if (in_array($fileActualExt, $allowed)) {
+                if ($fileError === 0) {
+                    if ($fileSize < 1000000) {
+                        $fileNameNew = $tmid.".png";
+                        $fileDestination = '../images/toys/'.$fileNameNew;
+                        move_uploaded_file($fileTmpName, $fileDestination);
+                    } else {
+                        echo "Your file is too big!";
+                    }
+                } else {
+                    echo "There was an error uploading your file!";
+                }
+            } else {
+                echo "You cannot upload files of this type!";
+            } 
+        }
     }

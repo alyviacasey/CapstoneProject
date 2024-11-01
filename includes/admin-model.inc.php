@@ -15,14 +15,34 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include "../classes/model.classes.php";
     include "../classes/model-contr.classes.php";
 
-    $create = new ModelContr($theme, $name, $material, $rarity);
+    if(isset($_POST['submit'])) {
+        $create = new ModelContr($theme, $name, $material, $rarity);
 
-    // Running error handlers and user signup
+        // Running error handlers and user signup
 
-    $create->createModel();
+        $create->createModel();
 
-    //$mid = $create->fetchUserID(($usn));
+        //$mid = $create->fetchUserID(($usn));
 
-    // Going back to front page
-    header("location: ../admin.php?error=none");
+        // Going back to front page
+        header("location: ../admin.php?error=none");
+    }
+    else if(isset($_POST['delete'])) {
+        $toyID = htmlspecialchars($_POST["toyid"], ENT_QUOTES, 'UTF-8');
+
+        $delete = new ModelView();
+        $delete->deleteModel($toyID);
+
+        header("location: ../admin.php?error=none");
+    }
+    else if(isset($_POST['image'])) {
+
+        $toyID = htmlspecialchars($_POST["toyid"], ENT_QUOTES, 'UTF-8');
+        $file = $_FILES['file'];
+
+        $edit = new ModelView();
+        $edit->editImg($toyID, $file);
+
+        header("location: ../admin.php?error=none");
+    }
 }

@@ -69,7 +69,7 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <br>
-                        <button type = "submit" name = "submit">SUBMIT</button>
+                        <button type = "create" name = "create">SUBMIT</button>
                     </form>
                 </div>
                 <div class = "admin-form">
@@ -167,7 +167,7 @@
                             <td><?= $row['material']?></td>
                             <td><?= $row['rarity']?></td>
                             <td>
-                                <form action = "includes/admin-toy.inc.php" method = "post"  enctype="multipart/form-data">
+                                <form action = "includes/admin-model.inc.php" method = "post"  enctype="multipart/form-data">
                                     <input type = "hidden" name = "toyid" value = "<?= $row['model_id'] ?>"> 
                                     <label for = "file" class = "custom-file">
                                         <input type="file" name="file" id="file">
