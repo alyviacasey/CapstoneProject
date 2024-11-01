@@ -29,7 +29,10 @@
             <br><br>
             <form action = "includes/profile.inc.php" method = "post"  enctype="multipart/form-data">
                 <h3>Icon</h3>
-                <input type="file" name="file" id="file">
+                <label for = "file" class = "custom-file">
+                    <input type="file" name="file" id="file">
+                    <i class="fa fa-cloud-upload"></i> Upload Image
+                </label> 
                 <br><br>
                 <h3>About</h3>
                 <textarea name = "about" rows="10" cols="50" placeholder = "Tell us about yourself!"> <?php $profile->fetchAbout($_SESSION["userid"]);?> </textarea>
