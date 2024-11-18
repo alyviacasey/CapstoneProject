@@ -128,7 +128,7 @@
                             </td>
                             <td>
                                 <form action = "includes/admin-box.inc.php" method = "post" enctype="multipart/form-data">
-                                    <img src = "<?php $boxView->fetchImg($row['model_id']); ?>" alt = "box image" style = "width: 100px; height:100px;"> <br> <br>
+                                    <img src = "<?php $boxView->fetchImg($row['model_id']); ?>" alt = "box image" style = "width: 100px; height:100px;"> <br> 
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> 
                                     <label for = "file_<?= htmlspecialchars($row['model_id']) ?>" class = "custom-file">
                                         <input type="file" name="file" id ="file_<?= htmlspecialchars($row['model_id']) ?>" />
@@ -169,7 +169,7 @@
                             <td><?= htmlspecialchars($row['rarity'])?></td>
                             <td>
                                 <form action = "includes/admin-model.inc.php" method = "post" enctype="multipart/form-data">
-                                    <img src = "<?php $toyView->fetchImg($row['model_id']); ?>" alt = "toy image" style = "width: 100px; height:100px;"> <br> <br>
+                                    <img src = "<?php $toyView->fetchImg($row['model_id']); ?>" alt = "toy image" style = "width: 100px; height:100px;"> <br> 
                                     <input type = "hidden" name = "toyid" value = "<?= $row['model_id'] ?>"> 
                                     <label for = "file_<?= htmlspecialchars($row['model_id']) ?>" class = "custom-file">
                                         <input type="file" name="file" id ="file_<?= htmlspecialchars($row['model_id']) ?>"/>
