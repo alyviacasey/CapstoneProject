@@ -128,12 +128,12 @@
                             </td>
                             <td>
                                 <form action = "includes/admin-box.inc.php" method = "post" enctype="multipart/form-data">
-                                    <img src = "<?php $boxView->fetchImg($row['model_id']); ?>" alt = "box image" style = "width: 100px; height:100px;">
+                                    <img src = "<?php $boxView->fetchImg($row['model_id']); ?>" alt = "box image" style = "width: 100px; height:100px;"> <br> <br>
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> 
                                     <label for = "file_<?= htmlspecialchars($row['model_id']) ?>" class = "custom-file">
                                         <input type="file" name="file" id ="file_<?= htmlspecialchars($row['model_id']) ?>" />
                                         <i class="fa fa-cloud-upload"></i> Upload Image
-                                    </label> <br> <br>
+                                    </label>
                                     <button type = "submit" name = "boximage">SAVE</button>
                                 </form>
                             </td>
@@ -169,12 +169,12 @@
                             <td><?= htmlspecialchars($row['rarity'])?></td>
                             <td>
                                 <form action = "includes/admin-model.inc.php" method = "post" enctype="multipart/form-data">
-                                    <img src = "<?php $toyView->fetchImg($row['model_id']); ?>" alt = "toy image" style = "width: 100px; height:100px;">
+                                    <img src = "<?php $toyView->fetchImg($row['model_id']); ?>" alt = "toy image" style = "width: 100px; height:100px;"> <br> <br>
                                     <input type = "hidden" name = "toyid" value = "<?= $row['model_id'] ?>"> 
                                     <label for = "file_<?= htmlspecialchars($row['model_id']) ?>" class = "custom-file">
                                         <input type="file" name="file" id ="file_<?= htmlspecialchars($row['model_id']) ?>"/>
                                         <i class="fa fa-cloud-upload"></i> Upload Image
-                                    </label> <br> <br>
+                                    </label>
                                     <button type = "submit" name = "toyimage">SAVE</button>
                                 </form>
                             </td>
