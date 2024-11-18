@@ -157,6 +157,10 @@ header {
     text-align: center;
 }
 
+.box-table img, .toy-table img {
+    width: 100px; height:100px;
+    margin: auto;
+}
 
 
 /* STAR RATING SYSTEM */
