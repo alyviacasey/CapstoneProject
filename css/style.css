@@ -154,6 +154,7 @@ header {
 
 .box-table table, .toy-table table {
     margin: auto;
+    text-align: center;
 }
 
 
