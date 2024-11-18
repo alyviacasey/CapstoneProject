@@ -130,8 +130,8 @@
                                 <form action = "includes/admin-box.inc.php" method = "post" enctype="multipart/form-data">
                                     <img src = "<?php $boxView->fetchImg($row['model_id']); ?>" alt = "box image"> <br> 
                                     <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> 
-                                    <label for = "file_<?= htmlspecialchars($row['model_id']) ?>" class = "custom-file">
-                                        <input type="file" name="file" id ="file_<?= htmlspecialchars($row['model_id']) ?>" />
+                                    <label for = "boxfile_<?= htmlspecialchars($row['model_id']) ?>" class = "custom-file">
+                                        <input type="file" name="file" id ="boxfile_<?= htmlspecialchars($row['model_id']) ?>" />
                                         <i class="fa fa-cloud-upload"></i> Upload
                                     </label>
                                     <button type = "submit" name = "boximage">SAVE</button>
@@ -171,8 +171,8 @@
                                 <form action = "includes/admin-model.inc.php" method = "post" enctype="multipart/form-data">
                                     <img src = "<?php $toyView->fetchImg($row['model_id']); ?>" alt = "toy image"> <br> 
                                     <input type = "hidden" name = "toyid" value = "<?= $row['model_id'] ?>"> 
-                                    <label for = "file_<?= htmlspecialchars($row['model_id']) ?>" class = "custom-file">
-                                        <input type="file" name="file" id ="file_<?= htmlspecialchars($row['model_id']) ?>"/>
+                                    <label for = "toyfile_<?= htmlspecialchars($row['model_id']) ?>" class = "custom-file">
+                                        <input type="file" name="file" id ="toyfile_<?= htmlspecialchars($row['model_id']) ?>"/>
                                         <i class="fa fa-cloud-upload"></i> Upload
                                     </label>
                                     <button type = "submit" name = "toyimage">SAVE</button>
