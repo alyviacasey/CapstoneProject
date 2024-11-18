@@ -6,6 +6,11 @@ class BoxView extends Box {
     // METHODS
 
     // FETCH BALANCE
+    public function fetchBoxModel($boxID) {
+        $modelInfo = $this->getBoxModel($boxID);
+        return $modelInfo;
+    }
+
     public function fetchAllBoxModels() {
         $modelInfo = $this->getAllBoxModels();
         return $modelInfo;

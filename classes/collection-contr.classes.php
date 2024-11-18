@@ -41,11 +41,11 @@ class CollectionContr extends Collection {
     // GET TOY
     // Give user a toy
 
-    public function getToy($tid, $name) { 
+    public function getToy($tmid, $name) { 
 
         //ERROR HANDLING
 
-        if($this->emptyInput($tid, $name) == false) {
+        if($this->emptyInput($tmid, $name) == false) {
             header("location: ../index.php?error=emptyinput");
             exit();
         }
@@ -53,7 +53,9 @@ class CollectionContr extends Collection {
         // NO ERRORS
         // Set box
 
-        $this->setToy($tid, $this->uid, $name);
+        $this->setToy($tmid, $this->uid, $name);
+
+        $stmt = null;
     }
 
 

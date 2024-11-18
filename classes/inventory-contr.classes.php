@@ -68,12 +68,28 @@ class InventoryContr extends Inventory {
         }
         else {
             $this->updateBalance($inventory[0]['balance'] - $price, $this->uid);
-            $this->setBox($bid, $this->uid);
+            $this->createBox($bid, $this->uid);
             header("location: ../store.php?error=none");
         }
     }
 
+    public function rollBox($bid) {
+        $bid = $this->getBox($bid);
 
+        do {
+            $rarity = $this->rollRarity(); 
+        } while (empty($this->matchRarity($bid['boxmodel_id'], $rarity)));
+        
+        $matches = $this->matchRarity($bid['boxmodel_id'], $rarity);
+
+        $model = array_rand($matches, 1);
+
+        return $model;
+    }
+
+    public function deleteBox($bid) {
+        $this->destroyBox($bid);
+    }
 
     // EMPTY INPUT
     // Check for empty / blank inputs in form

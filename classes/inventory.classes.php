@@ -87,7 +87,7 @@
         // SET GIFTBOX
         // Add giftbox with to user inventory
 
-        protected function setBox($bid, $uid) {
+        protected function createBox($bid, $uid) {
             // PREPARE SQL STATEMENT
             // Update 
             $sql = 'INSERT INTO Boxes (user_id, boxmodel_id) VALUES (?, ?);';
@@ -103,6 +103,47 @@
             }
 
             $stmt = null;
+        }
+
+        // SET GIFTBOX
+        // Add giftbox with to user inventory
+
+        protected function destroyBox($bid) {
+            // PREPARE SQL STATEMENT
+            // Update 
+            $sql = 'DELETE FROM Boxes WHERE box_id = ?';
+            $stmt = $this->connect()->prepare($sql);
+
+            // ERROR HANDLING
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($bid))) {
+                $stmt = null;
+                header("location: ../index.php?error=stmtfailed");
+                exit();
+            }
+
+            $stmt = null;
+        }
+
+        protected function getBox($bid) {
+            // PREPARE SQL STATEMENT
+            // Select all user inventory data
+            $sql = 'SELECT b.*, m.* FROM Boxes AS b JOIN BoxModels AS m ON b.boxmodel_id = m.model_id WHERE b.user_id = ?';
+            $stmt = $this->connect()->prepare($sql);
+
+            // ERROR HANDLING
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($bid))) {
+                $stmt = null;
+                header("location: ../inventory.php?error=stmtfailed");
+                exit();
+            }
+
+            $box = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $box;
         }
 
         // GET GIFTBOXES
@@ -139,4 +180,42 @@
 
             return $inventory;
         }
+
+        protected function rollRarity() {
+
+            $rand = rand(1, 100); // 1-100
+    
+            if ($rand <= 35) { // 35%
+                $rarity = 1;
+            } else if ($rand <= 60) { // 25%
+                $rarity = 2;
+            } else if ($rand <= 80) { // 20%
+                $rarity = 3;
+            } else if ($rand <= 92) { // 12%
+                $rarity = 4;
+            } else {  // 8%
+                $rarity = 5;
+            }
+    
+            return $rarity;
+        }
+
+        protected function matchRarity($bmid, $rarity) {
+            $sql =  'SELECT m.model_id FROM Models AS m JOIN BoxContents AS c ON c.toymodel_id = m.model_id WHERE c.boxmodel_id = ? AND m.rarity = ?';
+            $stmt = $this->connect()->prepare($sql);
+
+            // ERROR HANDLING
+
+            // If statement fails to execute... ERROR
+            if(!$stmt->execute(array($bmid, $rarity))) {
+                $stmt = null;
+                header("location: ../inventory.php?error=stmtfailed");
+                exit();
+            }
+
+            $boxes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $boxes;
+        }
+
     }

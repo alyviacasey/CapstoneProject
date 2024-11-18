@@ -20,7 +20,8 @@
     include "classes/inventory.classes.php";
     include "classes/inventory-view.classes.php";
 
-    $inventory = new InventoryView();
+    $inventoryView = new InventoryView();
+    $boxView = new BoxView();
     ?>
 
     <div class = "wrapper">
@@ -33,19 +34,19 @@
                 </div>
             </div>
             <div class = "boxes">
-                <?php $boxes = $inventory->fetchBoxes($_SESSION["userid"]); ?>
-                <table>
-                    <tr>
-                      <th>Box ID</th>
-                      <th>Name</th>
-                      <th>Price</th>
-                    </tr>
+                <?php $inventory = $inventoryView->fetchBoxes($_SESSION["userid"]); ?>
 
-                    <?php foreach($boxes as $row): ?>
-                        <tr>
-                        <td><?= htmlspecialchars($row['box_id']) ?></td>
-                        <td><?= htmlspecialchars($row['name']) ?></td>
-                        <td><?= htmlspecialchars($row['price']) ?></td>
+                    <?php foreach($inventory as $box): ?>
+                        <div class = "store-box">
+                        <img src = "<?php $boxView->fetchImg($box['boxmodel_id']); ?>" alt = "box image" style = "width: 100px; height:100px;">
+                        <h4><?= $box['name']; ?></h4>
+                        <p><?php echo $box['price']; ?></p>
+                        <form action = "includes/inventory.inc.php" method = "post">
+                            <input type = "hidden" name = "boxid" value = "<?= $box['box_id']; ?>">
+                            <input type = "hidden" name = "boxmodelid" value = "<?= $box['boxmodel_id']; ?>">
+                            <button type = "submit" name = "usebox">OPEN</button>
+                        </form>
+                        </div>
                     </tr>
                     <?php endforeach ?>
                 </table>      
