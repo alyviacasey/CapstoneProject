@@ -46,6 +46,7 @@
             if($_SESSION["admin"] == 1)
             {
         ?>
+        <div class = "store-admin">
             <h2>Admin</h2> <br>
             <form action = "includes/admin-store.inc.php" method = "post">
                 <select id="boxid" name="boxid">
@@ -53,8 +54,9 @@
                             <option value="<?=htmlspecialchars($row['model_id'])?>"><?= htmlspecialchars($row['name']) ?></option>
                             <?php endforeach ?>
                     </select> 
-                    <button type = "submit" name = "set">ADD / REMOVE</button>
-                    </form>
+                <button type = "submit" name = "set">ADD / REMOVE</button>
+            </form>
+        </div>
         <?php } ?>
     </div>
 </body>
