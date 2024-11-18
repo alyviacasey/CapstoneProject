@@ -102,6 +102,16 @@ header {
     background-color: #45364b;
 }
 
+/* STORE PAGE */
+
+.store-box {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #2f273b;
+    outline: solid white;
+}
+
 
 /* ADMIN PAGE */
 
