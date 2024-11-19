@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         // ADD TO COLLECTION
 
-        $collectionContr->getToy($prizeModel, $name);
+        $collectionContr->getToy($prizeModel[0]["model_id"], $name);
 
         // DELETE BOX
 
