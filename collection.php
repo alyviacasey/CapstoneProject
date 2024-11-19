@@ -17,6 +17,8 @@
     <?php include_once "header.php"; 
     
     include "classes/dbh.classes.php";
+    include "classes/model.classes.php";
+    include "classes/model-view.classes.php";
     include "classes/collection.classes.php";
     include "classes/collection-view.classes.php";
 
