@@ -20,29 +20,24 @@
     include "classes/collection.classes.php";
     include "classes/collection-view.classes.php";
 
-    $collection = new CollectionView();
+    $collectionView = new CollectionView();
+    $modelView = new ModelView();
     ?>
 
     <div class = "wrapper">
         <section class = "collection">
             <div class = "toys">
-                <?php $toys = $collection->fetchToys($_SESSION["userid"]); ?>
-                <table>
-                    <tr>
-                      <th>Toy ID</th>
-                      <th>Name</th>
-                      <th>Model</th>
-                      <th>Adopted</th>
-                    </tr>
+                <?php $collection = $collectionView->fetchToys($_SESSION["userid"]); ?>
 
-                    <?php foreach($toys as $row): ?>
-                        <tr>
-                        <td><?= $row['toy_id'] ?></td>
-                        <td><?= $row['toy_name'] ?></td>
-                        <td><?= $row['theme'] . ' ' . $row['model_name']?></td>
-                        <td><?= $row['adoption_date'] ?></td>
-                    </tr>
-                    <?php endforeach ?>
+                <?php foreach($collection as $toy): ?>
+                <div class = "store-box">
+                    <img src = "<?php $modelView->fetchImg($toy['model_id']); ?>" alt = "toy image" style = "width: 100px; height:100px;">
+                    <h4><?= $toy['toy_name']; ?></h4>
+                    ID #<?= $row['toy_id'] ?> <br>
+                    <?= $row['theme'] . ' ' . $row['model_name']?> <br>
+                    BIRTHDAY: <?= $row['adoption_date'] ?>
+                </tr>
+                <?php endforeach ?>
                 </table>      
             </div>
         </section>
