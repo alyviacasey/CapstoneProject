@@ -39,7 +39,7 @@
                 <?php $inventory = $inventoryView->fetchBoxes($_SESSION["userid"]); ?>
 
                     <?php foreach($inventory as $box): ?>
-                        <div class = "store-box">
+                        <div class = "item-box">
                         <img src = "<?php $boxView->fetchImg($box['boxmodel_id']); ?>" alt = "box image" style = "width: 100px; height:100px;">
                         <h4><?= $box['name']; ?></h4>
                         <p><?php echo $box['price']; ?></p>
@@ -49,9 +49,7 @@
                             <button type = "submit" name = "usebox">OPEN</button>
                         </form>
                         </div>
-                    </tr>
-                    <?php endforeach ?>
-                </table>      
+                    <?php endforeach ?>     
             </div>
         </section>
     </div>

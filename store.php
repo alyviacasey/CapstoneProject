@@ -30,7 +30,7 @@
         <h2>Store</h2> <br>
         <section class = "store">
         <?php foreach($store as $box): ?>
-            <div class = "store-box">
+            <div class = "item-box">
                 <img src = "<?php $boxView->fetchImg($box['model_id']); ?>" alt = "box image" style = "width: 100px; height:100px;">
                 <h4><?= $box['name']; ?></h4>
                 <p><?php echo $box['price']; ?></p>

@@ -32,7 +32,7 @@
                 <?php $collection = $collectionView->fetchToys($_SESSION["userid"]); ?>
 
                 <?php foreach($collection as $toy): ?>
-                <div class = "store-box">
+                <div class = "item-box">
                     <img src = "<?php $modelView->fetchImg($toy['model_id']); ?>" alt = "toy image" style = "width: 100px; height:100px;">
                     <h4><?= $toy['toy_name']; ?></h4>
                     ID #<?= $toy['toy_id'] ?> <br>
