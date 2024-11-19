@@ -10,8 +10,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // INCLUDE CLASS FILES
 
     include "../classes/dbh.classes.php";
-    include "../classes/box.classes.php";
-    include "../classes/box-view.classes.php";
+    include "../classes/model.classes.php";
+    include "../classes/model-view.classes.php";
     include "../classes/inventory.classes.php";
     include "../classes/inventory-contr.classes.php";
     include "../classes/collection.classes.php";
@@ -24,14 +24,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $inventoryContr = new InventoryContr($_SESSION["userid"]);
         $collectionContr = new CollectionContr($_SESSION["userid"]);
-        $boxView = new BoxView();
+        $modelView = new ModelView();
 
         // GET MODEL
 
         $prizeModel = $inventoryContr->rollBox($boxID);
 
-        $box = $boxView->fetchBoxModel($modelID);
-        $name = $box[0]["theme"] . $box[0]["model_name"];
+        $toy = $modelView->fetchModel($prizeModel);
+        $name = $toy[0]["theme"] . $toy[0]["model_name"];
 
         // ADD TO COLLECTION
 

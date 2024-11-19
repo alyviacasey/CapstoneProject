@@ -11,6 +11,11 @@ class ModelView extends Model {
         return $modelInfo;
     }
 
+    public function fetchModel($toyID) {
+        $modelInfo = $this->getModel($toyID);
+        return $modelInfo;
+    }
+
     public function deleteModel($toyID){
         $this->unsetModel($toyID);
     }
