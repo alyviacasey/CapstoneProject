@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $prizeModel = $prize["model_id"];
 
         $toy = $modelView->fetchModel($prizeModel);
-        $name = $toy["theme"] . $toy["model_name"];
+        $name = $toy[0]["theme"] . $toy[0]["model_name"];
 
         // ADD TO COLLECTION
 
