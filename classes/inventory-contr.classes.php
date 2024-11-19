@@ -74,13 +74,13 @@ class InventoryContr extends Inventory {
     }
 
     public function rollBox($bid) {
-        $bid = $this->getBox($bid);
+        $box = $this->getBox($bid);
 
         do {
             $rarity = $this->rollRarity(); 
-        } while (empty($this->matchRarity($bid['boxmodel_id'], $rarity)));
+        } while (empty($this->matchRarity($box[0]['boxmodel_id'], $rarity)));
         
-        $matches = $this->matchRarity($bid['boxmodel_id'], $rarity);
+        $matches = $this->matchRarity($box[0]['boxmodel_id'], $rarity);
 
         $model = array_rand($matches, 1);
 
