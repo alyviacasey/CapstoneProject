@@ -28,14 +28,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         // GET MODEL
 
-        $prizeModel = $inventoryContr->rollBox($boxID);
+        $prize = $inventoryContr->rollBox($boxID);
+        $prizeModel = $prize[0]["model_id"];
 
         $toy = $modelView->fetchModel($prizeModel);
         $name = $toy[0]["theme"] . $toy[0]["model_name"];
 
         // ADD TO COLLECTION
 
-        $collectionContr->getToy($prizeModel[0]["model_id"], $name);
+        $collectionContr->getToy($prizeModel, $name);
 
         // DELETE BOX
 
