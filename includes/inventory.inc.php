@@ -29,10 +29,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // GET MODEL
 
         $prize = $inventoryContr->rollBox($boxID);
-        $prizeModel = $prize[0]["model_id"];
+        $prizeModel = $prize["model_id"];
 
         $toy = $modelView->fetchModel($prizeModel);
-        $name = $toy[0]["theme"] . $toy[0]["model_name"];
+        $name = $toy["theme"] . $toy["model_name"];
 
         // ADD TO COLLECTION
 
