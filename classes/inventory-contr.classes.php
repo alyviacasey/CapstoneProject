@@ -78,9 +78,9 @@ class InventoryContr extends Inventory {
 
         do {
             $rarity = $this->rollRarity(); 
-        } while (empty($this->matchRarity($box[0]['boxmodel_id'], $rarity)));
+        } while (empty($this->matchRarity($box['boxmodel_id'], $rarity)));
         
-        $matches = $this->matchRarity($box[0]['boxmodel_id'], $rarity);
+        $matches = $this->matchRarity($box['boxmodel_id'], $rarity);
 
         $model = array_rand($matches, 1);
 

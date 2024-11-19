@@ -129,7 +129,7 @@
         protected function getBox($bid) {
             // PREPARE SQL STATEMENT
             // Select all user inventory data
-            $sql = 'SELECT b.*, m.* FROM Boxes AS b JOIN BoxModels AS m ON b.boxmodel_id = m.model_id WHERE b.user_id = ?';
+            $sql = 'SELECT b.*, m.* FROM Boxes AS b JOIN BoxModels AS m ON b.boxmodel_id = m.model_id WHERE b.box_id = ?';
             $stmt = $this->connect()->prepare($sql);
 
             // ERROR HANDLING
