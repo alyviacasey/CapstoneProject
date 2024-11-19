@@ -111,6 +111,10 @@ header {
     text-align: center;
 }
 
+.store-box img{
+    margin: auto;
+}
+
 .store-admin { 
     display: block;
     width: 100%;
