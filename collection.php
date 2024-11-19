@@ -38,9 +38,8 @@
                     ID #<?= $toy['toy_id'] ?> <br>
                     <?= $toy['theme'] . ' ' . $toy['model_name']?> <br>
                     BIRTHDAY: <?= $toy['adoption_date'] ?>
-                </tr>
-                <?php endforeach ?>
-                </table>      
+                </div>
+                <?php endforeach ?>      
             </div>
         </section>
     </div>
