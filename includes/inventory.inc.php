@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $prizeModel = $prize["model_id"];
 
         $toy = $modelView->fetchModel($prizeModel);
-        $name = $toy[0]["theme"] . $toy[0]["model_name"];
+        $name = $toy[0]["theme"] . " " . $toy[0]["model_name"];
 
         // ADD TO COLLECTION
 
@@ -41,5 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // DELETE BOX
 
         //$inventoryContr ->deleteBox($boxID);
+
+        header("location: ../inventory.php?error=none");
     }
 }
