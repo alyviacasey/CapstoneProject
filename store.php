@@ -19,14 +19,22 @@
     include "classes/dbh.classes.php";
     include "classes/box.classes.php";
     include "classes/box-view.classes.php";
+    include "classes/inventory.classes.php";
+    include "classes/inventory-view.classes.php";
 
     $boxView = new BoxView();
+    $inventoryView = new InventoryView();
 
     $allBoxes = $boxView->fetchAllBoxModels(); 
     $store = $boxView->fetchStore();
     ?>
 
     <div class = "wrapper">
+            <div class = "balance">
+                <h3>Balance:</h3> <?php $inventoryView->fetchBalance($_SESSION["userid"]); ?>
+                </p>
+                <br><br>
+            </div>
         <h2>Store</h2> <br>
         <section class = "store">
         <?php foreach($store as $box): ?>
