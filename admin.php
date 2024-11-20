@@ -139,7 +139,7 @@
                             </td>
                             <td> 
                                 <form action = "includes/admin-box.inc.php" method = "post">
-                                    <input type = "hidden" name = "boxids" value = "<?= $row['model_id'] ?>"> <br>
+                                    <input type = "hidden" name = "boxid" value = "<?= $row['model_id'] ?>"> <br>
                                     <button type = "submit" name = "delete">DELETE</button>
                                 </form>
                             </td>
