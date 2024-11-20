@@ -14,6 +14,8 @@
 </head>
 
 <body>
+    <?php if(!isset($_SESSION["userid"])) { header("location: ../index.php"); } ?>
+    
     <?php include_once "header.php";  
     
     include "classes/dbh.classes.php";
