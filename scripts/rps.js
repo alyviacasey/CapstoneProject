@@ -1,7 +1,10 @@
 
 const form = document.getElementById("rps-userchoice");
 
-form.addEventListener("submit", rps(form));
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    rps(form);
+});
 
 function rps(form) {
     const data = new FormData(form);
