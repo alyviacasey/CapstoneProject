@@ -7,9 +7,9 @@ shootform.addEventListener("submit", function(event) {
     rps(shootform);
 });
 
-document.getElementById("cashout").onclick = cashout();
-document.getElementById("rematch").onclick = rematch();
-document.getElementById("double").onclick = rematch();
+document.getElementById("cashout").addEventListener("click", cashout());
+document.getElementById("rematch").addEventListener("click", rematch());
+document.getElementById("double").addEventListener("click", rematch());
 
 function rps(form) {
     const data = new FormData(form);
