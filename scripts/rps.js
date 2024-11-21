@@ -3,7 +3,7 @@ const shootform = document.getElementById("rps-shoot");
 const restartform = document.getElementById("rps-restart");
 const cashoutform = document.getElementById("rps-cashout");
 
-let score = document.getElementById("score").value;
+let score = Number(document.getElementById("score").value);
 
 shootform.addEventListener("submit", function(event) {
     event.preventDefault();
