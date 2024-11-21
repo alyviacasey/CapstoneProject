@@ -1,5 +1,5 @@
 
-const form = document.querySelector("form");
+form = document.getElementById("rps-userchoice");
 
 form.addEventListener(
   "submit",

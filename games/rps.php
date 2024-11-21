@@ -22,7 +22,7 @@
             <span><span id="rps-user"></span></span>
         </div>
         <br>
-        <form style="margin: auto; text-align:center;">
+        <form id="rps-userchoice" style="margin: auto; text-align:center;">
             <input type="radio" id="rock" name="user-choice" value="Rock" /><label for="rock">Rock</label> &nbsp; &nbsp;
             <input type="radio" id="paper" name="user-choice" value="Paper" /><label for="paper">Paper</label> &nbsp; &nbsp;
             <input type="radio" id="scissors" name="user-choice" value="Scissors" /><label for="scissors">Scissors</label> &nbsp; &nbsp;
