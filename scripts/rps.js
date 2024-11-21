@@ -109,7 +109,6 @@ function rematch() {
 }
 
 function cashout() {
-    score = Number(document.getElementById("score").value);
     document.getElementById("submit-score").submit();
 
     document.getElementById("score").value = score;
