@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <div style="padding: 5vw">
-        <h3 style="text-align:center;">Rock, Paper, Scissors</h3>
+    <div style="padding: 5vw; overflow:hidden;">
+        <h3 style="text-align:center;">Rock, Paper, Scissors</h3> <br>
         <div class="rps">
             <span id="rps-com"></span> 
             <span id="rps-user"></span>
