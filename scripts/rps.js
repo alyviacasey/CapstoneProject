@@ -3,7 +3,7 @@ const shootform = document.getElementById("rps-shoot");
 const restartform = document.getElementById("rps-restart");
 const cashoutform = document.getElementById("rps-cashout");
 
-let score = 0;
+let score = document.getElementById("score").value;
 
 shootform.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -13,7 +13,6 @@ shootform.addEventListener("submit", function(event) {
 function rps(form) {
     const data = new FormData(form);
     let userChoice = "";
-    score = document.getElementById("score").value;
 
     for (const entry of data) {
         userChoice = `${entry[1]}`;
@@ -28,7 +27,7 @@ function rps(form) {
     document.getElementById("result").innerHTML = declareWinner(userChoice, computerChoice);
 
     if(document.getElementById("result").innerHTML == "You win!") {
-        if(score==0){
+        if(score == 0){
             score+=10;
         }
         else {
