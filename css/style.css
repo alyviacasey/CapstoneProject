@@ -193,6 +193,7 @@ header {
 .rps span {
     height:300px; width:300px; 
     background-image: url("../images/games/bottom-rps.png");
+    position: relative;
 }
 
 .rps span:first-of-type {
