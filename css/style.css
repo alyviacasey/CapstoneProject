@@ -192,5 +192,5 @@ header {
 
 .rps span {
     height:300px; width:300px; 
-    background-color:white
+    background-image: url("../images/games/bottom-rps.png");
 }
