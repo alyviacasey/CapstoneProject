@@ -38,7 +38,7 @@ function rps(form) {
         score+=10;
     }
     if(document.getElementById("result").innerHTML == "You lose!") {
-        score==0;
+        score = 0;
         document.getElementById("rematch").style.cssText = "display: inline;";
     }
 
