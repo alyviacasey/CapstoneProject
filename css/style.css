@@ -194,3 +194,7 @@ header {
     height:300px; width:300px; 
     background-image: url("../images/games/bottom-rps.png");
 }
+
+.rps span:last-of-type {
+    transform: scaleX(-1);
+}
