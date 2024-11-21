@@ -14,8 +14,6 @@ document.getElementById("cashout").onclick = cashout();
 document.getElementById("rematch").onclick = rematch();
 document.getElementById("double").onclick = rematch();
 
-
-
 function rps(form) {
     const data = new FormData(form);
     let userChoice = "";
@@ -112,6 +110,8 @@ function rematch() {
 
     document.getElementById("score").value = score;
     document.getElementById("coins").innerHTML = score;
+
+    console.log(score);
 }
 
 function cashout() {
