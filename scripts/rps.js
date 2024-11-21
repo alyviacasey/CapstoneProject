@@ -115,7 +115,7 @@ function rematch() {
 }
 
 function cashout() {
-    document.getElementById("submit-score").submit();
+    document.getElementById("rps-score").submit();
 
     document.getElementById("score").value = score;
     document.getElementById("coins").innerHTML = score;
