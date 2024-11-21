@@ -1,5 +1,5 @@
 
-const form = document.getElementById("rps-userchoice");
+const form = document.getElementById("rps-shoot");
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
