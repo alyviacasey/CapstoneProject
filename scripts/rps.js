@@ -35,6 +35,7 @@ function rps(form) {
         }
         document.getElementById("double").style.cssText = "display: inline;";
     }
+
     if(document.getElementById("result").innerHTML == "You lose!") {
         score = 0;
         document.getElementById("rematch").style.cssText = "display: inline;";
@@ -42,6 +43,12 @@ function rps(form) {
 
     if(score > 0){
         document.getElementById("cashout").style.cssText = "display: inline;";
+    }
+    else {
+        document.getElementById("cashout").style.cssText = "display: none;";
+        document.getElementById("double").style.cssText = "display: none;";
+        document.getElementById("rematch").style.cssText = "display: inline;";
+        
     }
 
     document.getElementById("score").value = score;
