@@ -115,8 +115,6 @@ function cashout() {
     document.getElementById("score").value = score;
     document.getElementById("coins").innerHTML = score;
 
-    console.log(score);
-
     rematch();
 }
 
