@@ -198,3 +198,27 @@ header {
 .rps span:first-of-type {
     transform: scaleX(-1);
 }
+
+#rps-com, #rps-user {
+    background-image: url("../images/games/rock-rps.png");
+    animation: bounce 0.6s cubic-bezier(0, 0, 0.58, 1) infinite alternate;
+}
+/* ANIMATIONS */
+
+@keyframes bounce {
+    0% {
+      transform: translateY(20%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  @keyframes shadow {
+    0% {
+      transform: scale(2.5, 0.8);
+    }
+    100% {
+      transform: scale(0.5, 0.1);
+    }
+  }

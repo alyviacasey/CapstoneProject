@@ -17,8 +17,8 @@
     <div style="padding: 5vw; overflow:hidden;">
         <h3 style="text-align:center;">Rock, Paper, Scissors</h3> <br>
         <div class="rps">
-            <span id="rps-com"></span> 
-            <span id="rps-user"></span>
+            <span><span id="rps-com"></span></span>
+            <span><span id="rps-user"></span></span>
         </div>
         <br>
         <form action="games-inc.php" method="post" style="margin: auto; text-align:center;">
