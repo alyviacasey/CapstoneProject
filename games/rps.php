@@ -28,6 +28,11 @@
             <input type="radio" id="scissors" name="user-choice" value="Scissors" /><label for="scissors">Scissors</label> &nbsp; &nbsp;
             <button type = "submit" id = "submit" name = "shoot">SHOOT</button>
         </form>
+
+        <form id="rps-restart" style="margin: auto; text-align:center;">
+            <input type="hidden" id="score" name="score" value="0" />
+            <button type = "submit" id = "rematch" name = "rematch" style = "display:none;">REMATCH</button>
+        </form>
     </div>
 </body>
 </html>

@@ -1,14 +1,27 @@
 
-const form = document.getElementById("rps-shoot");
+const shootform = document.getElementById("rps-shoot");
+const restartform = document.getElementById("rps-restart");
+let score = 0;
 
-form.addEventListener("submit", function(event) {
+shootform.addEventListener("submit", function(event) {
     event.preventDefault();
-    rps(form);
+    rps(shootform);
+});
+
+restartform.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const selection = event.target.id
+
+    if(selection == "rps-restart") {
+        restart();
+    }
+
 });
 
 function rps(form) {
     const data = new FormData(form);
     let userChoice = "";
+
     for (const entry of data) {
         userChoice = `${entry[1]}`;
     }
@@ -17,7 +30,22 @@ function rps(form) {
     shoot(userChoice, "rps-user");
     shoot(computerChoice, "rps-com");
 
+    form.cssText = "display: none;";
+
     document.getElementById("result").innerHTML = declareWinner(userChoice, computerChoice);
+
+    if(document.getElementById("result").innerHTML == "You win!") {
+        score+=10;
+    }
+    if(document.getElementById("result").innerHTML == "You lose!") {
+        score==0;
+        document.getElementById("rematch").style.cssText = "display: inline;";
+    }
+
+    document.getElementById("score").value = score;
+    console.log(score);
+    console.log(event.target.id);
+
 }
 
 function computerShoot() {
