@@ -22,7 +22,7 @@ function rps(form) {
     shoot(userChoice, "rps-user");
     shoot(computerChoice, "rps-com");
 
-    shootform.cssText = "display: none;";
+    document.getElementById("rps-shoot").cssText = "display: none;";
 
     document.getElementById("result").innerHTML = declareWinner(userChoice, computerChoice);
 
@@ -95,7 +95,7 @@ function reset() {
     document.getElementById("double").style.cssText = "display: none;";
     document.getElementById("cashout").style.cssText = "display: none;";
 
-    form.cssText = "display: block;";
+    document.getElementById("rps-shoot").cssText = "display: block;";
 }
 
 function cashout() {
