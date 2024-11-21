@@ -3,7 +3,7 @@ const shootform = document.getElementById("rps-shoot");
 const restartform = document.getElementById("rps-restart");
 const cashoutform = document.getElementById("rps-cashout");
 
-let score = Number(document.getElementById("score").value);
+let score = 0;
 
 shootform.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -104,7 +104,7 @@ function rematch() {
 
     document.getElementById("rps-shoot").style.cssText = "display: block;";
 
-    score = Number(document.getElementById("score").value);
+    document.getElementById("score").value = score;
     document.getElementById("coins").innerHTML = score;
 }
 
