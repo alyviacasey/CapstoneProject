@@ -30,9 +30,9 @@
             <button type = "submit" id = "submit" name = "shoot">SHOOT</button>
         </form>
         <form id="rps-restart" style="margin: auto; text-align:center;">
-            <button type = "submit" id = "rematch" name = "rematch" style = "display:none;" onclick = "rematch();">REMATCH</button> 
-            <button type = "submit" id = "double" name = "double" style = "display:none;" onclick = "rematch();">DOUBLE OR NOTHING</button>
-            <button type = "submit" id = "cashout" name = "cashout" style = "display:none;" onclick="cashout();">CASH OUT</button>
+            <button type = "button" id = "rematch" name = "rematch" style = "display:none;" onclick = "rematch();">REMATCH</button> 
+            <button type = "button" id = "double" name = "double" style = "display:none;" onclick = "rematch();">DOUBLE OR NOTHING</button>
+            <button type = "button" id = "cashout" name = "cashout" style = "display:none;" onclick="cashout();">CASH OUT</button>
         </form>
         <form id="rps-score" style="display:none">
             <input type="hidden" id="score" name="score" value="0" />
