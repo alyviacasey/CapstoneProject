@@ -216,6 +216,6 @@ header {
       transform: translateY(20%);
     }
     100% {
-      transform: translateY(-60%);
+      transform: translateY(-50%);
     }
   }
