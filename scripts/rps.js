@@ -106,11 +106,9 @@ function reset() {
 }
 
 function cashout() {
-    score = 0;
-    score = document.getElementById("score").value;
+    score = Number(document.getElementById("score").value);
     document.getElementById("submit-score").submit();
 
-    score = 0;
     document.getElementById("score").value = score;
     document.getElementById("coins").innerHTML = score;
 
