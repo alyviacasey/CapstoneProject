@@ -7,14 +7,14 @@ form.addEventListener(
     const data = new FormData(form);
     let userChoice = "";
     for (const entry of data) {
-        userChoice = `${entry[1]}\r`;
+        userChoice = `${entry[1]}`;
     }
     let computerChoice = computerShoot();
 
     shoot(userChoice, "rps-user");
     shoot(computerChoice, "rps-com");
 
-    document.getElementById($result).innerHTML = declareWinner(userChoice, computerChoice);
+    document.getElementById("result").innerHTML = declareWinner(userChoice, computerChoice);
 
     event.preventDefault();
   },
@@ -22,8 +22,8 @@ form.addEventListener(
 );
 
 function computerShoot() {
-    $numberChoice = rand(0, 2);
-    if ($numberChoice == 0) {
+    const numberChoice = rand(0, 3);
+    if (numberChoice == 0) {
         return "Rock";
     } 
     else if ($numberChoice == 1) {
@@ -34,20 +34,20 @@ function computerShoot() {
     }
 }
 
-function shoot($choice, $playerID) {
-    if($choice == "Rock") {
-        document.getElementById($playerID).style.cssText = "background-image: url('../images/games/rock-rps.png'); animation: none;"
+function shoot(choice, playerID) {
+    if(choice == "Rock") {
+        document.getElementById(playerID).style.cssText = "background-image: url('../images/games/rock-rps.png'); animation: none;"
     }
-    else if($choice == "Paper") {
-        document.getElementById($playerID).style.cssText = "background-image: url('../images/games/paper-rps.png'); animation: none;"
+    else if(choice == "Paper") {
+        document.getElementById(playerID).style.cssText = "background-image: url('../images/games/paper-rps.png'); animation: none;"
     }
     else {
-        document.getElementById($playerID).style.cssText = "background-image: url('../images/games/scissors-rps.png'); animation: none;"
+        document.getElementById(playerID).style.cssText = "background-image: url('../images/games/scissors-rps.png'); animation: none;"
     }
 }
 
-function declareWinner($userChoice, $computerChoice) {
-    if($userChoice == $computerChoice) {
+function declareWinner(userChoice, computerChoice) {
+    if(userChoice == computerChoice) {
         return "It's a tie!";
     }
     else if($userChoice == "Rock" && $computerChoice == "Scissors" || $userChoice == "Paper" && $computerChoice == "Rock" || $userChoice == "Scissors" && $computerChoice == "Paper") {
