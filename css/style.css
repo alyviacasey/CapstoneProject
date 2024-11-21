@@ -196,15 +196,14 @@ header {
     position: relative;
 }
 
-.rps span:first-of-type {
+/*.rps span:first-of-type {
     transform: scaleX(-1);
-}
+}*/
 
 #rps-com, #rps-user {
     height:300px; width:300px; 
     position: absolute;
     display: block;
-    transform: scaleX(-1);
     background-image: url("../images/games/rock-rps.png");
     animation: bounce 0.7s cubic-bezier(0,0,0.50,1) infinite alternate;
 }

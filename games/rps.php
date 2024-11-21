@@ -18,7 +18,7 @@
     <div style="padding: 5vw; overflow:hidden;">
         <h3 id = "result" style="text-align:center;">Rock, Paper, Scissors</h3> <br>
         <div class="rps">
-            <span><span id="rps-com"></span></span>
+            <span style = "transform: scaleX(-1);"><span id="rps-com"></span></span>
             <span><span id="rps-user"></span></span>
         </div>
         <br>
