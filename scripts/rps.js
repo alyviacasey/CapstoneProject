@@ -22,7 +22,7 @@ function rps(form) {
     shoot(userChoice, "rps-user");
     shoot(computerChoice, "rps-com");
 
-    form.cssText = "display: none;";
+    shootform.cssText = "display: none;";
 
     document.getElementById("result").innerHTML = declareWinner(userChoice, computerChoice);
 
