@@ -26,8 +26,7 @@
             <input type="radio" id="rock" name="user-choice" value="Rock" /><label for="rock">Rock</label> &nbsp; &nbsp;
             <input type="radio" id="paper" name="user-choice" value="Paper" /><label for="paper">Paper</label> &nbsp; &nbsp;
             <input type="radio" id="scissors" name="user-choice" value="Scissors" /><label for="scissors">Scissors</label> &nbsp; &nbsp;
-            <input type="hidden" name="com-choice" value="Rock">
-            <button type = "submit" id = "shoot" name = "shoot">SHOOT</button>
+            <button type = "submit" id = "submit" name = "shoot">SHOOT</button>
         </form>
     </div>
 </body>

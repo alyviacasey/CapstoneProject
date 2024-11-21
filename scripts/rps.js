@@ -26,7 +26,7 @@ function computerShoot() {
     if (numberChoice == 0) {
         return "Rock";
     } 
-    else if ($numberChoice == 1) {
+    else if (numberChoice == 1) {
         return "Paper";
     }
     else {
@@ -50,7 +50,7 @@ function declareWinner(userChoice, computerChoice) {
     if(userChoice == computerChoice) {
         return "It's a tie!";
     }
-    else if($userChoice == "Rock" && $computerChoice == "Scissors" || $userChoice == "Paper" && $computerChoice == "Rock" || $userChoice == "Scissors" && $computerChoice == "Paper") {
+    else if(userChoice == "Rock" && computerChoice == "Scissors" || userChoice == "Paper" && computerChoice == "Rock" || userChoice == "Scissors" && computerChoice == "Paper") {
         return "You win!";
     }
     else {
