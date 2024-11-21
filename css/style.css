@@ -205,7 +205,7 @@ header {
     background-image: url("../images/games/rock-rps.png");
     position: absolute;
     display: block;
-    animation: bounce 0.6s cubic-bezier(0, 0, 0.58, 1) infinite alternate;
+    animation: bounce 0.7s cubic-bezier(0,0,1,.54) infinite alternate;
     transform: scaleX(-1);
 }
 
