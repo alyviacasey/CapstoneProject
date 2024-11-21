@@ -10,6 +10,12 @@ shootform.addEventListener("submit", function(event) {
     rps(shootform);
 });
 
+document.getElementById("cashout").onclick = cashout();
+document.getElementById("rematch").onclick = rematch();
+document.getElementById("double").onclick = rematch();
+
+
+
 function rps(form) {
     const data = new FormData(form);
     let userChoice = "";
