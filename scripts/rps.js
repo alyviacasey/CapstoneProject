@@ -1,9 +1,9 @@
 
 form = document.getElementById("rps-userchoice");
 
-form.addEventListener(
-  "submit",
-  (event) => {
+form.addEventListener("submit", rps(form));
+
+function rps(form) {
     const data = new FormData(form);
     let userChoice = "";
     for (const entry of data) {
@@ -15,11 +15,7 @@ form.addEventListener(
     shoot(computerChoice, "rps-com");
 
     document.getElementById("result").innerHTML = declareWinner(userChoice, computerChoice);
-
-    event.preventDefault();
-  },
-  false,
-);
+}
 
 function computerShoot() {
     const numberChoice = rand(0, 3);
