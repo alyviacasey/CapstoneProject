@@ -1,5 +1,7 @@
 const shootform = document.getElementById("rps-shoot");
 
+let score = 0;
+
 shootform.addEventListener("submit", function(event) {
     event.preventDefault();
     rps(shootform);
