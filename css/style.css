@@ -200,6 +200,7 @@ header {
 }
 
 #rps-com, #rps-user {
+    height:300px; width:300px; 
     background-image: url("../images/games/rock-rps.png");
     position: relative;
     /*animation: bounce 0.6s cubic-bezier(0, 0, 0.58, 1) infinite alternate;*/
