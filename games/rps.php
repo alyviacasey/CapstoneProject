@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <script>0</script>
     <div style="padding: 5vw; overflow:hidden;">
         <h3 id = "result" style="text-align:center;">Rock, Paper, Scissors...</h3> <br>
         <div class="rps">
