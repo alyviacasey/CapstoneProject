@@ -35,13 +35,13 @@ function computerShoot() {
 
 function shoot(choice, playerID) {
     if(choice == "Rock") {
-        document.getElementById(playerID).style.cssText = "background-image: url('../images/games/rock-rps.png'); animation: none; transform: scaleX(-1);"
+        document.getElementById(playerID).style.cssText = "background-image: url('../images/games/rock-rps.png'); animation: none; transform:"
     }
     else if(choice == "Paper") {
-        document.getElementById(playerID).style.cssText = "background-image: url('../images/games/paper-rps.png'); animation: none; transform: scaleX(-1);"
+        document.getElementById(playerID).style.cssText = "background-image: url('../images/games/paper-rps.png'); animation: none; transform:"
     }
     else {
-        document.getElementById(playerID).style.cssText = "background-image: url('../images/games/scissors-rps.png'); animation: none; transform: scaleX(-1);"
+        document.getElementById(playerID).style.cssText = "background-image: url('../images/games/scissors-rps.png'); animation: none; transform:"
     }
 }
 
