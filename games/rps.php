@@ -14,9 +14,11 @@
 </head>
 
 <body>
-    <div style="padding: 3vw">
+    <div style="padding: 5vw">
         <h3 style="text-align:center;">Rock, Paper, Scissors</h3>
-        <div style="height:300px; width:300px; background-color:white"></div>
+        <br>
+        <div class="rps" id="rps-com" style="height:300px; width:300px; background-color:white"></div> <div class="rps" id="rps-user" style="height:300px; width:300px; background-color:white"></div>
+        <br>
         <form action="games-inc.php" method="post" style="margin: auto; text-align:center;">
             <input type="radio" id="rock" name="user-choice" value="Rock" /><label for="rock">Rock</label> &nbsp; &nbsp;
             <input type="radio" id="paper" name="user-choice" value="Paper" /><label for="paper">Paper</label> &nbsp; &nbsp;

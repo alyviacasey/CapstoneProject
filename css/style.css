@@ -177,3 +177,15 @@ header {
 .stars i.checked {
     color: #f34deb;
 }
+
+/* GAMES */
+
+/* ROCK PAPER SCISSORS */
+
+.rps {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #2f273b;
+    padding: 2vw;
+}
