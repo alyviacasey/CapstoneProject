@@ -15,17 +15,18 @@
 
 <body>
     <div style="padding: 5vw; overflow:hidden;">
-        <h3 style="text-align:center;">Rock, Paper, Scissors</h3> <br>
+        <h3 id = "result" style="text-align:center;">Rock, Paper, Scissors</h3> <br>
         <div class="rps">
             <span><span id="rps-com"></span></span>
             <span><span id="rps-user"></span></span>
         </div>
         <br>
-        <form action="games-inc.php" method="post" style="margin: auto; text-align:center;">
+        <form method="post" style="margin: auto; text-align:center;">
             <input type="radio" id="rock" name="user-choice" value="Rock" /><label for="rock">Rock</label> &nbsp; &nbsp;
             <input type="radio" id="paper" name="user-choice" value="Paper" /><label for="paper">Paper</label> &nbsp; &nbsp;
             <input type="radio" id="scissors" name="user-choice" value="Scissors" /><label for="scissors">Scissors</label> &nbsp; &nbsp;
-            <button type = "submit" name = "shoot">SHOOT</button>
+            <input type="hidden" name="com-choice" value="Rock">
+            <button type = "submit" id = "shoot" name = "shoot">SHOOT</button>
         </form>
     </div>
 </body>
