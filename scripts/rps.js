@@ -13,6 +13,7 @@ shootform.addEventListener("submit", function(event) {
 function rps(form) {
     const data = new FormData(form);
     let userChoice = "";
+    score = document.getElementById("score").value;
 
     for (const entry of data) {
         userChoice = `${entry[1]}`;
