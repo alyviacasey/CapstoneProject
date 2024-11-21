@@ -103,6 +103,9 @@ function reset() {
     document.getElementById("cashout").style.cssText = "display: none;";
 
     document.getElementById("rps-shoot").style.cssText = "display: block;";
+
+    score = Number(document.getElementById("score").value);
+    document.getElementById("coins").innerHTML = score;
 }
 
 function cashout() {
