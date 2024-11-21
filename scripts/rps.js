@@ -93,7 +93,7 @@ function declareWinner(userChoice, computerChoice) {
     }
 }
 
-function reset() {
+function rematch() {
     document.getElementById("rps-user").style.cssText = "background-image: url('../images/games/rock-rps.png'); animation: none; animation: bounce 0.7s cubic-bezier(0,0,0.50,1) infinite alternate;";
     document.getElementById("rps-com").style.cssText = "background-image: url('../images/games/rock-rps.png'); animation: bounce 0.7s cubic-bezier(0,0,0.50,1) infinite alternate;";
     document.getElementById("result").innerHTML = "Rock, Paper, Scissors...";
@@ -115,7 +115,7 @@ function cashout() {
     document.getElementById("score").value = score;
     document.getElementById("coins").innerHTML = score;
 
-    reset();
+    rematch();
 }
 
 function rand(min, max) {
