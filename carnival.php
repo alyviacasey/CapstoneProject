@@ -18,7 +18,7 @@
 
     <div class = "wrapper">
         <h3>Carnival</h3>
-        <iframe src="games/rps.php" width="100%" height="500px" frameborder="0"></iframe>
+        <iframe src="games/rps.php" width="100%" height="600px" frameborder="0"></iframe>
     </div>
 </body>
 </html>
