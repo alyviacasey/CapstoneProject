@@ -11,7 +11,6 @@
     <title>Toybox</title>
     <link rel="stylesheet" href="/css/style.css"> 
     <link rel="stylesheet" href="/css/reset.css"> 
-    <script type="text/javascript" src="scripts/rps.js"></script>
 </head>
 
 <body>
