@@ -1,21 +1,13 @@
 
 const shootform = document.getElementById("rps-shoot");
 const restartform = document.getElementById("rps-restart");
+const cashoutform = document.getElementById("rps-cashout");
+
 let score = 0;
 
 shootform.addEventListener("submit", function(event) {
     event.preventDefault();
     rps(shootform);
-});
-
-restartform.addEventListener("submit", function(event) {
-    event.preventDefault();
-    const selection = event.target.id
-
-    if(selection == "rps-restart") {
-        restart();
-    }
-
 });
 
 function rps(form) {
@@ -35,16 +27,25 @@ function rps(form) {
     document.getElementById("result").innerHTML = declareWinner(userChoice, computerChoice);
 
     if(document.getElementById("result").innerHTML == "You win!") {
-        score+=10;
+        if(score==0){
+            score+=10;
+        }
+        else {
+            score*2;
+        }
+        document.getElementById("double").style.cssText = "display: inline;";
     }
     if(document.getElementById("result").innerHTML == "You lose!") {
         score = 0;
         document.getElementById("rematch").style.cssText = "display: inline;";
     }
 
+    if(score > 0){
+        document.getElementById("cashout").style.cssText = "display: inline;";
+    }
+
     document.getElementById("score").value = score;
-    console.log(score);
-    console.log(event.target.id);
+    document.getElementById("coins").innerHTML = score;
 
 }
 
@@ -83,6 +84,30 @@ function declareWinner(userChoice, computerChoice) {
     else {
         return "You lose!";
     }
+}
+
+function reset() {
+    document.getElementById("rps-user").style.cssText = "background-image: url('../images/games/rock-rps.png'); animation: none; animation: bounce 0.7s cubic-bezier(0,0,0.50,1) infinite alternate;";
+    document.getElementById("rps-com").style.cssText = "background-image: url('../images/games/rock-rps.png'); animation: bounce 0.7s cubic-bezier(0,0,0.50,1) infinite alternate;";
+    document.getElementById("result").innerHTML = "Rock, Paper, Scissors...";
+
+    document.getElementById("rematch").style.cssText = "display: none;";
+    document.getElementById("double").style.cssText = "display: none;";
+    document.getElementById("cashout").style.cssText = "display: none;";
+
+    form.cssText = "display: block;";
+}
+
+function cashout() {
+    score = 0;
+    score = document.getElementById("score").value;
+    document.getElementById("submit-score").submit();
+
+    score = 0;
+    document.getElementById("score").value = score;
+    document.getElementById("coins").innerHTML = score;
+
+    reset();
 }
 
 function rand(min, max) {
