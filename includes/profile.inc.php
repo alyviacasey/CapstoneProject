@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // UPLOAD ICON
 
-    if($file !== null){
+    if(($file['size'] !== 0){
         $profile->editIcon($file);
     }
 
