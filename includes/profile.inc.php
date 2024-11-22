@@ -29,8 +29,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // UPLOAD ICON
 
-
-    $profile->editIcon($file);
+    if($file !== null){
+        $profile->editIcon($file);
+    }
 
     // SEND BACK TO PROFILE
 
