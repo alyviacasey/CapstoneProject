@@ -14,13 +14,7 @@
 </head>
 
 <body>
-    <?php include_once "header.php"; 
-    
-    include "classes/dbh.classes.php";
-    include "classes/inventory.classes.php";
-    include "classes/inventory-view.classes.php";
-    
-    $inventoryView = new InventoryView();?>
+    <?php include_once "header.php"; ?>
 
     <div class = "wrapper">
         <h3>Carnival</h3>

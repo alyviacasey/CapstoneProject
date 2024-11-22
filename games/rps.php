@@ -14,6 +14,13 @@
 </head>
 
 <body>
+    <?php     
+        include "classes/dbh.classes.php";
+        include "classes/inventory.classes.php";
+        include "classes/inventory-view.classes.php";
+    
+        $inventoryView = new InventoryView();
+    ?>
     <div style="padding: 5vw;">
         <h3 id = "result" style="text-align:center;">Rock, Paper, Scissors...</h3> <br>
         <div class="rps">
