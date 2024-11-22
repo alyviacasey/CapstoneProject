@@ -15,9 +15,9 @@
 
 <body>
     <?php     
-        include "classes/dbh.classes.php";
-        include "classes/inventory.classes.php";
-        include "classes/inventory-view.classes.php";
+        include "../classes/dbh.classes.php";
+        include "../classes/inventory.classes.php";
+        include "../classes/inventory-view.classes.php";
     
         $inventoryView = new InventoryView();
     ?>
