@@ -16,6 +16,7 @@
 <body>
     <?php include_once "header.php"; 
     
+    include "classes/dbh.classes.php";
     include "classes/inventory.classes.php";
     include "classes/inventory-view.classes.php";
     
