@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         // DELETE BOX
 
-        //$inventoryContr ->deleteBox($boxID);
+        $inventoryContr ->deleteBox($boxID);
 
         header("location: ../inventory.php?error=none");
     }
