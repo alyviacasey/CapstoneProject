@@ -15,9 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $currBalance = (int)$inventoryView->fetchBalance($uid);
 
-    if(isset($_POST['submit-score'])) {
-        $newBalance = $currBalance + $score;
-        $inventoryContr->editBalance($newBalance);
-        header("location: ../carnival.php");
-    }
+    $newBalance = $currBalance + $score;
+    $inventoryContr->editBalance($newBalance);
+    header("location: ../carnival.php");
 }

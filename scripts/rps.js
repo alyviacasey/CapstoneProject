@@ -123,10 +123,7 @@ function rematch() {
 function cashout() {
     //document.getElementById("score").value = score;
     //document.getElementById("coins").innerHTML = score;
-
     document.getElementById("rps-score").submit();
-
-    rematch();
 }
 
 function rand(min, max) {
