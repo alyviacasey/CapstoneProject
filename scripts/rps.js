@@ -21,6 +21,7 @@ document.getElementById("double").addEventListener("click", function(event) {
 });
 
 function rps(form) {
+    score = parseInt(document.getElementById("score").value);
     const data = new FormData(form);
     let userChoice = "";
 
@@ -43,16 +44,15 @@ function rps(form) {
         else {
             score*2;
         }
-        document.getElementById("double").style.cssText = "display: inline;";
     }
 
     if(document.getElementById("result").innerHTML == "You lose!") {
         score = 0;
-        document.getElementById("rematch").style.cssText = "display: inline;";
     }
 
     if(score > 0){
         document.getElementById("cashout").style.cssText = "display: inline;";
+        document.getElementById("double").style.cssText = "display: inline;";
     }
     else {
         document.getElementById("cashout").style.cssText = "display: none;";
@@ -63,7 +63,6 @@ function rps(form) {
 
     document.getElementById("score").value = score;
     document.getElementById("coins").innerHTML = score;
-
 }
 
 function computerShoot() {
