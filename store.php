@@ -54,8 +54,8 @@
         <?php endforeach; ?>
         </section> <br> <br>
         <?php
-            if($_SESSION["admin"] == 1)
-            {
+            if(isset($_SESSION["userid"])) {
+                if($_SESSION["admin"] == 1) {
         ?>
         <div class = "store-admin">
             <h2>Admin</h2> <br>
@@ -68,7 +68,7 @@
                 <button type = "submit" name = "set">ADD / REMOVE</button>
             </form>
         </div>
-        <?php } ?>
+        <?php }} ?>
     </div>
 </body>
 </html>
