@@ -114,17 +114,17 @@ function rematch() {
 
     document.getElementById("rps-shoot").style.cssText = "display: block; margin: auto; text-align:center;";
 
-    document.getElementById("score").value = score;
-    document.getElementById("coins").innerHTML = score;
+    //document.getElementById("score").value = score;
+    //document.getElementById("coins").innerHTML = score;
 
     // console.log(score);
 }
 
 function cashout() {
-    document.getElementById("rps-score").submit();
+    //document.getElementById("score").value = score;
+    //document.getElementById("coins").innerHTML = score;
 
-    document.getElementById("score").value = score;
-    document.getElementById("coins").innerHTML = score;
+    document.getElementById("rps-score").submit();
 
     rematch();
 }
