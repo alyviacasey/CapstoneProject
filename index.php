@@ -17,7 +17,7 @@
     <?php include_once "header.php"; ?>
 
     <div class = "wrapper">
-        <img src="../images/giftboxes/default.png" alt="box" style="width: 200px; height: 200px;"> <br> <br>
+        <img src="../images/giftboxes/default.png" alt="box" style="width: 200px; height: 200px;"> <br>
         <h2>Hello, welcome to ToyBox!</h2>
         <p>This is a pet collection webgame where you can play games, earn coins, and spend them to acquire Boxes. </p>
     </div>
