@@ -27,8 +27,9 @@
         <section class = "profile">
             <div class = "profile-info">
                 <div class = "profile-img">
-                    <img src = "<?php $profile->fetchIcon($_SESSION["userid"]); ?>" style = "width: 100px; height:100px;">
+                    <img src = "<?php $profile->fetchIcon($_SESSION["userid"]); ?>" style = "width: 200px; height:200px;">
                 </div> 
+                <br>
                 <div class = "profile-about">
                     <h3><?php echo $_SESSION["username"]; ?></h3>
                     <p>
