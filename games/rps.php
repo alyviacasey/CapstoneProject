@@ -28,7 +28,7 @@
             <span><span id="rps-user"></span></span>
         </div>
         <br>
-        <h2 style="text-align:center;"> <span id="coins">0</span> COINS</h2> <br>
+        <h2 style="text-align:center;"> <span id="coins">0</span> COINS</h2>
         <h3 style="text-align:center;">Balance: <?php echo $inventoryView->fetchBalance($_SESSION["userid"]); ?></h3> <br>
         <form id="rps-shoot">
             <input type="radio" id="rock" name="user-choice" value="Rock" /><label for="rock">Rock</label> &nbsp; &nbsp;
