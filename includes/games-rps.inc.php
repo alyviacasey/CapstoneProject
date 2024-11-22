@@ -8,11 +8,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include "../classes/inventory-view.classes.php";
     include "../classes/inventory-contr.classes.php";
 
-    $score = htmlspecialchars($_POST["score"], ENT_QUOTES, 'UTF-8');
+    $uid = $_SESSION["userid"];
+    $score = (int)htmlspecialchars($_POST["score"], ENT_QUOTES, 'UTF-8');
     $inventoryView = new InventoryView();
-    $inventoryContr = new InventoryContr($_SESSION["userid"]);
+    $inventoryContr = new InventoryContr($uid);
 
-    $currBalance = $intentoryView->fetchBalance($_SESSION["userid"]);
+    $currBalance = (int)$inventoryView->fetchBalance($uid);
 
     if(isset($_POST['submit-score'])) {
         $newBalance = $currBalance + $score;
