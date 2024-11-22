@@ -45,19 +45,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         header("location: ../inventory.php?error=none");
     }
     if(isset($_POST['sellbox'])) {
-        // GET PRICE
 
-        $price = $modelView->fetchModel($modelID);
-        $price = $price[0]["price"];
-
-        // ADD COINS
-
-        $newBalance = $inventoryView->fetchBalance() + $price;
-        $inventoryContr->editBalance($newBalance);
-
-        // DELETE BOX
-
-        $inventoryContr ->deleteBox($boxID);
+        $inventoryContr ->sellBox($boxID);
 
         header("location: ../inventory.php?error=none");
     }
