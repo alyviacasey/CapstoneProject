@@ -36,7 +36,6 @@
                     <img src = "<?php $modelView->fetchImg($toy['model_id']); ?>" alt = "toy image">
                     <h4><?= $toy['toy_name']; ?></h4>
                     ID #<?= $toy['toy_id'] ?> <br>
-                    <?= $toy['theme'] . ' ' . $toy['model_name']?> <br>
                     BIRTHDAY: <?= $toy['adoption_date'] ?>
                 </div>
                 <?php endforeach ?>      
