@@ -24,6 +24,8 @@
     ?>
 
     <div class = "wrapper">
+        <h3><a href = "inventory.php">INVENTORY</a> &nbsp; &nbsp; <a href = "collection.php">COLLECTION</a> &nbsp; &nbsp; <a href = "profilesettings.php">PROFILE SETTINGS</a> &nbsp; &nbsp; <?php if($_SESSION["admin"] == 1) { ?> <a href = "admin.php">ADMIN PANEL</a> <?php } ?></h3>
+        <br><br>
         <section class = "profile">
             <div class = "profile-info">
                 <div class = "profile-img">
@@ -46,8 +48,6 @@
                     <p>
                         <?php $profile->fetchIntroText($_SESSION["userid"]); ?>
                     </p>
-                    <br><br>
-                    <h2><a href = "inventory.php">INVENTORY</a> &nbsp; &nbsp; <a href = "collection.php">COLLECTION</a> &nbsp; &nbsp; <a href = "profilesettings.php">PROFILE SETTINGS</a> &nbsp; &nbsp; <?php if($_SESSION["admin"] == 1) { ?> <a href = "admin.php">ADMIN PANEL</a> <?php } ?></h2>
                     <br><br>
                 </div>
             </div>
