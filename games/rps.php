@@ -1,7 +1,6 @@
 <?php
     session_start();
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +33,7 @@
             <button id = "double" name = "double" style = "display:none;">DOUBLE OR NOTHING</button>
             <button id = "cashout" name = "cashout" style = "display:none;">CASH OUT</button>
         </form>
-        <form id="rps-score" style="display:none">
+        <form method='post' action="../includes/games-rps.inc.php" id="rps-score" style="display:none">
             <input type="hidden" id="score" name="score" value="0" />
             <button type="submit" id="submit-score" name="submit-score">Submit</button>
         </form>

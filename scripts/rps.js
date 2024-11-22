@@ -7,9 +7,18 @@ shootform.addEventListener("submit", function(event) {
     rps(shootform);
 });
 
-document.getElementById("cashout").addEventListener("click", cashout);
-document.getElementById("rematch").addEventListener("click", rematch);
-document.getElementById("double").addEventListener("click", rematch);
+document.getElementById("cashout").addEventListener("click", function(event) {
+    event.preventDefault();
+    cashout();
+});
+document.getElementById("rematch").addEventListener("click", function(event) {
+    event.preventDefault();
+    rematch();
+});
+document.getElementById("double").addEventListener("click", function(event) {
+    event.preventDefault();
+    rematch();
+});
 
 function rps(form) {
     const data = new FormData(form);
