@@ -17,5 +17,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $newBalance = $currBalance + $score;
     $inventoryContr->editBalance($newBalance);
-    header("location: ../rps.php");
+    header("location: ../games/rps.php");
 }
