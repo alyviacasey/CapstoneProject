@@ -15,10 +15,21 @@
 
 <body>
     <?php include_once "header.php"; ?>
-
     <div class = "wrapper">
-        <h3>Carnival</h3>
+        <?php
+                if(isset($_SESSION["userid"]))
+                {
+        ?>
         <iframe src="games/rps.php" width="100%" height="650px" frameborder="0" scrolling="no"></iframe>
+        <?php
+                }
+                else
+                {
+        ?>
+        <h2>Please <a href = "signup.php">sign up</a> or <a href = "signup.php">sign in</a> to play!</h2>
+        <?php
+                }
+        ?>
     </div>
 </body>
 </html>
