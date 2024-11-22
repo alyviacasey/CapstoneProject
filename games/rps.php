@@ -22,7 +22,7 @@
         </div>
         <br>
         <h2 style="text-align:center;"> <span id="coins">0</span> COINS</h2> <br>
-        <form id="rps-shoot" style="margin: auto; text-align:center;">
+        <form id="rps-shoot">
             <input type="radio" id="rock" name="user-choice" value="Rock" /><label for="rock">Rock</label> &nbsp; &nbsp;
             <input type="radio" id="paper" name="user-choice" value="Paper" /><label for="paper">Paper</label> &nbsp; &nbsp;
             <input type="radio" id="scissors" name="user-choice" value="Scissors" /><label for="scissors">Scissors</label> &nbsp; &nbsp;

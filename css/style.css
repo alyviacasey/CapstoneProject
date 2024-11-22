@@ -202,6 +202,11 @@ header {
     transform: scaleX(-1);
 }*/
 
+#rps-shoot {
+    margin: auto; 
+    text-align:center;
+}
+
 #rps-com, #rps-user {
     height:300px; width:300px; 
     position: absolute;

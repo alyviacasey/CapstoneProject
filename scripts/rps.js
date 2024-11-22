@@ -112,7 +112,7 @@ function rematch() {
     document.getElementById("double").style.cssText = "display: none;";
     document.getElementById("cashout").style.cssText = "display: none;";
 
-    document.getElementById("rps-shoot").style.cssText = "display: block;";
+    document.getElementById("rps-shoot").style.cssText = "display: block; margin: auto; text-align:center;";
 
     document.getElementById("score").value = score;
     document.getElementById("coins").innerHTML = score;

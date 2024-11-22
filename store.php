@@ -32,7 +32,6 @@
     <div class = "wrapper">
             <div class = "balance">
                 <h3>Balance:</h3> <?php $inventoryView->fetchBalance($_SESSION["userid"]); ?>
-                </p>
                 <br><br>
             </div>
         <h2>Store</h2> <br>

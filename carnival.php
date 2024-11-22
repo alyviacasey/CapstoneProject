@@ -14,10 +14,15 @@
 </head>
 
 <body>
-    <?php include_once "header.php"; ?>
+    <?php include_once "header.php"; 
+    
+    include "classes/inventory.classes.php";
+    include "classes/inventory-view.classes.php";
+    
+    $inventoryView = new InventoryView();?>
 
     <div class = "wrapper">
-        <h3>Carnival</h3>
+        <h3>Carnival</h3> <span style="float:right;"><h3>Balance:</h3> <?php $inventoryView->fetchBalance($_SESSION["userid"]); ?></span>
         <iframe src="games/rps.php" width="100%" height="600px" frameborder="0"></iframe>
     </div>
 </body>
