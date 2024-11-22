@@ -31,7 +31,7 @@
 
     <div class = "wrapper">
             <div class = "balance" style="float:right;">
-                <h3>Balance: <?php echo $inventoryView->fetchBalance($_SESSION["userid"]); ?></h3> 
+                <h3>Balance: <?php echo $inventoryView->fetchBalance($_SESSION["userid"]); ?> coins</h3> 
                 <br><br>
             </div>
         <h2>Store</h2> <br>
