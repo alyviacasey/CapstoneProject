@@ -42,7 +42,7 @@ function rps(form) {
             score+=5;
         }
         else {
-            score*2;
+            score*=2;
         }
     }
 
