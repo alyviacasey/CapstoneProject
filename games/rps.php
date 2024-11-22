@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div style="padding: 5vw; overflow:hidden;">
+    <div style="padding: 5vw;">
         <h3 id = "result" style="text-align:center;">Rock, Paper, Scissors...</h3> <br>
         <div class="rps">
             <span style = "transform: scaleX(-1);"><span id="rps-com"></span></span>
@@ -22,6 +22,7 @@
         </div>
         <br>
         <h2 style="text-align:center;"> <span id="coins">0</span> COINS</h2> <br>
+        <h3 style="text-align:center;">Balance: <?php echo $inventoryView->fetchBalance($_SESSION["userid"]); ?></h3> <br>
         <form id="rps-shoot">
             <input type="radio" id="rock" name="user-choice" value="Rock" /><label for="rock">Rock</label> &nbsp; &nbsp;
             <input type="radio" id="paper" name="user-choice" value="Paper" /><label for="paper">Paper</label> &nbsp; &nbsp;

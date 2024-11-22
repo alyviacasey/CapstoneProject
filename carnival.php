@@ -23,8 +23,8 @@
     $inventoryView = new InventoryView();?>
 
     <div class = "wrapper">
-        <h3>Carnival</h3> <h3 style="float:right;">Balance: <?php echo $inventoryView->fetchBalance($_SESSION["userid"]); ?></h3>
-        <iframe src="games/rps.php" width="100%" height="600px" frameborder="0"></iframe>
+        <h3>Carnival</h3>
+        <iframe src="games/rps.php" width="100%" height="600px" frameborder="0" style="overflow:hidden;"></iframe>
     </div>
 </body>
 </html>
