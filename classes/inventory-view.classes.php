@@ -8,7 +8,7 @@ class InventoryView extends Inventory {
     // FETCH BALANCE
     public function fetchBalance($uid) {
         $inventoryInfo = $this->getInventory($uid);
-        echo $inventoryInfo[0]["balance"];
+        return $inventoryInfo[0]["balance"];
     }
 
     public function fetchBoxes($uid) {
