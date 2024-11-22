@@ -30,7 +30,7 @@
         <section class = "inventory">
             <div class = "inventory-info">
                 <div class = "balance">
-                    <h3>Balance:</h3> <?php $inventoryView->fetchBalance($_SESSION["userid"]); ?>
+                    <h3>Balance:</h3> <?php echo $inventoryView->fetchBalance($_SESSION["userid"]); ?>
                     </p>
                     <br><br>
                 </div>
