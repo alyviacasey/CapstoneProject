@@ -26,7 +26,7 @@
                 else
                 {
         ?>
-        <h2>Please <a href = "signup.php">sign up</a> or <a href = "signup.php">sign in</a> to play!</h2>
+        <h2>Please <a href = "signup.php">sign up</a> or <a href = "signup.php">log in</a> to play!</h2>
         <?php
                 }
         ?>

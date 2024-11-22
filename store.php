@@ -30,10 +30,12 @@
     ?>
 
     <div class = "wrapper">
+        <?php if(isset($_SESSION["userid"])) { ?>
             <div class = "balance" style="float:right;">
                 <h3>Balance: <?php echo $inventoryView->fetchBalance($_SESSION["userid"]); ?> coins</h3> 
                 <br><br>
             </div>
+        <?php } ?>
         <h2>Store</h2> <br>
         <section class = "store">
         <?php foreach($store as $box): ?>
@@ -41,11 +43,13 @@
                 <img src = "<?php $boxView->fetchImg($box['model_id']); ?>" alt = "box image">
                 <h4><?= $box['name']; ?></h4>
                 <p><?php echo $box['price'] . " coins"; ?></p>
+                <?php if(isset($_SESSION["userid"])) { ?>
                 <form action = "includes/store.inc.php" method = "post">
                     <input type = "hidden" name = "boxid" value = "<?= $box['model_id']; ?>">
                     <input type = "hidden" name = "price" value = "<?= $box['price']; ?>">
                     <button type = "submit" name = "purchase">PURCHASE</button>
                 </form>
+                <?php } ?>
             </div>
         <?php endforeach; ?>
         </section> <br> <br>
