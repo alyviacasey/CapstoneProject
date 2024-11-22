@@ -18,5 +18,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(isset($_POST['submit-score'])) {
         $newBalance = $currBalance + $score;
         $inventoryContr->editBalance($newBalance);
+        header("location: ../carnival.php");
     }
 }
