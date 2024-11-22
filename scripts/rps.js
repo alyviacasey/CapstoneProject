@@ -39,7 +39,7 @@ function rps(form) {
 
     if(document.getElementById("result").innerHTML == "You win!") {
         if(score == 0){
-            score+=10;
+            score+=5;
         }
         else {
             score*2;
