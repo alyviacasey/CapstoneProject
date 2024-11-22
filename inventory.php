@@ -40,7 +40,7 @@
                         <div class = "item-box">
                         <img src = "<?php $boxView->fetchImg($box['boxmodel_id']); ?>" alt = "box image">
                         <h4><?= $box['name']; ?></h4>
-                        <p><?php echo $box['price']; ?></p>
+                        <p><?php echo $box['price'] . " coins";?></p>
                         <form action = "includes/inventory.inc.php" method = "post">
                             <input type = "hidden" name = "boxid" value = "<?= $box['box_id']; ?>">
                             <input type = "hidden" name = "boxmodelid" value = "<?= $box['boxmodel_id']; ?>">
