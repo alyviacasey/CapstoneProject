@@ -17,15 +17,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include "../classes/collection.classes.php";
     include "../classes/collection-contr.classes.php";
 
+    $boxID = htmlspecialchars($_POST["boxid"], ENT_QUOTES, 'UTF-8');
+    $modelID = htmlspecialchars($_POST["boxmodelid"], ENT_QUOTES, 'UTF-8');
+
+    $inventoryContr = new InventoryContr($_SESSION["userid"]);
+    $collectionContr = new CollectionContr($_SESSION["userid"]);
+    $modelView = new ModelView();
+
 
     if(isset($_POST['usebox'])) {
-        $boxID = htmlspecialchars($_POST["boxid"], ENT_QUOTES, 'UTF-8');
-        $modelID = htmlspecialchars($_POST["boxmodelid"], ENT_QUOTES, 'UTF-8');
-
-        $inventoryContr = new InventoryContr($_SESSION["userid"]);
-        $collectionContr = new CollectionContr($_SESSION["userid"]);
-        $modelView = new ModelView();
-
         // GET MODEL
 
         $prize = $inventoryContr->rollBox($boxID);
@@ -37,6 +37,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // ADD TO COLLECTION
 
         $collectionContr->getToy($prizeModel, $name);
+
+        // DELETE BOX
+
+        $inventoryContr ->deleteBox($boxID);
+
+        header("location: ../inventory.php?error=none");
+    }
+    if(isset($_POST['sellbox'])) {
+        // GET PRICE
+
+        $price = $modelView->fetchModel($modelID);
+        $price = $price[0]["price"];
+
+        // ADD COINS
+
+        $newBalance = $inventoryView->fetchBalance() + $price;
+        $inventoryContr->editBalance($newBalance);
 
         // DELETE BOX
 

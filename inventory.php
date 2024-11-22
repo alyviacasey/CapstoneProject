@@ -44,7 +44,7 @@
                         <form action = "includes/inventory.inc.php" method = "post">
                             <input type = "hidden" name = "boxid" value = "<?= $box['box_id']; ?>">
                             <input type = "hidden" name = "boxmodelid" value = "<?= $box['boxmodel_id']; ?>">
-                            <button type = "submit" name = "usebox">OPEN</button>
+                            <button type = "submit" name = "usebox">OPEN</button> <button type = "submit" name = "sellbox">SELL</button>
                         </form>
                         </div>
                     <?php endforeach ?>     

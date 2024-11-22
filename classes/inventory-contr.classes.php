@@ -95,6 +95,14 @@ class InventoryContr extends Inventory {
         return $prize;
     }
 
+    public function sellBox($bid) {
+        $box = $this->getBox($bid);
+        $price = $box[0]['price'];
+
+        $this->updateBalance($this->getInventory($this->uid)[0]['balance'] + $price, $this->uid);
+        $this->destroyBox($bid);
+    }
+
     public function deleteBox($bid) {
         $this->destroyBox($bid);
     }
