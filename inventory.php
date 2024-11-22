@@ -40,7 +40,7 @@
 
                     <?php foreach($inventory as $box): ?>
                         <div class = "item-box">
-                        <img src = "<?php $boxView->fetchImg($box['boxmodel_id']); ?>" alt = "box image" style = "width: 100px; height:100px;">
+                        <img src = "<?php $boxView->fetchImg($box['boxmodel_id']); ?>" alt = "box image">
                         <h4><?= $box['name']; ?></h4>
                         <p><?php echo $box['price']; ?></p>
                         <form action = "includes/inventory.inc.php" method = "post">
